@@ -76,4 +76,21 @@ Le programme de dessin récupère les coordonnées du stylet et les interprètes
 
 ## Déploiement
 
+Le déploiement de l'application suit la procédure standard des environnements supportés:
+
+* Pour un environnement Windows, le déploiement se réalise par le biais d'un programme d'installation. 
+* Pour un environnement Mac OS X, le déploiement se réalise par le biais d'un fichier DMG.
+* Pour une distribution Linux donnée, le déploiement se réalise par le biais d'un paquetage.
+
+La mise en place du matériel requis est décrite par la procédure suivante:
+
+1. Disposer le support de travail.
+2. Poser le stylet sur le support de travail.
+3. Placer la caméra au-dessus du support de travail.
+4. Placer le projecteur vidéo au-dessus du support de travail.
+
+Le schéma suivant illustre un environnement de travail idéal :
+
+*à compléter... dessiner l'ébauche d'une pièce avec un mannequin, un stylet, une table, une chaise, une caméra, un beamer et un pc.*
+
 ## Planification du projet
