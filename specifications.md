@@ -35,17 +35,26 @@ L'objectif de ce projet est de concevoir un outil dessin assisté par ordinateur
 
 ## Technologies utilisées
 
-
 ## Plateformes supportées
+
+## Principe de fonctionnement
+
+Ce projet contient trois principale difficultés : la détection de pression sur la table à l'aide du stylet, le suivis de la position du stylet (*tracking*) et la precision. 
+
+Pour cela nous avons imaginé un stylet munis d'une mine speciale. Lors d'une pression sur le plan de travail, cette dernière appuye sur un bouton qui enclenche une LED placée proche de la mine. Une caméra placée au dessus du plan de travail film la scène et envoie l'image au logiciel chargé de suivre la position de la mine du stylet en détectant cette LED.
+
+Le programme de dessin récupère les coordonnées du stylet et les interprètes de manière à pouvoir projeter le dessin sur le plan de travail à l’aide du projecteur vidéo. Un thread de l'application sera consacré au Tracking de la LED, un autre récupérera les coordonées pour les interpreter sur le plan de travail en fonction de l'outil selectionné. 
+
 
 ## Matériel requis
 
-1.	Caméra
+1.	Stylet *(Prototype conçu par un membre de l'équipe)*
 
-2.	Projecteur vidéo
+2.	Caméra 
 
-3.	Stylet
+3.	Projecteur vidéo
 
+4. Support *(Pour le placement de la caméra et le projecteur au-dessus du plan de travail)*
 
 
 ## Déploiement
