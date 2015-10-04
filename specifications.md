@@ -52,6 +52,8 @@ L'objectif de ce projet est de concevoir un outil dessin assisté par ordinateur
 
 ## Plateformes supportées
 
+De par la nature du framework Qt, l'application est automatiquement multiplateforme ; elle est donc supportée par les environnements usuels. Il s'agit entre autres des éditions Windows, des systèmes Mac OS X et des différentes distributions Linux. Un simple travail de recompilation du code source sur l'environnement désiré permet de disposer d'une version compatible de l'application.
+
 ## Principe de fonctionnement
 
 Ce projet contient trois principales difficultés : la détection de pression sur la table à l'aide du stylet, le suivis de la position du stylet (*tracking*) et la precision.
