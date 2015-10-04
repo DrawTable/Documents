@@ -2,9 +2,16 @@
 
 ## Membres du groupe
 
+* Sacha Bron - *Chef de groupe*
+* David Villa - *Chef suppléant*
+* Paul Ntawuruhunga
+* Yassin Kammoun
+* Marc Pellet
+
+
 ## Objectif du projet
 
-L'objectif de ce projet est de concevoir un outil dessin assisté par ordinateur tout en permettant à l'utilisateur de réaliser ses dessins de la manière la plus naturelle possible. En effet, l'utilisateur dessine directement sur sa table ou n'importe quel autre surface plane à l'aide d'un stylet et son dessin est projeté sur son plan de travail. Ce qui donne à l'utilisateur l'impression de dessiner avec un crayon et un papier.
+L'objectif de ce projet est de concevoir un outil dessin assisté par ordinateur tout en permettant à l'utilisateur de réaliser ses dessins de la manière la plus naturelle possible. En effet, l'utilisateur dessine directement sur sa table ou n'importe quel autre surface plane à l'aide d'un stylet et son dessin est projeté sur son plan de travail. Ce qui donne à l'utilisateur l'impression de dessiner avec un crayon et une feuille.
 
 
 ## Fonctionnalités principales
@@ -33,17 +40,25 @@ L'objectif de ce projet est de concevoir un outil dessin assisté par ordinateur
 
 ## Fonctionnalités supplémentaires
 
+1. Site vitrine
+1. Pipette 
+1. Remplissage
+
+
 ## Technologies utilisées
+
+* Librarie OpenCV - Pour le suivis du stylet en temps réel.
+* Framework Qt - Pour l'interface graphique du plan de travail.
 
 ## Plateformes supportées
 
 ## Principe de fonctionnement
 
-Ce projet contient trois principale difficultés : la détection de pression sur la table à l'aide du stylet, le suivis de la position du stylet (*tracking*) et la precision. 
+Ce projet contient trois principales difficultés : la détection de pression sur la table à l'aide du stylet, le suivis de la position du stylet (*tracking*) et la precision.
 
-Pour cela nous avons imaginé un stylet munis d'une mine speciale. Lors d'une pression sur le plan de travail, cette dernière appuye sur un bouton qui enclenche une LED placée proche de la mine. Une caméra placée au dessus du plan de travail film la scène et envoie l'image au logiciel chargé de suivre la position de la mine du stylet en détectant cette LED.
+Pour cela nous avons imaginé un stylet munis d'une mine spéciale. Lors d'une pression sur le plan de travail, cette dernière presse sur un bouton qui enclenche une LED placée proche de la mine. Une caméra placée au-dessus du plan de travail film la scène et envoie l'image au logiciel chargé de suivre la position de la mine du stylet en détectant cette LED.
 
-Le programme de dessin récupère les coordonnées du stylet et les interprètes de manière à pouvoir projeter le dessin sur le plan de travail à l’aide du projecteur vidéo. Un thread de l'application sera consacré au Tracking de la LED, un autre récupérera les coordonées pour les interpreter sur le plan de travail en fonction de l'outil selectionné. 
+Le programme de dessin récupère les coordonnées du stylet et les interprètes de manière à pouvoir projeter le dessin sur le plan de travail à l'aide du projecteur vidéo. Un thread de l'application sera consacré au Tracking de la LED, un autre récupérera les coordonnées pour les interpréter sur le plan de travail en fonction de l'outil sélectionné.
 
 
 ## Matériel requis
