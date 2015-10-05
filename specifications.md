@@ -18,12 +18,12 @@ L'objectif de ce projet est de concevoir un outil dessin assisté par ordinateur
 
 ## Fonctionnalités principales
 
-1. Dessin à l’aide d’un stylet
+- Dessin à l’aide d’un stylet
 	
-1. Projection de l’image sur le plan de travail
-1. Alignement de l’image avec la position du stylet
-1. Calibrage du stylet
-1. Plan de travail avec barre d'outil
+- Projection de l’image sur le plan de travail
+- Alignement de l’image avec la position du stylet
+- Calibrage du stylet
+- Plan de travail avec barre d'outil
 
 	*Une barre d'outil sera projeté dans une zone du plan travail permettant à l'utilisateur de selectionner un outils.*
 	
