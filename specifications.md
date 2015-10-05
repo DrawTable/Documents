@@ -2,7 +2,13 @@
 
 Ce document constitue le cahier des charges du projet de groupe.
 
+## Contexte
+
+Ce projet de groupe se déroule dans le cadre de la formation Bachelor HES de la Haute-Ecole d'Ingéniérie et de Gestion du canton de Vaud. Il compte pour une unité d'enseignement du plan d'étude de l'orientation Informatique logiciel (IL) du département des Technologies de l'Information et de la Communication (TIC) de l'école. Il se réalise durant le cinquième semestre de l'année de formation 2015/16.
+
 ## Membres du groupe
+
+Les personnes suivantes constituent les membres du groupe de l'équipe de projet:
 
 - Sacha Bron - *Chef de groupe*
 - David Villa - *Chef suppléant*
@@ -10,11 +16,9 @@ Ce document constitue le cahier des charges du projet de groupe.
 - Yassin Kammoun
 - Marc Pellet
 
-
 ## Objectif du projet
 
 L'objectif de ce projet est de concevoir un outil dessin assisté par ordinateur permettant à l'utilisateur de réaliser ses dessins de la manière la plus naturelle possible. À terme, l'utilisateur dessinera directement sur sa table ou n'importe quelle autre surface plane à l'aide d'un stylet et son dessin sera projeté sur son plan de travail, donnant à l'utilisateur l'impression de dessiner avec un crayon et une feuille.
-
 
 ## Fonctionnalités principales
 
@@ -64,17 +68,27 @@ Le programme de dessin récupère les coordonnées du stylet et les interprètes
 
 L'application comportera différents threads: un thread de l'application sera consacré au tracking de la LED, un autre récupérera les coordonnées pour les interpréter sur le plan de travail en fonction de l'outil sélectionné.
 
+## Public-cible
+
+L'application vise avant toute chose tout amateur de dessin souhaitant se passer d'une feuille. 
 
 ## Matériel requis
 
-- Stylet *(Prototype conçu par un membre de l'équipe)*
+Les points suivants constituent le matériel requis pour l'utilisation de l'application.
 
-- Caméra 
+- Un prototype de stylet faisant office d'outil de dessin.
+- Une caméra permettant de traquer les mouvements du stylet. 
+- Un projecteur vidéo permettant de retranscrire le dessin de l'utilisateur.
+- Un plan de travail permettant de dessiner.
+- Un support prévu pour la disposition de la caméra et du projecteur au-dessus du plan de travail.
 
-- Projecteur vidéo
+Le prototype de stylet est conçu par le chef de projet. Sa conception nécessite les composants suivants:
 
-- Support *(Pour le placement de la caméra et le projecteur au-dessus du plan de travail)*
-
+- LED.
+- Un interrupteur.
+- Une résistance.
+- Une batterie.
+- Un boîtier.
 
 ## Déploiement
 
