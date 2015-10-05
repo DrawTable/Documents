@@ -86,11 +86,11 @@ Le déploiement de l'application suit la procédure standard des environnements 
 
 La mise en place du matériel requis est décrite par la procédure suivante:
 
-1. Disposer le support de travail.
-2. Poser le stylet sur le support de travail.
-3. Placer la caméra au-dessus du support de travail.
-4. Placer le projecteur vidéo au-dessus du support de travail.
+1. Disposez le support de travail.
+2. Posez le stylet sur le support de travail.
+3. Placez la caméra au-dessus du support de travail.
+4. Placez le projecteur vidéo au-dessus du support de travail.
 
 Le schéma suivant illustre un environnement de travail idéal:
 
-*à compléter... dessiner l'ébauche d'une pièce avec un mannequin, un stylet, une table, une chaise, une caméra, un beamer et un pc.*
+*À compléter... dessiner l'ébauche d'une pièce avec un mannequin, un stylet, une table, une chaise, une caméra, un beamer et un pc.*
