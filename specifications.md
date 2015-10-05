@@ -52,11 +52,11 @@ L'objectif de ce projet est de concevoir un outil dessin assisté par ordinateur
 
 ## Plateformes supportées
 
-De par la nature du framework Qt, l'application est automatiquement multiplateforme ; elle est donc supportée par les environnements usuels. Il s'agit entre autres des éditions Windows, des systèmes Mac OS X et des différentes distributions Linux. Un simple travail de recompilation du code source sur l'environnement désiré permet de disposer d'une version compatible de l'application.
+De par la nature du framework Qt, l'application est automatiquement multiplateforme; elle est donc supportée par les environnements usuels. Il s'agit entre autres des éditions Windows, des systèmes Mac OS X et des différentes distributions Linux. Un simple travail de recompilation du code source sur l'environnement désiré permet de disposer d'une version compatible de l'application.
 
 ## Principe de fonctionnement
 
-Ce projet contient trois principales difficultés : la détection de pression sur la table à l'aide du stylet, le suivis de la position du stylet (*tracking*) et la precision.
+Ce projet contient trois principales difficultés: la détection de pression sur la table à l'aide du stylet, le suivis de la position du stylet (*tracking*) et la precision.
 
 Pour cela nous avons imaginé un stylet munis d'une mine spéciale. Lors d'une pression sur le plan de travail, cette dernière presse sur un bouton qui enclenche une LED placée proche de la mine. Une caméra placée au-dessus du plan de travail film la scène et envoie l'image au logiciel chargé de suivre la position de la mine du stylet en détectant cette LED.
 
@@ -89,7 +89,7 @@ La mise en place du matériel requis est décrite par la procédure suivante:
 3. Placer la caméra au-dessus du support de travail.
 4. Placer le projecteur vidéo au-dessus du support de travail.
 
-Le schéma suivant illustre un environnement de travail idéal :
+Le schéma suivant illustre un environnement de travail idéal:
 
 *à compléter... dessiner l'ébauche d'une pièce avec un mannequin, un stylet, une table, une chaise, une caméra, un beamer et un pc.*
 
