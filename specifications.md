@@ -4,11 +4,11 @@ Ce document constitue le cahier des charges du projet de groupe.
 
 ## Membres du groupe
 
-* Sacha Bron - *Chef de groupe*
-* David Villa - *Chef suppléant*
-* Paul Ntawuruhunga
-* Yassin Kammoun
-* Marc Pellet
+- Sacha Bron - *Chef de groupe*
+- David Villa - *Chef suppléant*
+- Paul Ntawuruhunga
+- Yassin Kammoun
+- Marc Pellet
 
 
 ## Objectif du projet
@@ -19,7 +19,6 @@ L'objectif de ce projet est de concevoir un outil dessin assisté par ordinateur
 ## Fonctionnalités principales
 
 - Dessin à l’aide d’un stylet
-	
 - Projection de l’image sur le plan de travail
 - Alignement de l’image avec la position du stylet
 - Calibrage du stylet
@@ -27,30 +26,29 @@ L'objectif de ce projet est de concevoir un outil dessin assisté par ordinateur
 
 	*Une barre d'outil sera projeté dans une zone du plan travail permettant à l'utilisateur de selectionner un outils.*
 	
-	* Outils de dessin: crayon, gomme
-	* Outils de forme: Ligne droite, carré, cercle
-	* Outils de couleur: Palette de couleur
-	* Outils de choix d'épaisseur
+	- Outils de dessin: crayon, gomme
+	- Outils de forme: Ligne droite, carré, cercle
+	- Outils de couleur: Palette de couleur
+	- Outils de choix d'épaisseur
 	
-1. Annulation d’une action
+- Annulation d’une action
 
 	*Une pile d'actions est enregistrée et un bouton dans la barre d'outil permet de remonter cette pile, annulant ainsi les dernières modification apportées au dessin.*
-1. Enregistrement et importation du dessin
+- Enregistrement et importation du dessin
 
 	*Possibilité d'enregistrer ou importer son dessin au format PNG*
 	
 
 ## Fonctionnalités supplémentaires
 
-1. Site vitrine
-1. Pipette 
-1. Remplissage
-
+- Site vitrine
+- Pipette 
+- Remplissage
 
 ## Technologies utilisées
 
-* Librarie OpenCV - Pour le suivis du stylet en temps réel.
-* Framework Qt - Pour l'interface graphique du plan de travail.
+- Librarie OpenCV - Pour le suivis du stylet en temps réel.
+- Framework Qt - Pour l'interface graphique du plan de travail.
 
 ## Plateformes supportées
 
@@ -67,22 +65,22 @@ Le programme de dessin récupère les coordonnées du stylet et les interprètes
 
 ## Matériel requis
 
-1.	Stylet *(Prototype conçu par un membre de l'équipe)*
+- Stylet *(Prototype conçu par un membre de l'équipe)*
 
-2.	Caméra 
+- Caméra 
 
-3.	Projecteur vidéo
+- Projecteur vidéo
 
-4. Support *(Pour le placement de la caméra et le projecteur au-dessus du plan de travail)*
+- Support *(Pour le placement de la caméra et le projecteur au-dessus du plan de travail)*
 
 
 ## Déploiement
 
 Le déploiement de l'application suit la procédure standard des environnements supportés:
 
-* Pour un environnement Windows, le déploiement se réalise par le biais d'un programme d'installation. 
-* Pour un environnement Mac OS X, le déploiement se réalise par le biais d'un fichier DMG.
-* Pour une distribution Linux donnée, le déploiement se réalise par le biais d'un paquetage.
+- Pour un environnement Windows, le déploiement se réalise par le biais d'un programme d'installation. 
+- Pour un environnement Mac OS X, le déploiement se réalise par le biais d'un fichier DMG.
+- Pour une distribution Linux donnée, le déploiement se réalise par le biais d'un paquetage.
 
 La mise en place du matériel requis est décrite par la procédure suivante:
 
