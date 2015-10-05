@@ -24,16 +24,16 @@ L'objectif de ce projet est de concevoir un outil dessin assisté par ordinateur
 - Calibrage du stylet
 - Plan de travail avec barre d'outil
 
-	*Une barre d'outil sera projeté dans une zone du plan travail permettant à l'utilisateur de selectionner un outils.*
+	*Une barre d'outil sera projeté dans une zone du plan travail permettant à l'utilisateur de selectionner un outil.*
 	
 	- Outils de dessin: crayon, gomme
 	- Outils de forme: Ligne droite, carré, cercle
-	- Outils de couleur: Palette de couleur
+	- Outils de couleur: Palette de couleurs
 	- Outils de choix d'épaisseur
 	
 - Annulation d’une action
 
-	*Une pile d'actions est enregistrée et un bouton dans la barre d'outil permet de remonter cette pile, annulant ainsi les dernières modification apportées au dessin.*
+	*Une pile d'actions est enregistrée et un bouton dans la barre d'outil permet de remonter cette pile, annulant ainsi les dernières modifications apportées au dessin.*
 - Enregistrement et importation du dessin
 
 	*Possibilité d'enregistrer ou importer son dessin au format PNG*
@@ -62,7 +62,7 @@ Pour cela nous avons imaginé un stylet munis d'une mine spéciale. Lors d'une p
 
 Le programme de dessin récupère les coordonnées du stylet et les interprètes de manière à pouvoir projeter le dessin sur le plan de travail à l'aide du projecteur vidéo.
 
-L'application comportera différents threads: un thread de l'application sera consacré au Tracking de la LED, un autre récupérera les coordonnées pour les interpréter sur le plan de travail en fonction de l'outil sélectionné.
+L'application comportera différents threads: un thread de l'application sera consacré au tracking de la LED, un autre récupérera les coordonnées pour les interpréter sur le plan de travail en fonction de l'outil sélectionné.
 
 
 ## Matériel requis
@@ -94,7 +94,3 @@ La mise en place du matériel requis est décrite par la procédure suivante:
 Le schéma suivant illustre un environnement de travail idéal:
 
 *à compléter... dessiner l'ébauche d'une pièce avec un mannequin, un stylet, une table, une chaise, une caméra, un beamer et un pc.*
-
-## Planification du projet
-
-
