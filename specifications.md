@@ -1,5 +1,7 @@
 # Cahier des charges
 
+Ce document constitue le cahier des charges du projet de groupe.
+
 ## Membres du groupe
 
 * Sacha Bron - *Chef de groupe*
