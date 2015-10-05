@@ -28,22 +28,16 @@ Les fonctionnalités principales du projet sont:
 - Projection de l’image sur le plan de travail
 - Alignement de l’image avec la position du stylet
 - Calibrage du stylet
-- Plan de travail avec barre d'outil
-
-	*Une barre d'outil sera projeté dans une zone du plan travail permettant à l'utilisateur de selectionner un outil.*
-	
-	- Outils de dessin: crayon, gomme
-	- Outils de forme: Ligne droite, carré, cercle
-	- Outils de couleur: Palette de couleurs
-	- Outils de choix d'épaisseur
-	
+- Plan de travail avec barre d'outils
+	+ Une barre d'outil sera projeté dans une zone du plan travail permettant à l'utilisateur de selectionner un outil.
+		* Outils de dessin: crayon, gomme.
+		* Outils de forme: Ligne droite, carré, cercle.
+		* Outils de couleur: Palette de couleurs.
+		* Outils de choix d'épaisseur.
 - Annulation d’une action
-
-	*Une pile d'actions est enregistrée et un bouton dans la barre d'outil permet de remonter cette pile, annulant ainsi les dernières modifications apportées au dessin.*
+	+ Une pile d'actions est enregistrée et un bouton dans la barre d'outil permet de remonter cette pile, annulant ainsi les dernières modifications apportées au dessin.
 - Enregistrement et importation du dessin
-
-	*Possibilité d'enregistrer ou importer son dessin au format PNG*
-	
+	+ Possibilité d'enregistrer ou importer son dessin au format PNG.
 
 ## Fonctionnalités supplémentaires
 
@@ -126,9 +120,11 @@ La mise en place du matériel requis est décrite par la procédure suivante:
 3. Placez la caméra au-dessus du support de travail.
 4. Placez le projecteur vidéo au-dessus du support de travail.
 
-Le schéma suivant illustre un environnement de travail idéal:
+Les schémas suivant illustrent un environnement de travail idéal:
 
-*À compléter... dessiner l'ébauche d'une pièce avec un mannequin, un stylet, une table, une chaise, une caméra, un beamer et un pc.*
+![Vue de côté d'un environnement idéal](side.png "Vue de côté d'un environnement idéal")
+
+![Vue en perspective d'un environnement idéal](sideview.png "Vue en perspective d'un environnement idéal")
 
 ## Déroulement du projet
 
