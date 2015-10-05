@@ -13,7 +13,7 @@ Ce document constitue le cahier des charges du projet de groupe.
 
 ## Objectif du projet
 
-L'objectif de ce projet est de concevoir un outil dessin assisté par ordinateur tout en permettant à l'utilisateur de réaliser ses dessins de la manière la plus naturelle possible. En effet, l'utilisateur dessine directement sur sa table ou n'importe quel autre surface plane à l'aide d'un stylet et son dessin est projeté sur son plan de travail. Ce qui donne à l'utilisateur l'impression de dessiner avec un crayon et une feuille.
+L'objectif de ce projet est de concevoir un outil dessin assisté par ordinateur permettant à l'utilisateur de réaliser ses dessins de la manière la plus naturelle possible. À terme, l'utilisateur dessinera directement sur sa table ou n'importe quelle autre surface plane à l'aide d'un stylet et son dessin sera projeté sur son plan de travail, donnant à l'utilisateur l'impression de dessiner avec un crayon et une feuille.
 
 
 ## Fonctionnalités principales
