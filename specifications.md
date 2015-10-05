@@ -22,7 +22,9 @@ L'objectif de ce projet est de concevoir un outil dessin assisté par ordinateur
 
 ## Fonctionnalités principales
 
-- Dessin à l’aide d’un stylet
+Les fonctionnalités principales du projet sont:
+
+- Dessin à l’aide d’un stylet.
 - Projection de l’image sur le plan de travail
 - Alignement de l’image avec la position du stylet
 - Calibrage du stylet
@@ -45,13 +47,26 @@ L'objectif de ce projet est de concevoir un outil dessin assisté par ordinateur
 
 ## Fonctionnalités supplémentaires
 
+Les fonctionnalités supplémentaires du projet:
+
 - Site vitrine
 - Pipette 
 - Remplissage
+- Rétablissement d'une action
+
+## Mockup
+
+La figure suivante illustre une ébauche de l'interface graphique du plan de travail:
+
+![Mockup du plan de travail](mockup.png "Mockup du plan de travail")
+
+L'interface graphique est divisée en trois parties à savoir la barre des menus, la barre d'outils et la zone de dessin.
 
 ## Technologies utilisées
 
-- Librarie OpenCV - Pour le suivis du stylet en temps réel.
+Les technologies utilisées pour le développement de l'application et le suivi du stylet sont les suivantes:
+
+- Librarie OpenCV - Pour le suivi du stylet en temps réel.
 - Framework Qt - Pour l'interface graphique du plan de travail.
 
 ## Plateformes supportées
@@ -60,7 +75,7 @@ De par la nature du framework Qt, l'application est automatiquement multiplatef
 
 ## Principe de fonctionnement
 
-Ce projet contient trois principales difficultés: la détection de contact du stylet sur la table, le suivis de la position du stylet (*tracking*) et la précision de l'entier du système.
+Ce projet contient trois principales difficultés: la détection de contact du stylet sur la table, le suivi de la position du stylet (*tracking*) et la précision de l'entier du système.
 
 Pour cela nous avons imaginé un stylet munis d'une mine spéciale. Lors d'une pression sur le plan de travail, cette dernière presse sur un bouton qui enclenche une diode électroluminescente placée proche de la mine. Une caméra placée au-dessus du plan de travail film la scène et envoie l'image au logiciel chargé de suivre la position de la mine du stylet en détectant cette LED.
 
@@ -82,6 +97,8 @@ Les points suivants constituent le matériel requis pour l'utilisation de l'appl
 - Un plan de travail permettant de dessiner.
 - Un support prévu pour la disposition de la caméra et du projecteur au-dessus du plan de travail.
 
+## Prototype du stylet
+
 Le prototype de stylet est conçu par le chef de projet. Sa conception nécessite les composants suivants:
 
 - LED.
@@ -89,6 +106,10 @@ Le prototype de stylet est conçu par le chef de projet. Sa conception nécessit
 - Une résistance.
 - Une batterie.
 - Un boîtier.
+
+La figure suivante propose une ébauche de prototype du stylet:
+
+![Prototype du stylet](schama-stylus.png "Prototype du stylet")
 
 ## Déploiement
 
@@ -108,3 +129,44 @@ La mise en place du matériel requis est décrite par la procédure suivante:
 Le schéma suivant illustre un environnement de travail idéal:
 
 *À compléter... dessiner l'ébauche d'une pièce avec un mannequin, un stylet, une table, une chaise, une caméra, un beamer et un pc.*
+
+## Déroulement du projet
+
+### Planification des tâches
+
+Le diagramme de Gantt qui suit présente la planification des tâches du projet:
+
+![Planification des tâches](planification.png "Planification des tâches")
+
+### Description des tâches
+
+Les points suivants constituent un bref descriptif des tâches du projet:
+
+- Enregistrement d'une vidéo de test
+	+ Afin de pouvoir tester les différents outils du logiciel de dessin avant que l'outil de tracking ne soit terminé, une vidéo contenant différents mouvements sera enregistrée.
+- Apprentissage de OpenCv
+	+ Pour toutes les opérations de tracking du stylet, nous allons utiliser la librairie OpenCv. Il sera donc nécessaire de prendre le temps d’en apprendre les bases avant de se lancer à corps perdu dans l’implémentation.
+- Construction d'un stylet
+	+ Un stylet de notre propre création sera utilisé pour cette application, le matériel nécessaire à la construction de ce dernier est détaillé dans la section **Prototype du stylet**.
+- Tracking du stylet
+	+ A l’aide d’une caméra nous détecterons les mouvements du stylet, il faudra donc récupérer ces informations et les transmettre au logiciel de dessin.
+- Apprentissage de Qt
+	+ Apprentissage des librairies Qt pour ce qui concerne principalement les interfaces graphiques et les librairies de dessin.
+- Création de l’interface graphique
+	+ Conception de l’interface graphique du logiciel. Celle-ci contiendra un menu permettant d’importer/exporter des images, d’un plan de travail sur lequel travailler ainsi qu’une boîte à outils contenant différentes fonctionnalités tel que le crayon, la gomme, une palette de couleurs, le choix de l’épaisseur du trait.
+- Tracking intermédiaire de la souris
+	+ Afin de permettre de tester le bon fonctionnement de l’implémentation des différents outils, ceci  d’une manière accessible à tous les développeurs, il faut implémenter une fonctionnalité permettant de dessiner à l’aide de la souris.
+- Création du modèle de l’image
+	+ Conception et création du modèle qui sera utilisé par le logiciel pour représenter notre image.
+- Implémentation des outils
+	+ Implémentation des fonctionnalités obligatoires disponibles dans notre boîte à outils. Ce référer à la description des fonctionnalités pour obtenir la liste de ces fonctionnalités.
+- Enregistrement des dessins
+	+  Exportation de notre représentation de l’image en une image au format .PNG.
+- Modélisation et affichage du dessin
+	+  Implémentation des méthodes gérant l’affichage et la modélisation de notre image.
+- Calibrage du projecteur avec les données du stylet
+	+ Calibrage permettant de faire concorder la position de l’image projetée avec la position effective stylet.
+- Dessin selon la vidéo de test
+	+ Utilisation d’une vidéo de test préenregistrée utilisant les méthodes de tracking implémentées permettant de tester les différents outils sans pour autant avoir le matériel à disposition.
+- Liaison entre le stylet et le logiciel
+	+ Liaison entre les données collectées par le système de tracking avec les méthodes d’affichage du logiciel.
