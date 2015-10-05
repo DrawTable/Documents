@@ -56,11 +56,13 @@ De par la nature du framework Qt, l'application est automatiquement multiplatef
 
 ## Principe de fonctionnement
 
-Ce projet contient trois principales difficultés: la détection de pression sur la table à l'aide du stylet, le suivis de la position du stylet (*tracking*) et la précision.
+Ce projet contient trois principales difficultés: la détection de contact du stylet sur la table, le suivis de la position du stylet (*tracking*) et la précision de l'entier du système.
 
-Pour cela nous avons imaginé un stylet munis d'une mine spéciale. Lors d'une pression sur le plan de travail, cette dernière presse sur un bouton qui enclenche une LED placée proche de la mine. Une caméra placée au-dessus du plan de travail film la scène et envoie l'image au logiciel chargé de suivre la position de la mine du stylet en détectant cette LED.
+Pour cela nous avons imaginé un stylet munis d'une mine spéciale. Lors d'une pression sur le plan de travail, cette dernière presse sur un bouton qui enclenche une diode électroluminescente placée proche de la mine. Une caméra placée au-dessus du plan de travail film la scène et envoie l'image au logiciel chargé de suivre la position de la mine du stylet en détectant cette LED.
 
-Le programme de dessin récupère les coordonnées du stylet et les interprètes de manière à pouvoir projeter le dessin sur le plan de travail à l'aide du projecteur vidéo. Un thread de l'application sera consacré au Tracking de la LED, un autre récupérera les coordonnées pour les interpréter sur le plan de travail en fonction de l'outil sélectionné.
+Le programme de dessin récupère les coordonnées du stylet et les interprètes de manière à pouvoir projeter le dessin sur le plan de travail à l'aide du projecteur vidéo.
+
+L'application comportera différents threads: un thread de l'application sera consacré au Tracking de la LED, un autre récupérera les coordonnées pour les interpréter sur le plan de travail en fonction de l'outil sélectionné.
 
 
 ## Matériel requis
