@@ -52,7 +52,7 @@ Les fonctionnalités supplémentaires du projet sont les suivantes:
 
 La figure suivante illustre une ébauche de l'interface graphique utilisateur devant correspondre au plan de travail:
 
-![Interface graphique utilisateur](ui.png)
+![Interface graphique utilisateur](images/ui.png)
 
 L'interface graphique utilisateur est divisée en trois parties à savoir la barre des menus, la barre d'outils et la zone de dessin.
 
@@ -68,7 +68,7 @@ Le prototype de stylet est conçu par le chef de projet. Sa conception nécessit
 
 La figure suivante propose une ébauche de prototype du stylet:
 
-![Prototype du stylet](schama-stylus.png)
+![Prototype du stylet](images/schama-stylus.png)
 
 ## Principe de fonctionnement
 
@@ -126,9 +126,9 @@ La mise en place du matériel requis est décrite par la procédure suivante:
 
 Les schémas suivants illustrent un environnement de travail idéal:
 
-![Vue de côté d'un environnement idéal](side.png)
+![Vue de côté d'un environnement idéal](images/side.png)
 
-![Vue en perspective d'un environnement idéal](sideview.png)
+![Vue en perspective d'un environnement idéal](images/sideview.png)
 
 ## Déroulement du projet
 
@@ -136,7 +136,7 @@ Les schémas suivants illustrent un environnement de travail idéal:
 
 Le diagramme de Gantt qui suit présente la planification des tâches du projet:
 
-![Planification des tâches](planification.png)
+![Planification des tâches](images/planification.png)
 
 ### Description des tâches
 
