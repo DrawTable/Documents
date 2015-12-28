@@ -1,0 +1,348 @@
+\documentclass[11pt,a4paper,oldfontcommands]{memoir}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage[dvips]{graphicx}
+\usepackage{xcolor}
+\usepackage{times}
+\usepackage[french]{babel}
+\usepackage{listings}
+
+\usepackage[
+breaklinks=true,colorlinks=true,
+%linkcolor=blue,urlcolor=blue,citecolor=blue,% PDF VIEW
+linkcolor=black,urlcolor=black,citecolor=black,% PRINT
+bookmarks=true,bookmarksopenlevel=2]{hyperref}
+
+\usepackage{geometry}
+% PDF VIEW
+% \geometry{total={210mm,297mm},
+% left=25mm,right=25mm,%
+% bindingoffset=0mm, top=25mm,bottom=25mm}
+% PRINT
+\geometry{total={210mm,297mm},
+left=20mm,right=20mm,
+bindingoffset=10mm, top=25mm,bottom=25mm}
+
+\OnehalfSpacing
+%\linespread{1.3}
+
+%%% CHAPTER'S STYLE
+\chapterstyle{bianchi}
+%\chapterstyle{ger}
+%\chapterstyle{madsen}
+%\chapterstyle{ell}
+%%% STYLE OF SECTIONS, SUBSECTIONS, AND SUBSUBSECTIONS
+\setsecheadstyle{\Large\bfseries\sffamily\raggedright}
+\setsubsecheadstyle{\large\bfseries\sffamily\raggedright}
+\setsubsubsecheadstyle{\bfseries\sffamily\raggedright}
+
+
+%%% STYLE OF PAGES NUMBERING
+\pagestyle{plain}
+\makepagestyle{plain}
+\makeevenfoot{plain}{\thepage}{}{}
+\makeoddfoot{plain}{}{}{\thepage}
+\makeevenhead{plain}{}{}{}
+\makeoddhead{plain}{}{}{}
+\maxsecnumdepth{subsubsection}
+\maxtocdepth{subsection}
+
+\begin{document}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\center
+ 
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\textsc{\LARGE Haute École d'ingénierie et de gestion \\du canton de Vaud}\\[1.5cm]
+\textsc{\Large Projet de groupe (PDG)}\\[0.5cm]
+\textsc{\large Rapport de projet}\\[0.5cm]
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.8cm]
+{ \huge \bfseries DrawTable}\\[0.4cm]
+\HRule \\[1.5cm]
+ 
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Auteurs:}\\
+Sacha \textsc{Bron}\\
+Yassin \textsc{Kammoun}\\
+Paul \textsc{Ntawuruhunga}\\
+Marc \textsc{Pellet}\\
+David \textsc{Villa}
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Superviseur:} \\
+René \textsc{Rentsch} 
+\break 
+\break 
+\break 
+\break 
+\end{flushright}
+\end{minipage}\\[4cm]
+
+%----------------------------------------------------------------------------------------
+%	DATE SECTION
+%----------------------------------------------------------------------------------------
+
+{\large \today}\\[3cm]
+
+%----------------------------------------------------------------------------------------
+%	LOGO SECTION
+%----------------------------------------------------------------------------------------
+
+\includegraphics[scale=0.3]{images/heigvd.png}
+\hfill
+\includegraphics[scale=0.6]{images/hesso.png}
+
+\vfill
+\end{titlepage}
+
+\cleardoublepage
+\tableofcontents*
+\cleardoublepage
+\listoffigures*
+\cleardoublepage
+\listoftables*
+\cleardoublepage
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+
+\chapter{Introduction}
+
+\section{Description du projet}
+
+\section{Objectifs}
+
+\section{Technologies utilisées}
+
+\section{Équipe de projet}
+
+\section{Motivations du choix du sujet}
+
+%----------------------------------------------------------------------------------------
+%	CONCEPTION
+%----------------------------------------------------------------------------------------
+
+\chapter{Conception}
+
+\section{Système}
+
+\subsection{Architecture}
+
+\subsection{Diagramme de classes}
+
+\subsection{Tracking}
+
+\subsection{Dessin}
+
+\subsubsection{Hiérarchie des contrôleurs}
+
+\subsubsection{Contrôleur général}
+
+\subsubsection{Contrôleurs outils}
+
+\subsubsection{Substitution des contrôleurs outils}
+
+\section{Stylet}
+
+\subsection{Principe}
+
+\subsection{Composants}
+
+\subsection{Prototype}
+
+\subsection{Fabrication}
+
+\subsection{Fonctionnement}
+
+\section{Infrastructure de dessin}
+
+%----------------------------------------------------------------------------------------
+%	DESCRIPTION TECHNIQUE
+%----------------------------------------------------------------------------------------
+
+\chapter{Description technique}
+
+\section{Vue d'ensemble des projets}
+
+\section{Structure des projets}
+
+\section{Patrons de conception}
+
+\section{Librairies}
+
+\section{Interface graphique utilisateur}
+
+\subsection{Structure de l'interface utilisateur}
+
+\subsection{Barre des menus}
+
+\subsection{Barre d'outils}
+
+\subsection{Zone de dessin}
+
+\subsection{Ressources externes}
+
+\section{Tracking}
+
+\subsection{Système de détection}
+
+\subsection{Mouvement du stylet}
+
+\subsection{Déclenchement du dessin}
+
+\subsection{Filtrage de couleurs}
+
+\subsection{Précision du tracking}
+
+\subsection{Contraintes de luminosité}
+
+\newpage
+
+\section{Dessin}
+
+\subsection{Outils de dessin}
+
+\subsubsection{Crayon}
+
+\subsubsection{Gomme}
+
+\subsection{Outils de formes}
+
+\subsubsection{Trait}
+
+\subsubsection{Rectangle}
+
+\subsubsection{Cercle}
+
+\subsection{Outils de couleurs}
+
+\subsubsection{Palette de couleurs}
+
+\subsection{Choix d'épaisseur}
+
+\section{Interfaçage tracking-dessin}
+
+\subsection{Communication inter-projet}
+
+\subsubsection{Modèle des sockets}
+
+\subsubsection{Protocole de communication}
+
+\subsubsection{Structure des messages}
+
+\subsection{Simulation et contrôle de la souris}
+
+\section{Historique des actions}
+
+\section{Sérialisation}
+
+\section{Impression}
+
+%----------------------------------------------------------------------------------------
+%	PROCEDURE DE TESTS
+%----------------------------------------------------------------------------------------
+
+\chapter{Tests \& Validation}
+
+\section{Stratégie de tests}
+
+\section{Outils}
+
+\section{Procédures de tests}
+
+\section{Résultats}
+
+%----------------------------------------------------------------------------------------
+%	PROBLEMES CONNUS
+%----------------------------------------------------------------------------------------
+
+\chapter{Problèmes connus}
+
+%----------------------------------------------------------------------------------------
+%	CONCLUSION
+%----------------------------------------------------------------------------------------
+
+\chapter{Conclusion}
+
+\section{Solution proposée}
+
+\subsection{Fonctionnalités implémentées}
+
+\subsection{Fonctionnalités manquantes}
+
+\subsection{Propositions d'amélioration}
+
+\section{Problèmes rencontrés}
+
+\subsection{Problèmes organisationnels}
+
+\subsection{Problèmes techniques}
+
+\subsection{Problèmes de planification}
+
+\section{Respect du planning}
+
+\subsection{Planification initiale}
+
+\subsection{Évolution}
+
+\section{Déroulement du projet}
+
+\subsection{Points positifs}
+
+\subsection{Points négatifs}
+
+\section{Synthèse}
+
+%----------------------------------------------------------------------------------------
+%	LISTINGS
+%----------------------------------------------------------------------------------------
+
+\lstlistoflistings
+
+%----------------------------------------------------------------------------------------
+%	APPENDIX
+%----------------------------------------------------------------------------------------
+
+\appendix
+
+%----------------------------------------------------------------------------------------
+%	CAHIER DES CHARGES
+%------------------------------------------------------------------------------s----------
+
+\chapter{Cahier des charges}
+
+%----------------------------------------------------------------------------------------
+%	JOURNAL DE TRAVAIL
+%----------------------------------------------------------------------------------------
+
+\chapter{Journal de travail}
+
+%----------------------------------------------------------------------------------------
+%	PLANIFICATION
+%----------------------------------------------------------------------------------------
+
+\chapter{Planification}
+
+\end{document}
