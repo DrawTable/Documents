@@ -7,6 +7,8 @@
 \usepackage{times}
 \usepackage[french]{babel}
 \usepackage{listings}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
 
 \usepackage[
 breaklinks=true,colorlinks=true,
@@ -129,21 +131,85 @@ René \textsc{Rentsch}
 
 \chapter{Introduction}
 
+Ce chapitre se veut être une introduction de ce rapport de travail. Il s'agit dans un premier temps de rappeler le sujet du projet par une description complète de celui-ci. Viennent ensuite l'énumération, le commentaire et l'explication des objectifs que cherche à atteindre ce projet. Les technologies utilisées pour la réalisation du système sont introduites par la suite. Les différents membres constituant l'équipe de projet sont introduits. Cette introduction décrit précisément les rôles de chacun des protagonistes. Finalement, un commentaire quant à la décision de choisir un tel sujet de projet est exposé. Cela consiste à partager les motivations et les raisons qui ont poussé le groupe à partir sur un tel projet.
+
 \section{Description du projet}
 
-\section{Objectifs}
+Le projet consiste en un outil de dessin tout à fait standard. Celui-ci permet entre autres de dessiner sur un espace de travail. Pour ce faire, l'utilisateur dispose d'un éventail d'outils:
+
+\begin{itemize}
+\item[$\bullet$] Outils de dessin: les outils de dessin mettent à disposition un crayon et une gomme permettant de dessiner sans restriction n'importe quelle forme géométrique.
+\item[$\bullet$] Outils de formes: les outils de formes mettent à disposition un ensemble de formes géométriques prédéfinies pouvant être dessinées au sein d'un dessin et redimensionnées à la guise de l'utilisateur.
+\item[$\bullet$] Outils de couleurs: les outils de couleurs mettent à disposition une palette de couleurs laquelle permet de définir la couleur du trait aussi bien pour les outils de dessin que pour les outils de formes.
+\item[$\bullet$] Outils d'épaisseur: les outils d'épaisseur permettent de définir selon une liste prédéfinie l'épaisseur du trait aussi bien pour les outils de dessin que pour les outils de formes.
+\end{itemize}
+
+Malgré ce côté simpliste du système, celui-ci se démarque des outils de dessin traditionnels par le fait que l'espace de travail du dessinateur est non pas l'écran de l'utilisateur mais un support physique tel un mur, un sol, une table ou n'importe quelle autre surface susceptible de jouer le rôle de support de dessin. L'idéal est bien évidemment une surface plane toutefois, le système n'est pas restreint par une telle propriété. Celle-ci pourrait tout aussi bien être théoriquement abrupte, instable et biscornue. L'utilisateur définit lui-même ce qu'il juge être un support de dessin propice pour travailler.
+
+Le fait de dessiner sur un support physique plutôt que virtuel nécessite une substitution de la souris de l'ordinateur. Ceci est rendu possible par la mise à disposition d'un stylet au dessinateur. Ce stylet est conçu sur mesure par l'équipe de projet pour les besoins du système. Il reste toutefois un outil expérimentale avec une casquette de prototype. En effet, celui-ci n'a pour but que de valider la conception et l'implémentation du système. Il n'en demeure pas moins que ce stylet reste relativement complexe pour accomplir une telle tâche.
+
+Le stylet se présente sous la forme d'un stylo tout à fait usuel. Toutefois, de part l'objectif de son utilisation, il est caractérisé par les composants suivants:
+
+\begin{itemize}
+\item[$\bullet$] Une LED rouge.
+\item[$\bullet$] Une LED verte.
+\item[$\bullet$] Une pile.
+\item[$\bullet$] Un bouton poussoire.
+\end{itemize}
+
+Les détails quant à l'utilité de ces différents composants sont révélés dans la section \ref{sec:stylet} du chapitre \ref{ch:conception} décrivant de manière complète sa conception.
+
+Bien que l'action de dessiner soit réalisée sur un support physique, le dessin à proprement parlé n'est pas gravé sur ce support. Les faits et gestes du dessinateur avec le stylet sont capturés par une caméra. Un programme informatique reçoit en permanences des informations liées aux faits et gestes du stylet manipulé par le dessinateur. C'est là qu'intervient le mécanisme du tracking, c'est-à-dire la détection et le suivi du stylet. Toutes ces informations récupérées sont commuuniqués à un autre programme informatique. Ce dernier stocke, analyse, traite et reproduit ces mêmes faits et gestes de manière à reconstituer le dessin correspondant.
+
+Afin que le dessinateur puisse disposer d'un retour instantanné de son dessin, un projecteur projete la reproduction fidèle du dessin réalisée au sein du second programme informatique. Ainsi, le dessinateur a l'illusion de dessiner directement sur son support physique. Il dispose en plus de cela des fonctionnalités usuelles de sérialisation de dessin. Il peut en effet enregistrer son travail et le reprendre ultérieurement.
+
+\section{Objectif du projet}
+
+L'objectif de ce projet est de concevoir un outil de dessin assisté par ordinateur permettant à l'utilisateur de réaliser ses dessins de la manière la plus naturelle possible. À terme, l'utilisateur dessinera directement sur sa table ou n'importe quelle autre surface plane à l'aide d'un stylet et son dessin sera projeté sur son plan de travail, donnant ainsi à l'utilisateur l'impression de dessiner avec un crayon et une feuille.
 
 \section{Technologies utilisées}
 
+Les technologies utilisées pour le développement de l'application et le suivi du stylet sont les suivantes:
+
+\begin{itemize}
+\item[$\bullet$] Langage C++.
+\item[$\bullet$] Framework Qt: Le framework Qt est une API orientée objet offrant des composants d'interface graphique, d'accès aux données, de connexions réseaux, de gestion des fils d'exécution, \dots Dans le cadre du projet, elle est utilisée pour construire l'interface graphique utilisateur de l'application. Pour de plus amples informations, veuillez vous référer au site officiel \url{http://www.qt.io}.
+\item[$\bullet$] Librairie OpenCV: Open Computer Vision (OpenCV) est une bibliothèque graphique libre spécialisée dans le traitement d'images en temps réel. La bibliothèque OpenCV met à disposition de nombreuses fonctionnalités pour le traitement d'images, le traitement vidéos, les calculs matriciels, \dots Dans le cadre du projet, elle est notamment utilisée pour le tracking du stylet. Pour de plus amples informations, veuillez vous référer au site officiel \url{http://opencv.org}.
+\end{itemize}
+
 \section{Équipe de projet}
 
-\section{Motivations du choix du sujet}
+Le tableau suivant présente l'équipe de projet, la hiérarchie au sein du groupe ainsi que les rôles des différents membres:
+
+\begin{table}[h]
+\centering
+\label{my-label}
+\begin{tabular}{|l|l|c|l|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Nom, prénom}} & \multicolumn{1}{c|}{\textbf{E-mail}} & \textbf{Hiérarchie}                 & \multicolumn{1}{c|}{\textbf{Rôles}} \\ \hline
+Bron, Sacha                                & sacha.bron@heig-vd.ch                & \multicolumn{1}{l|}{Chef de projet} &                                     \\ \hline
+Villa, David                               & david.villa@heig-vd.ch               & \multicolumn{1}{l|}{Chef suppléant} &                                     \\ \hline
+Kammoun, Yassin                            & yassin.kammoun@heig-vd.ch            & -                                   &                                     \\ \hline
+Ntawuruhunga, Paul                         & paul.ntawuruhunga@heig-vd.ch         & -                                   &                                     \\ \hline
+Pellet, Marc                               & marc.pellet@heig-vd.ch               & -                                   &                                     \\ \hline
+\end{tabular}
+\caption{Équipe de projet}
+\end{table}
+
+\section{Cadre de réalisation}
+
+Ce projet s'inscrit dans le cadre du cours de Projet de Groupe (PDG) au sein de la Haute École d'ingénierie et de gestion du canton de Vaud (Heig-VD) sis à Yverdon-les-Bains. Selon le plan d'études de l'école, il est dispensé aux étudiants IL du département des Technologies de l'Information et de la Communication (TIC) pour le compte de leurs troisièmes années de formation Bachelor. Le but de ce cours est d’effectuer un projet en passant par toutes les étapes de développement. Cela inclut le choix d'un sujet, la définition d’un cahier des charges, une phase de recherche et d'analyse suivie du développement de l’application et d’une phase de tests et de validation. En dernière instance, un rapport sur le déroulement du travail et une présentation du projet sont requis dans le but d'évaluer le travail effectué.
+
+\section{Choix du sujet}
+
+Le choix d'un tel sujet se justifie par le fait que ce projet exige un important travail de recherche, de découverte et d'apprentissage de nouvelles technologies comme cela peut notamment être le cas pour la librairire OpenCV. Bien évidemment, ce genre de projet présente des risques compte tenu du fait que la technologie n'est connue de personne, qu'elle peut-être difficile à mettre en oeuvre et à maîtriser, que la faisabilité du projet n'est pas forcément définie et que le temps d'apprentissage est difficilement estimable. Toutefois, toutes ces problèmatiques ne rendent le projet que plus motivant, attrayant et intéressant. Ce projet s'inscrivant dans un cadre académique, il s'agit donc d'une opportunité idéale d'acquérir de nouvelles connaissances. Le sujet en lui-même est des plus intéressants. Il se démarque clairement de la monotonie des applications développées dans un tel contexte. Des projets similaires ont certainement déjà été réalisés que ce soit dans un cadre professionnel que dans un cadre académique mais à bien moindre mesure ce qui laisse énormément de place pour la créativité et l'innovation. Par ailleurs, la complexité d'un tel projet ne rend que plus grand le mérite une fois le travail terminé avec un système tout à fait fonctionnel.D'un point de vue organisationnel, ce projet présente la particularité d'être subdivisé en deux sous-projets étant donné que deux programmes sont développés: l'outil de dessin et le système de tracking du stylet. Un troisième sous-projet pourrait encore ressortir de ces deux derniers puisque la conception et le fabrication du stylet est un travail à part entière. Ainsi, un défi clairement établi de ce projet est l'intégration des différentes composantes pour finalement former un tout.
 
 %----------------------------------------------------------------------------------------
 %	CONCEPTION
 %----------------------------------------------------------------------------------------
 
 \chapter{Conception}
+\label{ch:conception}
 
 \section{Système}
 
@@ -164,6 +230,7 @@ René \textsc{Rentsch}
 \subsubsection{Substitution des contrôleurs outils}
 
 \section{Stylet}
+\label{sec:stylet}
 
 \subsection{Principe}
 
