@@ -1,0 +1,22 @@
+@startuml
+
+skinparam object {
+    BackgroundColor White
+    ArrowColor Black
+    BorderColor Black
+}
+
+object AbstractToolController
+object DashController
+object EllipseController
+object EraserController
+object PenController
+object RectangleController
+
+AbstractToolController <|-- DashController
+AbstractToolController <|-- EllipseController
+AbstractToolController <|-- EraserController
+AbstractToolController <|-- PenController
+AbstractToolController <|-- RectangleController
+
+@enduml

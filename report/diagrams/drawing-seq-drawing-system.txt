@@ -1,0 +1,17 @@
+@startuml
+
+skinparam sequence {
+    ArrowColor Black
+    ActorBorderColor Black
+    LifeLineBorderColor Black
+    LifeLineBackgroundColor Black
+    ParticipantBorderColor Black
+    ParticipantBackgroundColor White
+}
+
+"Network I/O\nHandler" --> "Mouse\nController"
+"Mouse\nController" --> "General\nController"
+"General\nController" --> "Drawing\nControllers"
+"Drawing\nControllers" --> "Drawing\nView"
+
+@enduml

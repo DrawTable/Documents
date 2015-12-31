@@ -1,0 +1,26 @@
+@startuml
+
+skinparam sequence {
+    ArrowColor Black
+    ActorBorderColor Black
+    LifeLineBorderColor Black
+    LifeLineBackgroundColor Black
+    ParticipantBorderColor Black
+    ParticipantBackgroundColor White
+    ActorBackgroundColor White
+}
+
+actor User
+
+User --> MainWindow: emit onDashTriggered(true)
+MainWindow --> GeneralController: setDrawController(DashController::getInstance())
+
+User --> MainWindow: emit onEraserTriggered(true)
+MainWindow --> GeneralController: setDrawController(EraserController::getInstance())
+
+User --> MainWindow: emit onPenTriggered(true)
+MainWindow --> GeneralController: setDrawController(PenController::getInstance())
+
+...
+
+@enduml
