@@ -1,0 +1,86 @@
+\hypertarget{classTrackingManager}{}\section{Tracking\+Manager Class Reference}
+\label{classTrackingManager}\index{Tracking\+Manager@{Tracking\+Manager}}
+
+
+Tracking Manager.  
+
+
+
+
+{\ttfamily \#include $<$trackingmanager.\+h$>$}
+
+Inheritance diagram for Tracking\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classTrackingManager}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classTrackingManager_ae2b8f75dfa34ecfd2f3039f030ee7fa5}{}void {\bfseries process} ()\label{classTrackingManager_ae2b8f75dfa34ecfd2f3039f030ee7fa5}
+
+\item 
+\hypertarget{classTrackingManager_a211f31126e88c1643c57fba01bbcadee}{}void {\bfseries on\+Strat\+Calibration} (int width, int height)\label{classTrackingManager_a211f31126e88c1643c57fba01bbcadee}
+
+\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classTrackingManager_ad4f94efc3dd5b3b0a3d42e3adb4510e7}{}void {\bfseries show\+Green\+Screen} ()\label{classTrackingManager_ad4f94efc3dd5b3b0a3d42e3adb4510e7}
+
+\item 
+\hypertarget{classTrackingManager_adeff149404d6a11e0e601dce2c6fbf19}{}void {\bfseries calibration\+Success} ()\label{classTrackingManager_adeff149404d6a11e0e601dce2c6fbf19}
+
+\item 
+\hypertarget{classTrackingManager_a27991c87468af9ea491d8d03500cba7d}{}void {\bfseries calibration\+Error} (int error\+Code)\label{classTrackingManager_a27991c87468af9ea491d8d03500cba7d}
+
+\item 
+\hypertarget{classTrackingManager_af855534686754a9a8faf8bb3ab3c025d}{}void {\bfseries mouse\+Move} (int x, int y)\label{classTrackingManager_af855534686754a9a8faf8bb3ab3c025d}
+
+\item 
+\hypertarget{classTrackingManager_a6ead6e5bfb2771828999ef6a422fc9ae}{}void {\bfseries mouse\+Press} ()\label{classTrackingManager_a6ead6e5bfb2771828999ef6a422fc9ae}
+
+\item 
+\hypertarget{classTrackingManager_abacc04eccec18a93d6b608c58836cca6}{}void {\bfseries mouse\+Release} ()\label{classTrackingManager_abacc04eccec18a93d6b608c58836cca6}
+
+\item 
+\hypertarget{classTrackingManager_a4656804e577a454304ec6130498de15e}{}void {\bfseries finished} ()\label{classTrackingManager_a4656804e577a454304ec6130498de15e}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTrackingManager_a4eaf01c120866ec67137abd9fcaf51e2}{Tracking\+Manager} (int camera\+Id, Q\+Object $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Create the Tracking Manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Tracking Manager. 
+
+This is the main manager for all the tracking part. It starts with the screen detection and once it\textquotesingle{}s done, it reads frames from the camera, find the position of the stylus using the \hyperlink{classLedDetector}{Led\+Detector} and mouve the mouse accordingly. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classTrackingManager_a4eaf01c120866ec67137abd9fcaf51e2}{}\index{Tracking\+Manager@{Tracking\+Manager}!Tracking\+Manager@{Tracking\+Manager}}
+\index{Tracking\+Manager@{Tracking\+Manager}!Tracking\+Manager@{Tracking\+Manager}}
+\subsubsection[{Tracking\+Manager(int camera\+Id, Q\+Object $\ast$parent=0)}]{\setlength{\rightskip}{0pt plus 5cm}Tracking\+Manager\+::\+Tracking\+Manager (
+\begin{DoxyParamCaption}
+\item[{int}]{camera\+Id, }
+\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\label{classTrackingManager_a4eaf01c120866ec67137abd9fcaf51e2}
+
+
+Create the Tracking Manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera\+Id} & I\+D of the camera the user wants to use. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Draw\+Table\+G\+U\+I/tracking/trackingmanager.\+h\item 
+Draw\+Table\+G\+U\+I/tracking/trackingmanager.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,89 @@
+\hypertarget{classLedDetector}{}\section{Led\+Detector Class Reference}
+\label{classLedDetector}\index{Led\+Detector@{Led\+Detector}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classLedDetector_a0f280ba70ebf743afc71b9a63411d720}{}void {\bfseries set\+Image} (Mat \&img)\label{classLedDetector_a0f280ba70ebf743afc71b9a63411d720}
+
+\item 
+\hypertarget{classLedDetector_ac9ce809e89dff011f1cdcae4337364a3}{}void {\bfseries background\+Subtraction} ()\label{classLedDetector_ac9ce809e89dff011f1cdcae4337364a3}
+
+\item 
+\hypertarget{classLedDetector_ae026c4dfa42a32f1a870774ebe775e98}{}void {\bfseries activate\+Debug\+Bg\+Substraction} ()\label{classLedDetector_ae026c4dfa42a32f1a870774ebe775e98}
+
+\item 
+\hypertarget{classLedDetector_a629b7ec493e513d956c3ca9622f3b405}{}Point {\bfseries debug\+Led\+Detection} ()\label{classLedDetector_a629b7ec493e513d956c3ca9622f3b405}
+
+\item 
+\hypertarget{classLedDetector_a4ce1110914331c419ed7e4c14d343ab1}{}void {\bfseries track\+Led} ()\label{classLedDetector_a4ce1110914331c419ed7e4c14d343ab1}
+
+\item 
+\hypertarget{classLedDetector_af2fdcf7e4b5047c6c4c48f14c44b4b9b}{}void {\bfseries track\+Led\+Center} ()\label{classLedDetector_af2fdcf7e4b5047c6c4c48f14c44b4b9b}
+
+\item 
+\hypertarget{classLedDetector_a289688384f3c571612f751d99c97edfb}{}void {\bfseries track\+Led\+Light} ()\label{classLedDetector_a289688384f3c571612f751d99c97edfb}
+
+\item 
+\hypertarget{classLedDetector_a3ac0d3385963a14e6947340edf3bb5ee}{}void {\bfseries draw\+Cross} (Mat \&frame, Point center, Scalar color, int size=1)\label{classLedDetector_a3ac0d3385963a14e6947340edf3bb5ee}
+
+\item 
+\hypertarget{classLedDetector_ae7a234c682707e08d7f2c4bd4e6c0612}{}void {\bfseries find\+Led\+Pos\+Max\+Red\+Area} (vector$<$ vector$<$ Point $>$$>$ contours)\label{classLedDetector_ae7a234c682707e08d7f2c4bd4e6c0612}
+
+\item 
+\hypertarget{classLedDetector_a7c471d039e52c020165aa88a72757620}{}Point {\bfseries find\+Led\+Pos\+Merge\+Red} (vector$<$ vector$<$ Point $>$$>$ contours)\label{classLedDetector_a7c471d039e52c020165aa88a72757620}
+
+\item 
+\hypertarget{classLedDetector_a9fedc896713ce18b75e35648c8d7e5ea}{}bool {\bfseries check\+Light\+Tracking\+Rect} ()\label{classLedDetector_a9fedc896713ce18b75e35648c8d7e5ea}
+
+\item 
+\hypertarget{classLedDetector_abd427704b5fb3ff3ef526d1cfcf993f5}{}void {\bfseries show\+Images} ()\label{classLedDetector_abd427704b5fb3ff3ef526d1cfcf993f5}
+
+\item 
+\hypertarget{classLedDetector_a165f9967f6f339932485ae828228b6ea}{}void {\bfseries select\+Roi} (int event, Point p)\label{classLedDetector_a165f9967f6f339932485ae828228b6ea}
+
+\item 
+\hypertarget{classLedDetector_a0e7ff5c747230fd89aad172c7f1b7dd6}{}void {\bfseries find\+Mouse\+Hsv\+Range} (int event, int x, int y)\label{classLedDetector_a0e7ff5c747230fd89aad172c7f1b7dd6}
+
+\item 
+\hypertarget{classLedDetector_aa57d8649c167e85241ef80769b7f5dd8}{}void {\bfseries handle\+Selection} ()\label{classLedDetector_aa57d8649c167e85241ef80769b7f5dd8}
+
+\item 
+\hypertarget{classLedDetector_aa272c18d3e03dc0d8f423657d0cd1cbb}{}void {\bfseries calc\+Histograms} (Mat hsv\+\_\+img)\label{classLedDetector_aa272c18d3e03dc0d8f423657d0cd1cbb}
+
+\item 
+\hypertarget{classLedDetector_a0b853d6f2d525ba10b0c39e9376dc56a}{}Mat {\bfseries get\+Hsv\+Img\+Selection} ()\label{classLedDetector_a0b853d6f2d525ba10b0c39e9376dc56a}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classLedDetector_aca9f616100e09aabf7c9a07535f72bf5}{}static \hyperlink{classLedDetector}{Led\+Detector} $\ast$ {\bfseries get\+Instance} ()\label{classLedDetector_aca9f616100e09aabf7c9a07535f72bf5}
+
+\item 
+\hypertarget{classLedDetector_a14c32ea7c63fdc6d40bcb7c259724e0d}{}static void {\bfseries on\+Track\+Bar\+Changed} (int, void $\ast$)\label{classLedDetector_a14c32ea7c63fdc6d40bcb7c259724e0d}
+
+\item 
+\hypertarget{classLedDetector_acf48918b29de16bcbec9762fac60c3f1}{}static void {\bfseries on\+Led\+Track\+Bar\+Changed} (int, void $\ast$)\label{classLedDetector_acf48918b29de16bcbec9762fac60c3f1}
+
+\item 
+\hypertarget{classLedDetector_a26e9d8438a60e842d8c9cb9cdbfd2bd5}{}static void {\bfseries on\+Track\+Bar\+Changed\+Subtractor} (int, void $\ast$)\label{classLedDetector_a26e9d8438a60e842d8c9cb9cdbfd2bd5}
+
+\item 
+\hypertarget{classLedDetector_acee2318d7dbd0573f204770f4af6b581}{}static void {\bfseries on\+Mouse} (int event, int x, int y, int, void $\ast$)\label{classLedDetector_acee2318d7dbd0573f204770f4af6b581}
+
+\item 
+\hypertarget{classLedDetector_a4a413aed69397aca0ae1e6a24082b869}{}static void {\bfseries on\+Selection\+Mouse} (int event, int x, int y, int, void $\ast$)\label{classLedDetector_a4a413aed69397aca0ae1e6a24082b869}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classLedDetector_addb453acafab885280ad486bf9063baf}{}static \hyperlink{classLedDetector}{Led\+Detector} $\ast$ {\bfseries instance} = nullptr\label{classLedDetector_addb453acafab885280ad486bf9063baf}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Draw\+Table\+G\+U\+I/tracking/\+Led\+Detection/leddetector.\+h\item 
+Draw\+Table\+G\+U\+I/tracking/\+Led\+Detection/leddetector.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,139 @@
+\hypertarget{classAbstractToolController}{}\section{Abstract\+Tool\+Controller Class Reference}
+\label{classAbstractToolController}\index{Abstract\+Tool\+Controller@{Abstract\+Tool\+Controller}}
+
+
+The \hyperlink{classAbstractToolController}{Abstract\+Tool\+Controller} class.  
+
+
+
+
+{\ttfamily \#include $<$abstracttoolcontroller.\+h$>$}
+
+Inheritance diagram for Abstract\+Tool\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.523810cm]{classAbstractToolController}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classAbstractToolController_a9d509ed22a9826afec1df34b0885d0f8}{mouse\+Double\+Click\+Event} (Q\+Graphics\+Scene $\ast$scene, Q\+Mouse\+Event $\ast$event)=0
+\begin{DoxyCompactList}\small\item\em Method called when the user double clicks. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classAbstractToolController_a0c48f932f791684ac1ae6570cd7ea7bd}{mouse\+Move\+Event} (Q\+Graphics\+Scene $\ast$scene, Q\+Mouse\+Event $\ast$event)=0
+\begin{DoxyCompactList}\small\item\em Method called when the user mouves the mouse. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classAbstractToolController_ac48753f7a2864501760e66e67a369014}{mouse\+Press\+Event} (Q\+Graphics\+Scene $\ast$scene, Q\+Mouse\+Event $\ast$event, Q\+Pen $\ast$pen)=0
+\begin{DoxyCompactList}\small\item\em Method called when the user presses a mouse button. \end{DoxyCompactList}\item 
+virtual Q\+Graphics\+Item $\ast$ \hyperlink{classAbstractToolController_a8815614e51c7c47d3234f4ce3d8384ea}{mouse\+Release\+Event} (Q\+Graphics\+Scene $\ast$scene, Q\+Mouse\+Event $\ast$event)=0
+\begin{DoxyCompactList}\small\item\em Method called when the user releases a mouse button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classAbstractToolController}{Abstract\+Tool\+Controller} class. 
+
+Abstract class containing every functions that controllers must implements. Those function will then be called by the tools. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classAbstractToolController_a9d509ed22a9826afec1df34b0885d0f8}{}\index{Abstract\+Tool\+Controller@{Abstract\+Tool\+Controller}!mouse\+Double\+Click\+Event@{mouse\+Double\+Click\+Event}}
+\index{mouse\+Double\+Click\+Event@{mouse\+Double\+Click\+Event}!Abstract\+Tool\+Controller@{Abstract\+Tool\+Controller}}
+\subsubsection[{mouse\+Double\+Click\+Event(\+Q\+Graphics\+Scene $\ast$scene, Q\+Mouse\+Event $\ast$event)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Abstract\+Tool\+Controller\+::mouse\+Double\+Click\+Event (
+\begin{DoxyParamCaption}
+\item[{Q\+Graphics\+Scene $\ast$}]{scene, }
+\item[{Q\+Mouse\+Event $\ast$}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classAbstractToolController_a9d509ed22a9826afec1df34b0885d0f8}
+
+
+Method called when the user double clicks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene} & \+: view to modify \\
+\hline
+{\em event} & \+: state of the mouse \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classEllipseController_ab0741d358017c05d6aceaa62b14ec302}{Ellipse\+Controller}, \hyperlink{classEraserController_a72507fa6319589843b988d8cc2a3dcf4}{Eraser\+Controller}, \hyperlink{classPenController_ad3692e4a346eef3114f683590a5f508e}{Pen\+Controller}, \hyperlink{classRectangleController_a706b3621b5437b4a39eafb698b8cda0f}{Rectangle\+Controller}, and \hyperlink{classDashController_ab9e34573a8bb26a022da0de26deaf72d}{Dash\+Controller}.
+
+\hypertarget{classAbstractToolController_a0c48f932f791684ac1ae6570cd7ea7bd}{}\index{Abstract\+Tool\+Controller@{Abstract\+Tool\+Controller}!mouse\+Move\+Event@{mouse\+Move\+Event}}
+\index{mouse\+Move\+Event@{mouse\+Move\+Event}!Abstract\+Tool\+Controller@{Abstract\+Tool\+Controller}}
+\subsubsection[{mouse\+Move\+Event(\+Q\+Graphics\+Scene $\ast$scene, Q\+Mouse\+Event $\ast$event)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Abstract\+Tool\+Controller\+::mouse\+Move\+Event (
+\begin{DoxyParamCaption}
+\item[{Q\+Graphics\+Scene $\ast$}]{scene, }
+\item[{Q\+Mouse\+Event $\ast$}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classAbstractToolController_a0c48f932f791684ac1ae6570cd7ea7bd}
+
+
+Method called when the user mouves the mouse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene} & \+: view to modify \\
+\hline
+{\em event} & \+: state of the mouse \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classEllipseController_a817bd50d7b449a337ce58ed6a24becf7}{Ellipse\+Controller}, \hyperlink{classEraserController_a51c33772287cdf511d8b9dbb21f47be2}{Eraser\+Controller}, \hyperlink{classPenController_ac604ba90d1ea4bc0bb895215ffb04c3a}{Pen\+Controller}, \hyperlink{classRectangleController_aa593bd4a91f89f982185ac59b3a26e0d}{Rectangle\+Controller}, and \hyperlink{classDashController_aa958f7327cc2ec09b273144ddef71b7a}{Dash\+Controller}.
+
+\hypertarget{classAbstractToolController_ac48753f7a2864501760e66e67a369014}{}\index{Abstract\+Tool\+Controller@{Abstract\+Tool\+Controller}!mouse\+Press\+Event@{mouse\+Press\+Event}}
+\index{mouse\+Press\+Event@{mouse\+Press\+Event}!Abstract\+Tool\+Controller@{Abstract\+Tool\+Controller}}
+\subsubsection[{mouse\+Press\+Event(\+Q\+Graphics\+Scene $\ast$scene, Q\+Mouse\+Event $\ast$event, Q\+Pen $\ast$pen)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Abstract\+Tool\+Controller\+::mouse\+Press\+Event (
+\begin{DoxyParamCaption}
+\item[{Q\+Graphics\+Scene $\ast$}]{scene, }
+\item[{Q\+Mouse\+Event $\ast$}]{event, }
+\item[{Q\+Pen $\ast$}]{pen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classAbstractToolController_ac48753f7a2864501760e66e67a369014}
+
+
+Method called when the user presses a mouse button. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene} & \+: view to modify \\
+\hline
+{\em event} & \+: state of the mouse \\
+\hline
+{\em pen} & \+: definition of the Q\+Pen that determinates the thickness of the line. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classEllipseController_a396c344582c0119b4e898ba60eb88d76}{Ellipse\+Controller}, \hyperlink{classEraserController_ad4d26f0c187a4f1ec6a49c55c3f19e9a}{Eraser\+Controller}, \hyperlink{classPenController_a8acba210ff5fdbd926005bbc01861d0d}{Pen\+Controller}, \hyperlink{classRectangleController_aead56e4a6249e8fba020cbacb03c0d85}{Rectangle\+Controller}, and \hyperlink{classDashController_a6295b39caa176d1a12bb999ea5c120fc}{Dash\+Controller}.
+
+\hypertarget{classAbstractToolController_a8815614e51c7c47d3234f4ce3d8384ea}{}\index{Abstract\+Tool\+Controller@{Abstract\+Tool\+Controller}!mouse\+Release\+Event@{mouse\+Release\+Event}}
+\index{mouse\+Release\+Event@{mouse\+Release\+Event}!Abstract\+Tool\+Controller@{Abstract\+Tool\+Controller}}
+\subsubsection[{mouse\+Release\+Event(\+Q\+Graphics\+Scene $\ast$scene, Q\+Mouse\+Event $\ast$event)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual Q\+Graphics\+Item$\ast$ Abstract\+Tool\+Controller\+::mouse\+Release\+Event (
+\begin{DoxyParamCaption}
+\item[{Q\+Graphics\+Scene $\ast$}]{scene, }
+\item[{Q\+Mouse\+Event $\ast$}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classAbstractToolController_a8815614e51c7c47d3234f4ce3d8384ea}
+
+
+Method called when the user releases a mouse button. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene} & \+: view to modify \\
+\hline
+{\em event} & \+: state of the mouse\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Q\+Graphics\+Item$\ast$ \+: Final objet added to the scene at the end of the process. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classEllipseController_a8b9336d05750bafe63d2af6fdcf41458}{Ellipse\+Controller}, \hyperlink{classEraserController_a3135ed091e3e1482bd15818819bd642b}{Eraser\+Controller}, \hyperlink{classPenController_a51a563e8f9c43e869e93a910e6752eb2}{Pen\+Controller}, \hyperlink{classRectangleController_a61a472851c5a79c64d955bdd4f3799aa}{Rectangle\+Controller}, and \hyperlink{classDashController_a6aa7c1cefb601814f464eb902f03f698}{Dash\+Controller}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Draw\+Table\+G\+U\+I/tool/abstracttoolcontroller.\+h\end{DoxyCompactItemize}

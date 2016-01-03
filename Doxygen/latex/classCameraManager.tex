@@ -1,0 +1,98 @@
+\hypertarget{classCameraManager}{}\section{Camera\+Manager Class Reference}
+\label{classCameraManager}\index{Camera\+Manager@{Camera\+Manager}}
+
+
+The \hyperlink{classCameraManager}{Camera\+Manager} detects and lists user\textquotesingle{}s cameras.  
+
+
+
+
+{\ttfamily \#include $<$cameramanager.\+h$>$}
+
+Inheritance diagram for Camera\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classCameraManager}
+\end{center}
+\end{figure}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCameraManager_ab081e5040bc902c4574626a75ed61595}{camera\+Choosen} (int id)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCameraManager_abd6b233d62d1c698603aa1cdf6392a9a}{init\+Cameras} ()
+\item 
+void \hyperlink{classCameraManager_a202740c86ac639d2447031363a17282c}{list\+Cameras} ()
+\item 
+int \hyperlink{classCameraManager_a877ebf0c5c77e848b27e889470ed2de7}{count\+Cameras} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classCameraManager}{Camera\+Manager} $\ast$ \hyperlink{classCameraManager_abaf12aeae3470e2824736e70d66add15}{get\+Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCameraManager_a72098f2188913901a2d6398a8b520e72}{}static \hyperlink{classCameraManager}{Camera\+Manager} $\ast$ {\bfseries instance} = 0\label{classCameraManager_a72098f2188913901a2d6398a8b520e72}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classCameraManager}{Camera\+Manager} detects and lists user\textquotesingle{}s cameras. 
+
+It tries to detect the ten first camera connected to the computer. It also provides a live view of every camera allowing the user to choose which camera he wants to use. When a user clicks on a window, a handler will be triggered and the associated camera is selected.
+
+This class is a Singleton. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classCameraManager_ab081e5040bc902c4574626a75ed61595}{}\index{Camera\+Manager@{Camera\+Manager}!camera\+Choosen@{camera\+Choosen}}
+\index{camera\+Choosen@{camera\+Choosen}!Camera\+Manager@{Camera\+Manager}}
+\subsubsection[{camera\+Choosen}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\+Manager\+::camera\+Choosen (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}\label{classCameraManager_ab081e5040bc902c4574626a75ed61595}
+Emit the chosen camera I\+D \hypertarget{classCameraManager_a877ebf0c5c77e848b27e889470ed2de7}{}\index{Camera\+Manager@{Camera\+Manager}!count\+Cameras@{count\+Cameras}}
+\index{count\+Cameras@{count\+Cameras}!Camera\+Manager@{Camera\+Manager}}
+\subsubsection[{count\+Cameras()}]{\setlength{\rightskip}{0pt plus 5cm}int Camera\+Manager\+::count\+Cameras (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classCameraManager_a877ebf0c5c77e848b27e889470ed2de7}
+Count how many cameras has been detected by the \hyperlink{classCameraManager}{Camera\+Manager}.
+
+\begin{DoxyReturn}{Returns}
+The number of cameras detected. 
+\end{DoxyReturn}
+\hypertarget{classCameraManager_abaf12aeae3470e2824736e70d66add15}{}\index{Camera\+Manager@{Camera\+Manager}!get\+Instance@{get\+Instance}}
+\index{get\+Instance@{get\+Instance}!Camera\+Manager@{Camera\+Manager}}
+\subsubsection[{get\+Instance()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Camera\+Manager} $\ast$ Camera\+Manager\+::get\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classCameraManager_abaf12aeae3470e2824736e70d66add15}
+Get the instance of the Singleton. \hypertarget{classCameraManager_abd6b233d62d1c698603aa1cdf6392a9a}{}\index{Camera\+Manager@{Camera\+Manager}!init\+Cameras@{init\+Cameras}}
+\index{init\+Cameras@{init\+Cameras}!Camera\+Manager@{Camera\+Manager}}
+\subsubsection[{init\+Cameras()}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\+Manager\+::init\+Cameras (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classCameraManager_abd6b233d62d1c698603aa1cdf6392a9a}
+Init the camera detection. Every camera will then be retain by the \hyperlink{classCameraManager}{Camera\+Manager}. \hypertarget{classCameraManager_a202740c86ac639d2447031363a17282c}{}\index{Camera\+Manager@{Camera\+Manager}!list\+Cameras@{list\+Cameras}}
+\index{list\+Cameras@{list\+Cameras}!Camera\+Manager@{Camera\+Manager}}
+\subsubsection[{list\+Cameras()}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\+Manager\+::list\+Cameras (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classCameraManager_a202740c86ac639d2447031363a17282c}
+Show every camera in separated live views allowing the user to select which one he wants to use. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Draw\+Table\+G\+U\+I/camera/cameramanager.\+h\item 
+Draw\+Table\+G\+U\+I/camera/cameramanager.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,72 @@
+\hypertarget{classCameraManagerUpdater}{}\section{Camera\+Manager\+Updater Class Reference}
+\label{classCameraManagerUpdater}\index{Camera\+Manager\+Updater@{Camera\+Manager\+Updater}}
+
+
+This class is design to be launched as a thread by the \hyperlink{classCameraManager}{Camera\+Manager}.  
+
+
+
+
+{\ttfamily \#include $<$cameramanagerupdater.\+h$>$}
+
+Inheritance diagram for Camera\+Manager\+Updater\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classCameraManagerUpdater}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCameraManagerUpdater_a0e903705a4c146be3da91ee3fe36e8d7}{}void {\bfseries process} ()\label{classCameraManagerUpdater_a0e903705a4c146be3da91ee3fe36e8d7}
+
+\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCameraManagerUpdater_a0c355ff645f36efea192bf1dbec9dcb9}{}void {\bfseries finished} ()\label{classCameraManagerUpdater_a0c355ff645f36efea192bf1dbec9dcb9}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCameraManagerUpdater_a7419c3a34834f5e49bd4bf0df5e33f13}{Camera\+Manager\+Updater} (std\+::vector$<$ cv\+::\+Video\+Capture $\ast$ $>$ captures)
+\item 
+void \hyperlink{classCameraManagerUpdater_a05242c144594eb1591d3bbb24ab61f56}{stop\+Updater} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is design to be launched as a thread by the \hyperlink{classCameraManager}{Camera\+Manager}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCameraManagerUpdater_a7419c3a34834f5e49bd4bf0df5e33f13}{}\index{Camera\+Manager\+Updater@{Camera\+Manager\+Updater}!Camera\+Manager\+Updater@{Camera\+Manager\+Updater}}
+\index{Camera\+Manager\+Updater@{Camera\+Manager\+Updater}!Camera\+Manager\+Updater@{Camera\+Manager\+Updater}}
+\subsubsection[{Camera\+Manager\+Updater(std\+::vector$<$ cv\+::\+Video\+Capture $\ast$ $>$ captures)}]{\setlength{\rightskip}{0pt plus 5cm}Camera\+Manager\+Updater\+::\+Camera\+Manager\+Updater (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ cv\+::\+Video\+Capture $\ast$ $>$}]{captures}
+\end{DoxyParamCaption}
+)}\label{classCameraManagerUpdater_a7419c3a34834f5e49bd4bf0df5e33f13}
+Start the updater.
+
+
+\begin{DoxyParams}{Parameters}
+{\em captures} & List of captures created by the \hyperlink{classCameraManager}{Camera\+Manager}. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCameraManagerUpdater_a05242c144594eb1591d3bbb24ab61f56}{}\index{Camera\+Manager\+Updater@{Camera\+Manager\+Updater}!stop\+Updater@{stop\+Updater}}
+\index{stop\+Updater@{stop\+Updater}!Camera\+Manager\+Updater@{Camera\+Manager\+Updater}}
+\subsubsection[{stop\+Updater()}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\+Manager\+Updater\+::stop\+Updater (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classCameraManagerUpdater_a05242c144594eb1591d3bbb24ab61f56}
+Stop updating live views. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Draw\+Table\+G\+U\+I/camera/cameramanagerupdater.\+h\item 
+Draw\+Table\+G\+U\+I/camera/cameramanagerupdater.\+cpp\end{DoxyCompactItemize}

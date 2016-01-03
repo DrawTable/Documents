@@ -1,0 +1,57 @@
+\hypertarget{classErrorManager}{}\section{Error\+Manager Class Reference}
+\label{classErrorManager}\index{Error\+Manager@{Error\+Manager}}
+
+
+Error Handler.  
+
+
+
+
+{\ttfamily \#include $<$errormanager.\+h$>$}
+
+Inheritance diagram for Error\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classErrorManager}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classErrorManager_ae40cde62f5da1b12f94d36e9934e0e55}{}void {\bfseries select\+Camera} ()\label{classErrorManager_ae40cde62f5da1b12f94d36e9934e0e55}
+
+\item 
+\hypertarget{classErrorManager_ab570a754d257754679cb9fd0f275f5d5}{}void {\bfseries quit\+Application} ()\label{classErrorManager_ab570a754d257754679cb9fd0f275f5d5}
+
+\item 
+\hypertarget{classErrorManager_a2415d61789380707a9cc250ec7724d11}{}void {\bfseries on\+Calibration\+Error} (int error\+Code)\label{classErrorManager_a2415d61789380707a9cc250ec7724d11}
+
+\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classErrorManager_a359b6512ce87b4ee00714a08f441efe1}{}void {\bfseries camera\+Selection} ()\label{classErrorManager_a359b6512ce87b4ee00714a08f441efe1}
+
+\item 
+\hypertarget{classErrorManager_a60bf6a3ba2c2df771eded13e679abe09}{}void {\bfseries quit\+App} ()\label{classErrorManager_a60bf6a3ba2c2df771eded13e679abe09}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classErrorManager_a6632ebe84bc8eac8ca302c7a8c17e564}{}static \hyperlink{classErrorManager}{Error\+Manager} $\ast$ {\bfseries get\+Instance} ()\label{classErrorManager_a6632ebe84bc8eac8ca302c7a8c17e564}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Error Handler. 
+
+The purpose of this class is to show a pop-\/up when there is an error with the calibration process. Some information of why the calibration may have fail is shown to the user and then, the user has to choice to restart the calibration or to quit the program.
+
+This class is a Singleton. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Draw\+Table\+G\+U\+I/error/errormanager.\+h\item 
+Draw\+Table\+G\+U\+I/error/errormanager.\+cpp\end{DoxyCompactItemize}

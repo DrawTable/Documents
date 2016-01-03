@@ -1,0 +1,47 @@
+\hypertarget{classScreenDetector}{}\section{Screen\+Detector Class Reference}
+\label{classScreenDetector}\index{Screen\+Detector@{Screen\+Detector}}
+
+
+The \hyperlink{classScreenDetector}{Screen\+Detector} class Find a screen within an single image.  
+
+
+
+
+{\ttfamily \#include $<$screendetector.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classScreenDetector_1_1Error}{Error}
+\begin{DoxyCompactList}\small\item\em The \hyperlink{classScreenDetector_1_1Error}{Error} class shows error to the user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classScreenDetector_ae50bccd225070510148f0029f1cbd20e}{}{\bfseries Screen\+Detector} (Mat img, int width, int height)\label{classScreenDetector_ae50bccd225070510148f0029f1cbd20e}
+
+\item 
+\hypertarget{classScreenDetector_a4672a5ef1fb5d4cad91cfa2bd3766df1}{}void {\bfseries set\+Color\+Range} (const Scalar hsv\+Min, const Scalar Hsv\+Max)\label{classScreenDetector_a4672a5ef1fb5d4cad91cfa2bd3766df1}
+
+\item 
+\hypertarget{classScreenDetector_aaa289b7819c43b4f9bff936253a99c81}{}Mat {\bfseries get\+Transformation\+Matrix} (\hyperlink{classScreenDetector_1_1Error}{Error} \&err)\label{classScreenDetector_aaa289b7819c43b4f9bff936253a99c81}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classScreenDetector_a8a02bca5665ba2823c34afbe84490b54}{}static Point {\bfseries transform\+Point} (Point point, Mat transform\+Matrix)\label{classScreenDetector_a8a02bca5665ba2823c34afbe84490b54}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classScreenDetector}{Screen\+Detector} class Find a screen within an single image. 
+
+Finding the projected screen is the first part of the calibration process. The screen is detected by tracking his background color (Generally green).
+
+\hyperlink{classScreenDetector}{Screen\+Detector} determine the coordinates of the four points that represent the four corners of the screen and produce a transformation matrix. Thanks to this transformation matrix we are able to match coordinates taken by the camera with the real coordinates of the computers that is projecting the screen. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Draw\+Table\+G\+U\+I/tracking/screendetector.\+h\item 
+Draw\+Table\+G\+U\+I/tracking/screendetector.\+cpp\end{DoxyCompactItemize}

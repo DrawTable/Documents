@@ -1,0 +1,304 @@
+\hypertarget{classDrawingController}{}\section{Drawing\+Controller Class Reference}
+\label{classDrawingController}\index{Drawing\+Controller@{Drawing\+Controller}}
+
+
+\hyperlink{classController}{Controller} of the \hyperlink{classDrawing}{Drawing}.  
+
+
+
+
+{\ttfamily \#include $<$drawingcontroller.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDrawingController_a91a1fbfc4bbe11e56765f648dc3dc40e}{Drawing\+Controller} (\hyperlink{classDrawing}{Drawing} $\ast$drawing)
+\begin{DoxyCompactList}\small\item\em Create a \hyperlink{classDrawingController}{Drawing\+Controller} for a given \hyperlink{classDrawing}{Drawing}. \end{DoxyCompactList}\item 
+void \hyperlink{classDrawingController_a384807cfdf6c25495d5a894dfd91631b}{set\+Draw\+Controller} (\hyperlink{classAbstractToolController}{Abstract\+Tool\+Controller} $\ast$draw\+Controller)
+\begin{DoxyCompactList}\small\item\em Set a new tool controller to be used. \end{DoxyCompactList}\item 
+\hyperlink{classAbstractToolController}{Abstract\+Tool\+Controller} $\ast$ \hyperlink{classDrawingController_a5bb04261355c2d5bd5be402bc1f633fb}{get\+Draw\+Controller} ()
+\begin{DoxyCompactList}\small\item\em Get the current tool controller. \end{DoxyCompactList}\item 
+void \hyperlink{classDrawingController_ac2148fc6b277b02463690683f6241288}{set\+Pen} (Q\+Pen $\ast$pen)
+\begin{DoxyCompactList}\small\item\em Set a Q\+Pen for the \hyperlink{classDrawingController}{Drawing\+Controller}. \end{DoxyCompactList}\item 
+Q\+Pen $\ast$ \hyperlink{classDrawingController_a721091648ea9ec6c04a95cd8e75aaa92}{get\+Pen} ()
+\begin{DoxyCompactList}\small\item\em Get the Q\+Pen of the \hyperlink{classDrawingController}{Drawing\+Controller}. \end{DoxyCompactList}\item 
+void \hyperlink{classDrawingController_ac0d2a51a08a28d7011580a481a8b1c7c}{set\+Brush} (Q\+Brush $\ast$brush)
+\begin{DoxyCompactList}\small\item\em Set a Q\+Brush for the \hyperlink{classDrawingController}{Drawing\+Controller}. \end{DoxyCompactList}\item 
+Q\+Brush $\ast$ \hyperlink{classDrawingController_ac3a86bd08e93e1d8fff277ee157f6bf9}{get\+Brush} ()
+\begin{DoxyCompactList}\small\item\em Get the Q\+Brush of the \hyperlink{classDrawingController}{Drawing\+Controller}. \end{DoxyCompactList}\item 
+\hypertarget{classDrawingController_abf493e3f30c6f6c38ea938363c465dde}{}void \hyperlink{classDrawingController_abf493e3f30c6f6c38ea938363c465dde}{enable} ()\label{classDrawingController_abf493e3f30c6f6c38ea938363c465dde}
+
+\begin{DoxyCompactList}\small\item\em Enable the user to use the draw zone. \end{DoxyCompactList}\item 
+\hypertarget{classDrawingController_aa48ee94920f3c13118601ca77170f833}{}void \hyperlink{classDrawingController_aa48ee94920f3c13118601ca77170f833}{disable} ()\label{classDrawingController_aa48ee94920f3c13118601ca77170f833}
+
+\begin{DoxyCompactList}\small\item\em Disable the user to use the draw zone. \end{DoxyCompactList}\item 
+bool \hyperlink{classDrawingController_a54257fb927776ccd12f01ba3e234df3c}{can\+Undo} ()
+\begin{DoxyCompactList}\small\item\em Check if the user can undo his last action. \end{DoxyCompactList}\item 
+bool \hyperlink{classDrawingController_a21adceb4d955a915390b0322940b5269}{can\+Redo} ()
+\begin{DoxyCompactList}\small\item\em Check if the user can redo his undone action. \end{DoxyCompactList}\item 
+bool \hyperlink{classDrawingController_aad49b1662ead0118d5b21d6d4899e758}{to\+Save} ()
+\begin{DoxyCompactList}\small\item\em Check if the user has a drawing to save. \end{DoxyCompactList}\item 
+void \hyperlink{classDrawingController_a5d544a8c5e81f3c45b14ff348a77f837}{set\+To\+Save} (bool \hyperlink{classDrawingController_aad49b1662ead0118d5b21d6d4899e758}{to\+Save})
+\begin{DoxyCompactList}\small\item\em Define if the user has modify his drawing. \end{DoxyCompactList}\item 
+\hypertarget{classDrawingController_a4e0fd7449458f77d76e35566c86669e6}{}void \hyperlink{classDrawingController_a4e0fd7449458f77d76e35566c86669e6}{reset\+Undo\+History} ()\label{classDrawingController_a4e0fd7449458f77d76e35566c86669e6}
+
+\begin{DoxyCompactList}\small\item\em Reset the undo history. It is mainly used when a user create a new drawing. \end{DoxyCompactList}\item 
+\hypertarget{classDrawingController_a1b0cc1d8af0dc7c666aa839bae23a9c3}{}void \hyperlink{classDrawingController_a1b0cc1d8af0dc7c666aa839bae23a9c3}{undo} ()\label{classDrawingController_a1b0cc1d8af0dc7c666aa839bae23a9c3}
+
+\begin{DoxyCompactList}\small\item\em Undo the user last action. \end{DoxyCompactList}\item 
+\hypertarget{classDrawingController_affc95bcb0be797c3c6561cdde4cd04ff}{}void \hyperlink{classDrawingController_affc95bcb0be797c3c6561cdde4cd04ff}{redo} ()\label{classDrawingController_affc95bcb0be797c3c6561cdde4cd04ff}
+
+\begin{DoxyCompactList}\small\item\em Redo the user undone action. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDrawingController_a960da6dbddf8bbe4ebcec3e6394ba8ec}{mouse\+Double\+Click\+Event} (Q\+Mouse\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Event triggered when the user double clicks. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDrawingController_ac211d777a6ee36e2e613966c658a3905}{mouse\+Move\+Event} (Q\+Mouse\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Event triggered when the user moves the mouse. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDrawingController_a777b2c7b8f3a7569ced2bb68ddfc0cf3}{mouse\+Press\+Event} (Q\+Mouse\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Event triggered when the user presses a mouse button. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDrawingController_a199281e54f2914bec1d78109313e1423}{mouse\+Release\+Event} (Q\+Mouse\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Event triggered when the user releases a mouse button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classController}{Controller} of the \hyperlink{classDrawing}{Drawing}. 
+
+General controller of the application handling drawing tools and its parameters (color, thickness). It also handles a stack of user\textquotesingle{}s actions to allow him to use the undo and redo functions. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDrawingController_a91a1fbfc4bbe11e56765f648dc3dc40e}{}\index{Drawing\+Controller@{Drawing\+Controller}!Drawing\+Controller@{Drawing\+Controller}}
+\index{Drawing\+Controller@{Drawing\+Controller}!Drawing\+Controller@{Drawing\+Controller}}
+\subsubsection[{Drawing\+Controller(\+Drawing $\ast$drawing)}]{\setlength{\rightskip}{0pt plus 5cm}Drawing\+Controller\+::\+Drawing\+Controller (
+\begin{DoxyParamCaption}
+\item[{{\bf Drawing} $\ast$}]{drawing}
+\end{DoxyParamCaption}
+)}\label{classDrawingController_a91a1fbfc4bbe11e56765f648dc3dc40e}
+
+
+Create a \hyperlink{classDrawingController}{Drawing\+Controller} for a given \hyperlink{classDrawing}{Drawing}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drawing} & View to associate with this controller. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classDrawingController_a21adceb4d955a915390b0322940b5269}{}\index{Drawing\+Controller@{Drawing\+Controller}!can\+Redo@{can\+Redo}}
+\index{can\+Redo@{can\+Redo}!Drawing\+Controller@{Drawing\+Controller}}
+\subsubsection[{can\+Redo()}]{\setlength{\rightskip}{0pt plus 5cm}bool Drawing\+Controller\+::can\+Redo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classDrawingController_a21adceb4d955a915390b0322940b5269}
+
+
+Check if the user can redo his undone action. 
+
+\begin{DoxyReturn}{Returns}
+true if the user has some actions to redo. 
+\end{DoxyReturn}
+\hypertarget{classDrawingController_a54257fb927776ccd12f01ba3e234df3c}{}\index{Drawing\+Controller@{Drawing\+Controller}!can\+Undo@{can\+Undo}}
+\index{can\+Undo@{can\+Undo}!Drawing\+Controller@{Drawing\+Controller}}
+\subsubsection[{can\+Undo()}]{\setlength{\rightskip}{0pt plus 5cm}bool Drawing\+Controller\+::can\+Undo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classDrawingController_a54257fb927776ccd12f01ba3e234df3c}
+
+
+Check if the user can undo his last action. 
+
+\begin{DoxyReturn}{Returns}
+true if the user has some actions to undo. 
+\end{DoxyReturn}
+\hypertarget{classDrawingController_ac3a86bd08e93e1d8fff277ee157f6bf9}{}\index{Drawing\+Controller@{Drawing\+Controller}!get\+Brush@{get\+Brush}}
+\index{get\+Brush@{get\+Brush}!Drawing\+Controller@{Drawing\+Controller}}
+\subsubsection[{get\+Brush()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Brush $\ast$ Drawing\+Controller\+::get\+Brush (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classDrawingController_ac3a86bd08e93e1d8fff277ee157f6bf9}
+
+
+Get the Q\+Brush of the \hyperlink{classDrawingController}{Drawing\+Controller}. 
+
+\begin{DoxyReturn}{Returns}
+The brush. 
+\end{DoxyReturn}
+\hypertarget{classDrawingController_a5bb04261355c2d5bd5be402bc1f633fb}{}\index{Drawing\+Controller@{Drawing\+Controller}!get\+Draw\+Controller@{get\+Draw\+Controller}}
+\index{get\+Draw\+Controller@{get\+Draw\+Controller}!Drawing\+Controller@{Drawing\+Controller}}
+\subsubsection[{get\+Draw\+Controller()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Abstract\+Tool\+Controller} $\ast$ Drawing\+Controller\+::get\+Draw\+Controller (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classDrawingController_a5bb04261355c2d5bd5be402bc1f633fb}
+
+
+Get the current tool controller. 
+
+\begin{DoxyReturn}{Returns}
+A tool controller. 
+\end{DoxyReturn}
+\hypertarget{classDrawingController_a721091648ea9ec6c04a95cd8e75aaa92}{}\index{Drawing\+Controller@{Drawing\+Controller}!get\+Pen@{get\+Pen}}
+\index{get\+Pen@{get\+Pen}!Drawing\+Controller@{Drawing\+Controller}}
+\subsubsection[{get\+Pen()}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Pen $\ast$ Drawing\+Controller\+::get\+Pen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classDrawingController_a721091648ea9ec6c04a95cd8e75aaa92}
+
+
+Get the Q\+Pen of the \hyperlink{classDrawingController}{Drawing\+Controller}. 
+
+\begin{DoxyReturn}{Returns}
+The pen. 
+\end{DoxyReturn}
+\hypertarget{classDrawingController_a960da6dbddf8bbe4ebcec3e6394ba8ec}{}\index{Drawing\+Controller@{Drawing\+Controller}!mouse\+Double\+Click\+Event@{mouse\+Double\+Click\+Event}}
+\index{mouse\+Double\+Click\+Event@{mouse\+Double\+Click\+Event}!Drawing\+Controller@{Drawing\+Controller}}
+\subsubsection[{mouse\+Double\+Click\+Event(\+Q\+Mouse\+Event $\ast$event)}]{\setlength{\rightskip}{0pt plus 5cm}void Drawing\+Controller\+::mouse\+Double\+Click\+Event (
+\begin{DoxyParamCaption}
+\item[{Q\+Mouse\+Event $\ast$}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classDrawingController_a960da6dbddf8bbe4ebcec3e6394ba8ec}
+
+
+Event triggered when the user double clicks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDrawingController_ac211d777a6ee36e2e613966c658a3905}{}\index{Drawing\+Controller@{Drawing\+Controller}!mouse\+Move\+Event@{mouse\+Move\+Event}}
+\index{mouse\+Move\+Event@{mouse\+Move\+Event}!Drawing\+Controller@{Drawing\+Controller}}
+\subsubsection[{mouse\+Move\+Event(\+Q\+Mouse\+Event $\ast$event)}]{\setlength{\rightskip}{0pt plus 5cm}void Drawing\+Controller\+::mouse\+Move\+Event (
+\begin{DoxyParamCaption}
+\item[{Q\+Mouse\+Event $\ast$}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classDrawingController_ac211d777a6ee36e2e613966c658a3905}
+
+
+Event triggered when the user moves the mouse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDrawingController_a777b2c7b8f3a7569ced2bb68ddfc0cf3}{}\index{Drawing\+Controller@{Drawing\+Controller}!mouse\+Press\+Event@{mouse\+Press\+Event}}
+\index{mouse\+Press\+Event@{mouse\+Press\+Event}!Drawing\+Controller@{Drawing\+Controller}}
+\subsubsection[{mouse\+Press\+Event(\+Q\+Mouse\+Event $\ast$event)}]{\setlength{\rightskip}{0pt plus 5cm}void Drawing\+Controller\+::mouse\+Press\+Event (
+\begin{DoxyParamCaption}
+\item[{Q\+Mouse\+Event $\ast$}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classDrawingController_a777b2c7b8f3a7569ced2bb68ddfc0cf3}
+
+
+Event triggered when the user presses a mouse button. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDrawingController_a199281e54f2914bec1d78109313e1423}{}\index{Drawing\+Controller@{Drawing\+Controller}!mouse\+Release\+Event@{mouse\+Release\+Event}}
+\index{mouse\+Release\+Event@{mouse\+Release\+Event}!Drawing\+Controller@{Drawing\+Controller}}
+\subsubsection[{mouse\+Release\+Event(\+Q\+Mouse\+Event $\ast$event)}]{\setlength{\rightskip}{0pt plus 5cm}void Drawing\+Controller\+::mouse\+Release\+Event (
+\begin{DoxyParamCaption}
+\item[{Q\+Mouse\+Event $\ast$}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classDrawingController_a199281e54f2914bec1d78109313e1423}
+
+
+Event triggered when the user releases a mouse button. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDrawingController_ac0d2a51a08a28d7011580a481a8b1c7c}{}\index{Drawing\+Controller@{Drawing\+Controller}!set\+Brush@{set\+Brush}}
+\index{set\+Brush@{set\+Brush}!Drawing\+Controller@{Drawing\+Controller}}
+\subsubsection[{set\+Brush(\+Q\+Brush $\ast$brush)}]{\setlength{\rightskip}{0pt plus 5cm}void Drawing\+Controller\+::set\+Brush (
+\begin{DoxyParamCaption}
+\item[{Q\+Brush $\ast$}]{brush}
+\end{DoxyParamCaption}
+)}\label{classDrawingController_ac0d2a51a08a28d7011580a481a8b1c7c}
+
+
+Set a Q\+Brush for the \hyperlink{classDrawingController}{Drawing\+Controller}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em brush} & A brush. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDrawingController_a384807cfdf6c25495d5a894dfd91631b}{}\index{Drawing\+Controller@{Drawing\+Controller}!set\+Draw\+Controller@{set\+Draw\+Controller}}
+\index{set\+Draw\+Controller@{set\+Draw\+Controller}!Drawing\+Controller@{Drawing\+Controller}}
+\subsubsection[{set\+Draw\+Controller(\+Abstract\+Tool\+Controller $\ast$draw\+Controller)}]{\setlength{\rightskip}{0pt plus 5cm}void Drawing\+Controller\+::set\+Draw\+Controller (
+\begin{DoxyParamCaption}
+\item[{{\bf Abstract\+Tool\+Controller} $\ast$}]{draw\+Controller}
+\end{DoxyParamCaption}
+)}\label{classDrawingController_a384807cfdf6c25495d5a894dfd91631b}
+
+
+Set a new tool controller to be used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em draw\+Controller} & An new \hyperlink{classAbstractToolController}{Abstract\+Tool\+Controller}. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDrawingController_ac2148fc6b277b02463690683f6241288}{}\index{Drawing\+Controller@{Drawing\+Controller}!set\+Pen@{set\+Pen}}
+\index{set\+Pen@{set\+Pen}!Drawing\+Controller@{Drawing\+Controller}}
+\subsubsection[{set\+Pen(\+Q\+Pen $\ast$pen)}]{\setlength{\rightskip}{0pt plus 5cm}void Drawing\+Controller\+::set\+Pen (
+\begin{DoxyParamCaption}
+\item[{Q\+Pen $\ast$}]{pen}
+\end{DoxyParamCaption}
+)}\label{classDrawingController_ac2148fc6b277b02463690683f6241288}
+
+
+Set a Q\+Pen for the \hyperlink{classDrawingController}{Drawing\+Controller}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pen} & A pen. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDrawingController_a5d544a8c5e81f3c45b14ff348a77f837}{}\index{Drawing\+Controller@{Drawing\+Controller}!set\+To\+Save@{set\+To\+Save}}
+\index{set\+To\+Save@{set\+To\+Save}!Drawing\+Controller@{Drawing\+Controller}}
+\subsubsection[{set\+To\+Save(bool to\+Save)}]{\setlength{\rightskip}{0pt plus 5cm}void Drawing\+Controller\+::set\+To\+Save (
+\begin{DoxyParamCaption}
+\item[{bool}]{to\+Save}
+\end{DoxyParamCaption}
+)}\label{classDrawingController_a5d544a8c5e81f3c45b14ff348a77f837}
+
+
+Define if the user has modify his drawing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em to\+Save} & true if the user has something to save. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDrawingController_aad49b1662ead0118d5b21d6d4899e758}{}\index{Drawing\+Controller@{Drawing\+Controller}!to\+Save@{to\+Save}}
+\index{to\+Save@{to\+Save}!Drawing\+Controller@{Drawing\+Controller}}
+\subsubsection[{to\+Save()}]{\setlength{\rightskip}{0pt plus 5cm}bool Drawing\+Controller\+::to\+Save (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classDrawingController_aad49b1662ead0118d5b21d6d4899e758}
+
+
+Check if the user has a drawing to save. 
+
+\begin{DoxyReturn}{Returns}
+true if the user hasn\textquotesingle{}t save its drawing. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Draw\+Table\+G\+U\+I/drawing/drawingcontroller.\+h\item 
+Draw\+Table\+G\+U\+I/drawing/drawingcontroller.\+cpp\end{DoxyCompactItemize}

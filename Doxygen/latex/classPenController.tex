@@ -1,0 +1,148 @@
+\hypertarget{classPenController}{}\section{Pen\+Controller Class Reference}
+\label{classPenController}\index{Pen\+Controller@{Pen\+Controller}}
+
+
+\hyperlink{classController}{Controller} to draw a free line with the pen.  
+
+
+
+
+{\ttfamily \#include $<$pencontroller.\+h$>$}
+
+Inheritance diagram for Pen\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classPenController}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classPenController_ad3692e4a346eef3114f683590a5f508e}{mouse\+Double\+Click\+Event} (Q\+Graphics\+Scene $\ast$scene, Q\+Mouse\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Method called when the user double clicks. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classPenController_ac604ba90d1ea4bc0bb895215ffb04c3a}{mouse\+Move\+Event} (Q\+Graphics\+Scene $\ast$scene, Q\+Mouse\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Method called when the user mouves the mouse. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classPenController_a8acba210ff5fdbd926005bbc01861d0d}{mouse\+Press\+Event} (Q\+Graphics\+Scene $\ast$scene, Q\+Mouse\+Event $\ast$event, Q\+Pen $\ast$pen)
+\begin{DoxyCompactList}\small\item\em Method called when the user presses a mouse button. \end{DoxyCompactList}\item 
+virtual Q\+Graphics\+Item $\ast$ \hyperlink{classPenController_a51a563e8f9c43e869e93a910e6752eb2}{mouse\+Release\+Event} (Q\+Graphics\+Scene $\ast$scene, Q\+Mouse\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Method called when the user releases a mouse button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPenController_ae6a465fb6c91cadf89901bcc63bc39b3}{}static \hyperlink{classPenController}{Pen\+Controller} $\ast$ {\bfseries get\+Instance} ()\label{classPenController_ae6a465fb6c91cadf89901bcc63bc39b3}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classController}{Controller} to draw a free line with the pen. 
+
+This controller inherits from \hyperlink{classAbstractToolController}{Abstract\+Tool\+Controller}.
+
+Plese refer the the \hyperlink{classAbstractToolController}{Abstract\+Tool\+Controller} documentation to see functions\textquotesingle{} usage. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classPenController_ad3692e4a346eef3114f683590a5f508e}{}\index{Pen\+Controller@{Pen\+Controller}!mouse\+Double\+Click\+Event@{mouse\+Double\+Click\+Event}}
+\index{mouse\+Double\+Click\+Event@{mouse\+Double\+Click\+Event}!Pen\+Controller@{Pen\+Controller}}
+\subsubsection[{mouse\+Double\+Click\+Event(\+Q\+Graphics\+Scene $\ast$scene, Q\+Mouse\+Event $\ast$event)}]{\setlength{\rightskip}{0pt plus 5cm}void Pen\+Controller\+::mouse\+Double\+Click\+Event (
+\begin{DoxyParamCaption}
+\item[{Q\+Graphics\+Scene $\ast$}]{scene, }
+\item[{Q\+Mouse\+Event $\ast$}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classPenController_ad3692e4a346eef3114f683590a5f508e}
+
+
+Method called when the user double clicks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene} & \+: view to modify \\
+\hline
+{\em event} & \+: state of the mouse \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classAbstractToolController_a9d509ed22a9826afec1df34b0885d0f8}{Abstract\+Tool\+Controller}.
+
+\hypertarget{classPenController_ac604ba90d1ea4bc0bb895215ffb04c3a}{}\index{Pen\+Controller@{Pen\+Controller}!mouse\+Move\+Event@{mouse\+Move\+Event}}
+\index{mouse\+Move\+Event@{mouse\+Move\+Event}!Pen\+Controller@{Pen\+Controller}}
+\subsubsection[{mouse\+Move\+Event(\+Q\+Graphics\+Scene $\ast$scene, Q\+Mouse\+Event $\ast$event)}]{\setlength{\rightskip}{0pt plus 5cm}void Pen\+Controller\+::mouse\+Move\+Event (
+\begin{DoxyParamCaption}
+\item[{Q\+Graphics\+Scene $\ast$}]{scene, }
+\item[{Q\+Mouse\+Event $\ast$}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classPenController_ac604ba90d1ea4bc0bb895215ffb04c3a}
+
+
+Method called when the user mouves the mouse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene} & \+: view to modify \\
+\hline
+{\em event} & \+: state of the mouse \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classAbstractToolController_a0c48f932f791684ac1ae6570cd7ea7bd}{Abstract\+Tool\+Controller}.
+
+\hypertarget{classPenController_a8acba210ff5fdbd926005bbc01861d0d}{}\index{Pen\+Controller@{Pen\+Controller}!mouse\+Press\+Event@{mouse\+Press\+Event}}
+\index{mouse\+Press\+Event@{mouse\+Press\+Event}!Pen\+Controller@{Pen\+Controller}}
+\subsubsection[{mouse\+Press\+Event(\+Q\+Graphics\+Scene $\ast$scene, Q\+Mouse\+Event $\ast$event, Q\+Pen $\ast$pen)}]{\setlength{\rightskip}{0pt plus 5cm}void Pen\+Controller\+::mouse\+Press\+Event (
+\begin{DoxyParamCaption}
+\item[{Q\+Graphics\+Scene $\ast$}]{scene, }
+\item[{Q\+Mouse\+Event $\ast$}]{event, }
+\item[{Q\+Pen $\ast$}]{pen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classPenController_a8acba210ff5fdbd926005bbc01861d0d}
+
+
+Method called when the user presses a mouse button. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene} & \+: view to modify \\
+\hline
+{\em event} & \+: state of the mouse \\
+\hline
+{\em pen} & \+: definition of the Q\+Pen that determinates the thickness of the line. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classAbstractToolController_ac48753f7a2864501760e66e67a369014}{Abstract\+Tool\+Controller}.
+
+\hypertarget{classPenController_a51a563e8f9c43e869e93a910e6752eb2}{}\index{Pen\+Controller@{Pen\+Controller}!mouse\+Release\+Event@{mouse\+Release\+Event}}
+\index{mouse\+Release\+Event@{mouse\+Release\+Event}!Pen\+Controller@{Pen\+Controller}}
+\subsubsection[{mouse\+Release\+Event(\+Q\+Graphics\+Scene $\ast$scene, Q\+Mouse\+Event $\ast$event)}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Graphics\+Item $\ast$ Pen\+Controller\+::mouse\+Release\+Event (
+\begin{DoxyParamCaption}
+\item[{Q\+Graphics\+Scene $\ast$}]{scene, }
+\item[{Q\+Mouse\+Event $\ast$}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classPenController_a51a563e8f9c43e869e93a910e6752eb2}
+
+
+Method called when the user releases a mouse button. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene} & \+: view to modify \\
+\hline
+{\em event} & \+: state of the mouse\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Q\+Graphics\+Item$\ast$ \+: Final objet added to the scene at the end of the process. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classAbstractToolController_a8815614e51c7c47d3234f4ce3d8384ea}{Abstract\+Tool\+Controller}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Draw\+Table\+G\+U\+I/tool/pencontroller.\+h\item 
+Draw\+Table\+G\+U\+I/tool/pencontroller.\+cpp\end{DoxyCompactItemize}
