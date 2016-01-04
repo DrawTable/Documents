@@ -97,7 +97,7 @@ David \textsc{Villa}
 \begin{minipage}{0.4\textwidth}
 \begin{flushright} \large
 \emph{Superviseur:} \\
-Dr. René \textsc{Rentsch} 
+Pr René \textsc{Rentsch} 
 \break 
 \break 
 \break 
@@ -190,8 +190,8 @@ L'objectif de ce projet est de concevoir un outil de dessin assisté par ordinat
 Les technologies utilisées pour le développement de l'application et le suivi du stylet sont les suivantes:
 
 \begin{itemize}
-\item[$\bullet$] Qt 5.5: Le framework Qt est une API orientée objet offrant des composants d'interface graphique, d'accès aux données, de connexions réseaux, de gestion des fils d'exécution, \dots. Dans le cadre du projet, elle est utilisée pour construire l'interface graphique utilisateur de l'application. Pour de plus amples informations, veuillez-vous référer au site officiel \url{http://www.qt.io}.
-\item[$\bullet$] OpenCV 3.1: Open Computer Vision (OpenCV) est une bibliothèque graphique libre spécialisée dans le traitement d'images en temps réel. La bibliothèque OpenCV met à disposition de nombreuses fonctionnalités pour le traitement d'images, le traitement vidéos, les calculs matriciels, \dots. Dans le cadre du projet, elle est notamment utilisée pour le tracking du stylet. Pour de plus amples informations, veuillez-vous référer au site officiel \url{http://opencv.org}.
+\item[$\bullet$] Qt 5.5: Le framework Qt est une API orientée objet offrant des composants d'interface graphique, d'accès aux données, de connexions réseaux, de gestion des fils d'exécution, \dots. Dans le cadre du projet, elle est utilisée pour construire l'interface graphique utilisateur de l'application. Pour de plus amples informations, veuillez-vous référer au site officiel \url{http://www.Qt.io}.
+\item[$\bullet$] OpenCV 3.1: Open Computer Vision (OpenCV) est une bibliothèque graphique libre spécialisée dans le traitement d'images en temps réel. La bibliothèque OpenCV met à disposition de nombreuses fonctionnalités pour le traitement d'images, le traitement vidéos, les calculs matriciels, \dots. Dans le cadre du projet, elle est notamment utilisée pour le tracking du stylet. Pour de plus amples informations, veuillez-vous référer au site officiel \url{http://OpenCV.org}.
 \item[$\bullet$] C++11: Le C++ est utilisé en guise de langage de programmation de base permettant de manipuler les différentes librairies utilisées dans le cadre du développement du projet. La librairie OpenCV et le framework Qt utilisant par défaut le langage C++, celui-ci constitue donc un choix idéal pour le développement du système.
 \end{itemize}
 
@@ -556,13 +556,15 @@ Ce module doit fournir une abstraction suffisante au \textbf{Drawing Subsystem} 
 
 \subsubsection{Architecture}
 
-Les composants de ce sous-système peuvent être classé du niveau le plus bas au plus élevé:
+Les composants de ce sous-système sont les suivants:
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.9]{tracking-subsystem-architecture.png}
 \caption{Architecture du sous-système Tracking Subsystem}
 \end{figure}
+
+Ils peuvent être classé du niveau le plus bas au plus élevé:
 
 \begin{itemize}
 \item[$\bullet$] \textit{Calibrator}: ce constituant initialise et calibre l'infrastructure matériel de manière à ce qu'il puisse interagir avec l'application et inversement.
@@ -576,6 +578,10 @@ Les composants de ce sous-système peuvent être classé du niveau le plus bas a
 Comme nous pouvons le voir, une fois que le calibrage est effectué, la caméra pourra détecter la LED du stylet. Ensuite, cette position sera transformée pour que l'on connaisse sa position par rapport à l'image du vidéo-projecteur (donc du programme) et sera ensuite utilisée pour envoyer des événements de mouvement de souris via le réseau.
 
 \subsubsection{Controller}
+
+Le rôle du \textbf{Controller} est d'interpréter les informations du \textbf{LED Detector} afin de définir si l'utilisateur vient d'allumer, de bouger ou d'éteindre la LED de son pointeur, pour ensuite émettre les bons événements associés: appuyer, bouger et relâcher le bouton de la souris.
+
+Il a donc le rôle de traducteur d'événements.
 
 \subsubsection{Screen Detector}
 
@@ -629,6 +635,8 @@ Le rôle de l'\textbf{Updater} est de récupérer les images des caméras et met
 
 \section{Mouse Simulator System}
 
+Le système \textit{Mouse Simulator System} permet de simuler les actions de l'utilisateur avec le stylet, le but étant de rendre possible la reproduction du dessin de l'utilisateur dans l'application de dessin. Pour ce faire, ce système prend le contrôle de la souris de l'ordinateur et reproduit avec les gestes et les actions qu'a pu effectué l'utilisateur avec le stylet.
+
 \subsection{Architecture}
 
 La figure suivante illustre l'architecture du système \textbf{Mouse Simulator System}:
@@ -639,9 +647,15 @@ La figure suivante illustre l'architecture du système \textbf{Mouse Simulator S
 \caption{Architecture du système Mouse Simulator System}
 \end{figure}
 
+Le \textbf{Mouse Simulator System} est caractérisé par les composants \textit{Network I/O Listener} et \textit{Mouse Controller}. Le premier est à l'écoute du système de suivi de stylet qui lui communique des informations quant au tracking. Le second reproduit les faits et gestes de l'utilisateur en les simulant par une prise de contrôle de la souris de l'ordinateur.
+
 \subsection{Network I/O Listener}
 
+Le composant \textit{Network I/O Listener} a pour tâche d'écouter sur le réseau tout message en provenance du sous-système \textbf{Tracking Subsystem} du système \textbf{Drawing System}. Ces messages sont censés représentés le dernier état du stylet, c'est-à-dire ses coordonnées et l'éventuelle action émise.
+
 \subsection{Mouse Controller}
+
+Le composant \textit{Mouse Controller} permet de déclencher la simulation de la souris lors de la réception de messages par le composant \textit{Network I/O Listener}.
 
 \newpage
 
@@ -674,11 +688,11 @@ Le modèle à une LED du stylet a été défini lors de la définition du cahier
 Le premier modèle du stylet est caractérisé par les composants suivants:
 
 \begin{itemize}
-\item[$\bullet$] Une LED rouge.
-\item[$\bullet$] Un interrupteur.
-\item[$\bullet$] Une résistance.
-\item[$\bullet$] Une batterie.
-\item[$\bullet$] Un boîtier.
+\item[$\bullet$] Une LED rouge
+\item[$\bullet$] Un interrupteur
+\item[$\bullet$] Une résistance
+\item[$\bullet$] Une batterie
+\item[$\bullet$] Un boîtier
 \end{itemize}
 
 \subsubsection{Prototype}
@@ -744,9 +758,9 @@ Nous en avons conclu qu'il serait plus simple et plus efficace de suivre directe
 
 \newpage
 
-\subsection{Modèle laser}
+\subsection{Pointeur lumineux}
 
-Le modèle laser du stylet a été défini durant la seconde partie du projet. Il remplace le modèle à deux LEDs.
+Le pointeur lumineux est une évolution du stylet qui a été défini durant la seconde partie du projet. Il remplace le modèle à deux LEDs.
 
 \subsubsection{Fonctionnement}
 
@@ -768,11 +782,11 @@ Cette section présente la conception de l'environnement de dessin. Ce travail d
 Les points suivants constituent le matériel requis pour l'utilisation de l'application:
 
 \begin{itemize}
-\item[$\bullet$] Un prototype de stylet faisant office d'outil de dessin.
-\item[$\bullet$] Une caméra permettant de traquer les mouvements du stylet. 
-\item[$\bullet$] Un projecteur vidéo permettant de retranscrire le dessin de l'utilisateur.
-\item[$\bullet$] Un plan de travail permettant de dessiner.
-\item[$\bullet$] Un support prévu pour la disposition de la caméra et du projecteur au-dessus du plan de travail.
+\item[$\bullet$] Un prototype de stylet faisant office d'outil de dessin
+\item[$\bullet$] Une caméra permettant de traquer les mouvements du stylet
+\item[$\bullet$] Un projecteur vidéo permettant de retranscrire le dessin de l'utilisateur
+\item[$\bullet$] Un plan de travail permettant de dessiner
+\item[$\bullet$] Un support prévu pour la disposition de la caméra et du projecteur au-dessus du plan de travail
 \end{itemize}
 
 Plusieurs remarques s'imposent quant à cette énumération du matériel requis. En premier lieu, la caméra mentionnée correspond à n'importe quel dispositif permettant de capturer des informations vidéos; il peut donc s'agir aussi bien d'une webcam, d'une micro-caméra d'un smartphone, d'une caméra intégrée à un ordinateur ou même d'une caméra professionnelle. La différence dans le choix de ce matériel influera toutefois la qualité du système de tracking du stylet. Par ailleurs, le projecteur vidéo n'est pas réellement obligatoire dans la mesure où l'utilisateur peut tout à fait dessiner sur un support donné. Il peut tout aussi bien constater le résultat de ses esquisses sur le moniteur de son ordinateur.
@@ -921,7 +935,7 @@ Couleur                              & \includegraphics{images/icon-color.png}  
 \caption{Outils de la barre d'outils de l'interface graphique utilisateur}
 \end{table}
 
-La sélection d'un outil peut avoir pour conséquence la modification de l'icône du curseur selon l'outil donné. Ceci améliore l'expérience utilisateur dans la mesure où le curseur représente au mieux l'outil actuellement manipulé. Ainsi, la sélection de l'outil crayon aura pour conséquence l'affiche d'un curseur avec une icône représentant un crayon. En termes d'implémentation, la barre d'outils correspond directement à un objet de la classe QToolBar fournie par le framework Qt. Il n'a pas été jugé nécessaire d'en faire une spécialisation compte tenu du fait qu'elle proposait déjà toutes les fonctionnalités nécessaires à l'application. Par ailleurs, cette barre d'outils fait l'objet d'une personnalisation visuelle plutôt que de laisser le style de barre natif du système hôte. Ceci est réalisé par le CSS suivant:
+La sélection d'un outil peut avoir pour conséquence la modification de l'icône du curseur selon l'outil donné. Ceci améliore l'expérience utilisateur dans la mesure où le curseur représente au mieux l'outil actuellement manipulé. Ainsi, la sélection de l'outil crayon aura pour conséquence l'affiche d'un curseur avec une icône représentant un crayon. En termes d'implémentation, la barre d'outils correspond directement à un objet de la classe QtoolBar fournie par le framework Qt. Il n'a pas été jugé nécessaire d'en faire une spécialisation compte tenu du fait qu'elle proposait déjà toutes les fonctionnalités nécessaires à l'application. Par ailleurs, cette barre d'outils fait l'objet d'une personnalisation visuelle plutôt que de laisser le style de barre natif du système hôte. Ceci est réalisé par le CSS suivant:
 
 \begin{lstlisting}[
            caption=CSS de la barre d'outils de l'interface graphique utilisateur,
@@ -931,7 +945,7 @@ La sélection d'un outil peut avoir pour conséquence la modification de l'icôn
            numberstyle=\tiny,
            commentstyle=\color{gray}
         ]
-QToolBar{ 
+QtoolBar{ 
     background: rgb(46,46,46); 
     border: 0px; 
 }
@@ -1015,8 +1029,6 @@ QToolBar{
 
 \section{Stratégie de tests}
 
-\section{Outils}
-
 \section{Matériel}
 
 \section{Procédures de tests}
@@ -1039,9 +1051,20 @@ QToolBar{
 
 \subsection{Fonctionnalités implémentées}
 
-\subsection{Fonctionnalités non implémentées}
+Au terme de notre travail nous pouvons être content car nous avons réussi à nous en tenir à notre cahier des charges. Toutes les fonctionnalités de base que nous avions prévues sont présentes dans notre programme bien que certaines puissent encore être améliorées. Nous avons même pu ajouter le fait de permettre à l'utilisateur le rétablissement d'une action annulée. Ceci n'a pas été spécialement difficile à implémenter car tout (ou presque) avait déjà été mis en place pour l'annulation. 
+
+\subsection{Fonctionnalités manquantes}
+
+Faute de temps, nous n'avons pas pu implémenter toutes les fonctionnalités supplémentaires que nous avions mentionnées dans notre cahier des charges. Certaines tel que le outils supplémentaires, pourraient être ajoutées relativement facilement grâce à la structure que nous avons décris précédemment.
 
 \subsection{Propositions d'amélioration}
+
+Bien que nous soyons satisfait du résultat de notre travail, un programme peut toujours être amélioré. C'est pourquoi nous avons pensé à quelques fonctionnalités qui nous semblerait possible d'ajouter. En voici la liste:
+\begin{itemize}
+\item[$\bullet$] Ajouter d'outils supplémentaires, ce qui était déjà proposé unitialement dans le cahier des charges comme fonctionnalités supplémentaires.
+\item[$\bullet$] Amélioration du tracking, on pourrait même imaginer la possibilité d'utiliser une caméra infrarouge. Ceci nécessiterait par contre du matériel moins commun et rendrait donc moins accessible le programme.
+\item[$\bullet$] Ajouter la possibilité de re-calibrer le programme si la précision n'est pas satisfaisante ou dans le cas où le matériel aurait été déplacé pendant l'utilisation. Le tout sans avoir à relancer le programme en entier.
+\end{itemize}
 
 \textit{TODO: Infrarouge, avec caméra infrarouge (Wiimote)}
 
@@ -1049,11 +1072,23 @@ QToolBar{
 
 \section{Problèmes rencontrés}
 
-\subsection{Problèmes organisationnels}
+Nous allons maintenant aborder les problèmes que nous avons rencontrés au cours du développement de ce projet. Nous les avons séparés en trois catégories;  technique, organisation et planification.
 
 \subsection{Problèmes techniques}
 
+La première difficulté que nous avons rencontrée est apparue bien plus tôt que nous ne l'aurions imaginé. En effet, dès que le cahier des charges a été accepté, nous avons tous dû installer l'environnement de développement. Cette tâche fût bien plus ardue que nous ne l'aurions cru. Malgré la facilité de trouver un tutoriel pour installer la librairie OpenCV pour sur l'environnement Qt, aucun d'eux ne s'est avéré exact. Nous avons donc dû chercher à exécuter un mélange de toutes les informations trouvées afin de finalement arriver à l'installer sur une machine. Cependant pour arriver à ce que les cinq membres du groupe puisse l'installerm il fallut encore bon nombre de recherches car nous ne travaillons pas tous sur le même système d'exploitation.
+
+La plus grosse difficulté de ce projet a été d'obtenir un tracking d'une précision suffisante pour donner à l'utilisateur l'impression de pouvoir dessiner naturellement. Il nous a donc fallu tester plusieurs sortes de sources lumineuses pour trouver laquelle correspondait le mieux à notre programme. Ce soucis rend notre projet plus polyvalent car il peut maintenant être utilisé avec plusieurs outils différents.
+
+\subsection{Problèmes organisationnels}
+
+Nous avons très rapidement remarqué que le fait de travailler sur des machines différentes pose un véritable problème dans les importations de librairies. En effet, nous avons chacun des chemins d'accès différents. Le désagrément que cela nous a causé est clairement apparu lorsque nous avons voulu partager notre projet \textit{QtCreator} grâce au gestionnaire de version. En effet, les chemins d'importation doivent être dans un fichier de configuration. Nous avons tous d'abord pensé à le rajouter dans les fichiers à ignorer au moment de la synchronisation. Cependant, il contenait aussi beaucoup d'informations relatives au projet qui sont mise à jours, notamment à l'ajout de nouvelles classes. Il nous était donc impossible de l'ignorer. Nous avons donc dû travailler en modifiant le chemin manuellement à chaque partage sur le repository principal. Cette opération courte mais répétitive nous a plus fait perdre autant de patience que de temps.
+
+Bien que la communication entre les membres du groupe n'a pas été mauvaise, elle nous a quand même fait perdre un temps précieux. Il n'est effectivement pas facile de bien coordonner le travail de cinq personnes. Certains oublis de communication à des moments clés ont entraîné la production de travail à double alors que d'autres parties du travail n'avançaient pas. La rédaction de ce rapport en est un bon exemple, nous avons tout d'abord commencé à utiliser \textit{Google Docs}, puis nous avons décidé de rédiger ce document en \LaTeX et donc de changer d'emplacement où stocker le fichier. Cette information n'ayant pas été bien comprise par tous les membres, certains ont continué à travailler sur l'ancien document alors que les autres avançaient sur le nouveau.
+
 \subsection{Problèmes de planification}
+
+La planification est toujours un grand défi, pour ce travail nous estimons que notre planning a plutôt bien été. On pourra néanmoins noter quelques soucis de synchronisation, qui ont fait que certaines de nos ressources ont été bloquées en attendant que d'autres parties soient finies. Ceci dit, cela n'a pas causé de perte de temps majeur.
 
 \section{Respect du planning}
 
@@ -1352,35 +1387,45 @@ Les points suivants constituent un bref descriptif des tâches du projet:
 
 \chapter{Journal de travail}
 
-\section{Semaine 1: 14 septembre 2015}
+\section{Semaine 1-2: 14-27 sep 2015}
 
-\section{Semaine 2: 21 septembre 2015}
+Avant toute chose, il a fallu déterminer le sujet de notre travail. Après de longues discussions au sein du groupe, nous avons soumis deux propositions de sujet. La première est un outil utilisant l'API web du jeu \textit{League of Legends} afin de déterminer de manière statistique, avant le lancement d'une partie, laquelle des deux équipes a le plus de chance de gagner. La deuxième proposition est un logiciel de dessin utilisant le tracking vidéo comme système de commande. Après discussion avec notre professeur, nous optons pour la deuxième proposition.
 
-\section{Semaine 3: 28 septembre 2015}
+\section{Semaine 3-4: 21 sep - 4 oct 2015}
 
-\section{Semaine 4: 5 octobre 2015}
+La deuxième étape a été de rédiger le cahier des charges qui serait notre fil conducteur tout au long de ce travail. Ceci ne fût pas chose aisée notamment car nous nous lancions dans l'inconnu. En effet, aucun de nous n'avait encore travailler de près ou de loin avec le tracking. Il nous a donc été difficile d'imaginer le temps que pouvait nécessiter la prise en main d'une telle technologie.
 
-\section{Semaine 5: 12 octobre 2015}
+\section{Semaine 5: 5-11 oct 2015}
 
-\section{Semaine 6: 26 octobre 2015}
+Notre cahier des charges ayant été validé malgré un petit manque de précision dans notre planning, nous avons pu commencer à travailler. La première tâche que nous avons tous eu à accomplir a été d'installer l'environnement de développement. Cela ne fût pas aussi banal que nous ne l'imaginions. En conséquence, nous y avons passé beaucoup plus de temps que prévu. Entre temps, Sacha nous a créé la première ébauche de ce qui deviendra plus tard notre stylo de test, dit le stylet.
 
-\section{Semaine 7: 2 novembre 2015}
+\section{Semaine 6-7: 26 oct - 8nov 2015}
 
-\section{Semaine 8: 9 novembre 2015}
+L'environnement étant prêt, nous avons pu nous lancer dans la première partie du développement à proprement parlé. Nous nous séparons en deux groupes avec deux objectifs bien distincts. Sacha et Paul se lancent dans l'apprentissage d'OpenCV et mettent en place les bases du tracking. Pendant ce temps-là, le reste du groupe met en place le programme de dessin qui devra être contrôlé plus tard par le stylet.
 
-\section{Semaine 9: 16 novembre 2015}
+\section{Semaine 8: 9-15 nov 2015}
 
-\section{Semaine 10: 23 novembre 2015}
+La présentation intermédiaire étant prévu d'ici une semaine, chacun des deux groupes finalise sa partie tout en préparant une démonstration. En parallèle nous préparons le PowerPoint pour notre présentation. À la fin de la semaine, nous somme fin prêt pour la présentation du lundi suivant.
 
-\section{Semaine 11: 30 novembre 2015}
+\section{Semaine 9-10: 16 nov 29 nov 2015}
 
-\section{Semaine 12: 7 décembre 2015}
+La présentation s'est bien passée, nous avons pu annoncer que nous étions dans les temps. Nous continuons donc sur notre lancée. Le groupe du tracking continue à affiner la précision ainsi qu'à trouver une manière de calibrer notre programme. Une modification du prototype initial du stylet est apportée car il ne nous est pas possible d'extrapoler avec une précision suffisante la position de la mine pour dessiner. Marc quant à lui commence à chercher comment transmettre les données récupérées par le tracking à notre interface graphique et développe le contrôleur de la souris. Le reste du groupe continue sur le logiciel en ajoutant les fonctionnalités nécessaires à accueillir le programme de tracking.
 
-\section{Semaine 13: 14 décembre 2015}
+\section{Semaine 11-12: 30 nov - 13 déc 2015}
+
+Le moment de mettre toutes les briques ensembles est arrivé. Cependant la grande charge de travail que nous avons à fournir dans le cadre des cours à côté nous fait prendre un peu de retard. Nous nous en rendons compte un peu tard et le projet stagne plus que nous l'avions imaginé. Nous arrivons cependant à commencer la mise en commun du projet.
+
+\section{Semaine 13: 14-19 déc 2015}
+
+Le groupe se rend compte que le rendu approche à grand pas et que le retard devra être rattrapé. Nous décidons que nous passerons nos vacances à travailler s'il le faut. La mise en commun est terminée et nous avons le plaisir de voir que nous arrivons enfin à dessiner. Paul continue à affiner le tracking pour améliorer la précision pendant que le reste du groupe se lance dans la rédaction de toute la documentation qui sera à rendre avec le projet. 
 
 \section{Semaine 14: 4 janvier 2016}
 
+Quelques dernières modifications sont apportées au rapport avant de le relier et de graver le CD contenant notre rendu. Le rendu étant passé, nous pouvons commencer à préparer la présentation finale qui aura lieu la semaine suivante. 
+
 \section{Semaine 15: 11 janvier 2016}
+
+Présentation finale.
 
 %----------------------------------------------------------------------------------------
 %	PLANIFICATION
