@@ -62,7 +62,7 @@ bindingoffset=10mm, top=25mm,bottom=25mm}
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
 \center
- 
+
 %----------------------------------------------------------------------------------------
 %	HEADING SECTIONS
 %----------------------------------------------------------------------------------------
@@ -78,7 +78,7 @@ bindingoffset=10mm, top=25mm,bottom=25mm}
 \HRule \\[0.8cm]
 { \huge \bfseries LibreDraw}\\[0.4cm]
 \HRule \\[1.5cm]
- 
+
 %----------------------------------------------------------------------------------------
 %	AUTHOR SECTION
 %----------------------------------------------------------------------------------------
@@ -97,11 +97,11 @@ David \textsc{Villa}
 \begin{minipage}{0.4\textwidth}
 \begin{flushright} \large
 \emph{Superviseur:} \\
-Pr René \textsc{Rentsch} 
-\break 
-\break 
-\break 
-\break 
+Pr René \textsc{Rentsch}
+\break
+\break
+\break
+\break
 \end{flushright}
 \end{minipage}\\[4cm]
 
@@ -219,7 +219,7 @@ Ce projet s'inscrit dans le cadre du cours de Projet de Groupe (PDG) au sein de 
 
 \section{Choix du sujet}
 
-Le choix d'un tel sujet se justifie par le fait que ce projet exige un important travail de recherche, de découverte et d'apprentissage de nouvelles technologies comme cela peut notamment être le cas pour la librairie OpenCV. Bien évidemment, ce genre de projet présente des risques compte tenu du fait que la technologie n'est connue de personne, qu'elle peut être difficile à appréhender, à mettre en oeuvre et à maîtriser, que la faisabilité du projet n'est pas facilement définissable et que le temps d'apprentissage est difficilement estimable. Toutefois, toutes ces problématiques ne rendent le projet que plus motivant, attrayant et intéressant. 
+Le choix d'un tel sujet se justifie par le fait que ce projet exige un important travail de recherche, de découverte et d'apprentissage de nouvelles technologies comme cela peut notamment être le cas pour la librairie OpenCV. Bien évidemment, ce genre de projet présente des risques compte tenu du fait que la technologie n'est connue de personne, qu'elle peut être difficile à appréhender, à mettre en oeuvre et à maîtriser, que la faisabilité du projet n'est pas facilement définissable et que le temps d'apprentissage est difficilement estimable. Toutefois, toutes ces problématiques ne rendent le projet que plus motivant, attrayant et intéressant.
 
 Ce projet s'inscrivant dans un cadre académique, il s'agit donc d'une opportunité idéale d'acquérir de nouvelles connaissances. Le sujet en lui-même est des plus intéressants. Il se démarque clairement de la monotonie des applications développées dans un tel contexte. Des projets similaires ont certainement déjà été réalisés que ce soit dans un cadre professionnel que dans un cadre académique mais à bien moindre mesure ce qui laisse énormément de place pour la créativité et l'innovation. Par ailleurs, la complexité d'un tel projet ne rend que plus grand le mérite une fois le travail terminé avec un système tout à fait fonctionnel.
 
@@ -237,7 +237,7 @@ Ce chapitre se veut être une description complète aussi bien de la conception 
 
 \section{Système global}
 
-Cette section présente l'ensemble du système d'un point de vue global. Le but est d'être aussi abstrait que possible de manière à ce que l'étude du système se fasse de manière progressive. Cette présentation débute par l'introduction de l'architecture du système. 
+Cette section présente l'ensemble du système d'un point de vue global. Le but est d'être aussi abstrait que possible de manière à ce que l'étude du système se fasse de manière progressive. Cette présentation débute par l'introduction de l'architecture du système.
 
 Le système global correspond en la réunion de l'infrastructure matérielle et des composants logiciels compte tenu de la nature du projet. Cela se justifie notamment par le fait que des composants matériels interagissent avec des composants logiciels et inversement.
 
@@ -263,9 +263,9 @@ Le système \textbf{LibreDraw System} correspond à l'application de dessin à p
 
 Le sous-système \textbf{Drawing Subsystem} contient entre autres le \textit{Core} de l'application du point de vue expérience utilisateur, c'est-à-dire son interface graphique. Par ailleurs, compte tenu du fait que l'interaction de ce même utilisateur avec l'application s'effectue par le biais d'un stylet, un clavier virtuel est mis à disposition par le constituant \textit{Virtual Keyboard} pour toute saisie textuelle d'information. L'esquisse du dessin de l'utilisateur avec le stylet est reproduite par le constituant \textit{Drawing}. Cette reproduction est appliquée par des outils de dessin regroupés dans le constituant \textit{Drawing Tools}. La sérialisation d'un dessin, sa sauvegarde et son importation au sein de l'application, est rendue possible par la mise à disposition de fonctionnalités fournies par le constituant \textit{File System I/O}.
 
-Le sous-système \textbf{Tracking Subsystem} est caractérisé par un constituant unique; il s'agit du \textit{Tracking Manager}, le gestionnaire du suivi du stylet dit autrement. En plus de gérer le stylet, ce constituant assure l'initialisation et la configuration de l'ensemble de l'infrastructure du système: écran, caméra et stylet. 
+Le sous-système \textbf{Tracking Subsystem} est caractérisé par un constituant unique; il s'agit du \textit{Tracking Manager}, le gestionnaire du suivi du stylet dit autrement. En plus de gérer le stylet, ce constituant assure l'initialisation et la configuration de l'ensemble de l'infrastructure du système: écran, caméra et stylet.
 
-Le système \textbf{Mouse Simulator System} est un composant à part entière. Celui-ci permet comme son nom l'indique de simuler une souris, c'est-à-dire de reproduire les faits et gestes de l'utilisateur lors de la manipulation du stylet comme s'il utilisait une souris en lieu et place de ce même stylet. 
+Le système \textbf{Mouse Simulator System} est un composant à part entière. Celui-ci permet comme son nom l'indique de simuler une souris, c'est-à-dire de reproduire les faits et gestes de l'utilisateur lors de la manipulation du stylet comme s'il utilisait une souris en lieu et place de ce même stylet.
 
 Le système dans son ensemble fonctionne globalement de la manière suivante:
 
@@ -312,7 +312,7 @@ La figure suivante illustre l'activité globale liée à une esquisse utilisateu
 
 \section{LibreDraw System}
 
-Cette section présente le détail de la conception du système \textbf{LibreDraw System}. Cette présentation débute par l'introduction de l'architecture de ce système. Celle-ci est bien plus détaillée de manière à approfondir progressivement la description du système. Chaque constituant du système fait également l'objet d'une pareille décomposition et d'une pareille description. Ce système correspond à l'application de dessin à proprement parlé. Pour rappel, l'application se veut être un outil de dessin assisté par ordinateur permettant à l'utilisateur de réaliser ses dessins de la manière la plus naturelle possible. Il doit pouvoir dessiner directement sur sa table ou n'importe quelle autre surface plane à l'aide d'un stylet. Son dessin doit pour sa part être projeté sur son plan de travail, donnant à l'utilisateur l'impression de dessiner avec un crayon et une feuille. Une telle application nécessite bien évidemment la mise en place d'une infrastructure adéquate. Toutefois, cette infrastructure doit pouvoir être exploitée par l'application. 
+Cette section présente le détail de la conception du système \textbf{LibreDraw System}. Cette présentation débute par l'introduction de l'architecture de ce système. Celle-ci est bien plus détaillée de manière à approfondir progressivement la description du système. Chaque constituant du système fait également l'objet d'une pareille décomposition et d'une pareille description. Ce système correspond à l'application de dessin à proprement parlé. Pour rappel, l'application se veut être un outil de dessin assisté par ordinateur permettant à l'utilisateur de réaliser ses dessins de la manière la plus naturelle possible. Il doit pouvoir dessiner directement sur sa table ou n'importe quelle autre surface plane à l'aide d'un stylet. Son dessin doit pour sa part être projeté sur son plan de travail, donnant à l'utilisateur l'impression de dessiner avec un crayon et une feuille. Une telle application nécessite bien évidemment la mise en place d'une infrastructure adéquate. Toutefois, cette infrastructure doit pouvoir être exploitée par l'application.
 
 Le mécanisme de suivi du stylet étant relativement complexe, il ne peut en aucune manière être exécuté sans passer au préalable par une phase d'initialisation et de configuration. En effet, différents objectifs doivent être atteints initialement de manière à ce que le système de tracking soit non seulement en mesure d'interagir avec le matériel mais en plus, que son interaction s'effectue de la manière la plus optimale possible. Le système doit être capable de s'adapter à un certain nombre de contraintes. Celles-ci peuvent être d'ordre matériel. En effet, malgré la présence conseillée d'une caméra et d'un projecteur, il n'en demeure pas moins qu'elle n'est pas obligatoire. En conséquence, l'application doit être en mesure de s'adapter lors d'une telle situation. Par ailleurs, le fait de disposer d'une caméra connectée au système hôte n'est pas suffisant pour que le système de tracking soit en mesure d'interagir de manière performante avec l'ensemble de l'infrastructure. L'angle et la position de la caméra étant des informations tout à fait variables, elles doivent être prises en compte lors de l'initialisation du mécanisme de tracking.
 
@@ -334,7 +334,7 @@ Le système \textbf{LibreDraw System} est divisé en trois sous-systèmes distin
 
 Le second sous-système du système \textbf{LibreDraw System} est \textbf{Tracking Manager}. Celui-ci est constitué d'un constituant principal qui est le gestionnaire du tracking de stylet. Il a pour tâche principale, comme son nom l'indique, de gérer le tracking du stylet, c'est-à-dire d'assurer en permanence son suivi au sein du champ de vision de la caméra.
 
-Le dernier sous-système du système \textbf{LibreDraw System} est \textbf{Drawing Subsystem}. Celui-ci gère entre autres toute la partie interface graphique utilisateur de l'application de dessin. Il dispose en premier lieu d'un constituant nommé \textit{Core} qui fait office de coeur de l'interface. Il met également à disposition un constituant \textit{Virtual Keyboard} qui fournit comme son nom l'indique un clavier virtuel. Celui-ci est sollicité entre autres lors de chaque saisie utilisateur. 
+Le dernier sous-système du système \textbf{LibreDraw System} est \textbf{Drawing Subsystem}. Celui-ci gère entre autres toute la partie interface graphique utilisateur de l'application de dessin. Il dispose en premier lieu d'un constituant nommé \textit{Core} qui fait office de coeur de l'interface. Il met également à disposition un constituant \textit{Virtual Keyboard} qui fournit comme son nom l'indique un clavier virtuel. Celui-ci est sollicité entre autres lors de chaque saisie utilisateur.
 
 Le dessin de l'utilisateur est représenté pour sa part par le constituant \textit{Drawing}. Ce dernier gère toute la partie reproduction de dessin aussi bien au niveau logique que graphique. Il délègue toutefois l'application de l'esquisse réalisée à l'aide d'un outil à des éléments du constituant \textit{Drawing Tools}. Finalement, le dernier constituant composant ce sous-système est \textit{File System I/O} qui met à disposition des mécanismes de sérialisation de dessin.
 
@@ -377,7 +377,7 @@ La figure suivante illustre l'architecture du sous-système \textbf{Drawing Subs
 
 Le sous-système \textbf{Drawing Subsystem} gère entre autres toute la partie interface graphique utilisateur de l'application de dessin. Le composant \textit{Core} correspond au coeur de ce sous-système et donc, à l'interface graphique de l'application. Celui-ci met effectivement à disposition tous les constituants graphiques nécessaires devant être combinés et regroupés ensemble pour former finalement l'interface utilisateur final. Il s'agit concrètement des constituants \textit{Menu} qui fournit le menu de l'application de dessin, \textit{Window} qui correspond à la fenêtre principale de l'application et enfin, \textit{Toolbar} qui se révèle être la barre d'outils de cette même fenêtre.
 
-La sérialisation d'un dessin est rendue possible par le constituant \textit{File System I/O} qui fournit deux boîtes de dialogue permettant respectivement d'importer et de sauvegarder un dessin. La problématique liée à la saisie utilisateur par le biais du stylet est répondue grâce au constituant \textit{Visual Keyboard}. Ce dernier fournit un clavier virtuel s'apparentant aux claviers usuels que l'on rencontre sur les applications des smartphones et des tablettes. Ainsi, les boîtes de dialogue mentionnées plus tôt intègrent ce clavier dans leur interface. 
+La sérialisation d'un dessin est rendue possible par le constituant \textit{File System I/O} qui fournit deux boîtes de dialogue permettant respectivement d'importer et de sauvegarder un dessin. La problématique liée à la saisie utilisateur par le biais du stylet est répondue grâce au constituant \textit{Visual Keyboard}. Ce dernier fournit un clavier virtuel s'apparentant aux claviers usuels que l'on rencontre sur les applications des smartphones et des tablettes. Ainsi, les boîtes de dialogue mentionnées plus tôt intègrent ce clavier dans leur interface.
 
 Les constituants \textit{Drawing} et \textit{Drawing Tools} collaborent ensemble en vue de produire le dessin esquissé par l'utilisateur. Pour ce faire, un élément \textit{Controller} veille à appliquer l'esquisse sur le \textit{Model} du dessin en prenant en compte l'outil courant proposé par le constituant \textit{Drawing Tools}. À noter que, durant la totalité de son interaction avec l'interface graphique, l'utilisateur peut à tout moment recourir à la souris de son ordinateur pour réaliser les mêmes traitements qu'il était supposé réalisé initialement par le biais du stylet. Ainsi, la possibilité de s'abstenir d'utiliser le stylet demeure toujours possible pour l'utilisateur.
 
@@ -834,7 +834,7 @@ La procédure de mise en place n'est présentée ici qu'en guise de suggestion d
 
 \section{Librairies}
 
-Plus que des librairies, ce sont deux puissants frameworks qui ont été utilisé sur ce projet. 
+Plus que des librairies, ce sont deux puissants frameworks qui ont été utilisé sur ce projet.
 
 \subsection{Qt}
 
@@ -880,7 +880,7 @@ La figure suivante présente la structure de l'interface graphique utilisateur f
 
 La structure de l'interface graphique utilisateur est relativement rudimentaire; elle dispose d'une part d'une zone de dessin dans laquelle l'utilisateur est supposé y dessiner. D'autre part, elle dispose d'une barre d'outils laquelle fournit des outils de dessin, des outils de formes, des outils de couleurs et des outils d'épaisseur. Par ailleurs, cette barre d'outils met à disposition un outil supplémentaire permettant d'afficher le menu de l'application.
 
-En termes d'implémentation, cette interface graphique utilisateur correspond à la classe MainWindow. Celle-ci hérite de la classe graphique QMainWindow. Cette classe fournie par le framework Qt propose entre autres une structure de base pour des applications caractérisées par une barre de menus, par une barre d'outils, par une zone centrale et par une éventuelle barre d'état. 
+En termes d'implémentation, cette interface graphique utilisateur correspond à la classe MainWindow. Celle-ci hérite de la classe graphique QMainWindow. Cette classe fournie par le framework Qt propose entre autres une structure de base pour des applications caractérisées par une barre de menus, par une barre d'outils, par une zone centrale et par une éventuelle barre d'état.
 
 Dans le cas de l'application de dessin, la barre de menus n'est pas conservée dans la mesure où un menu personnalisé a été développé pour des raisons ergonomiques et est mis à disposition de l'utilisateur au moyen d'une boîte de dialogue. La zone centrale et la barre d'outils y figurent en ce qui les concernent. Pour ce qui est de la barre d'état, elle n'a pas été ajoutée à l'interface étant donné que son utilité pour une telle application ne présente que peu d'intérêt.
 
@@ -945,9 +945,9 @@ La sélection d'un outil peut avoir pour conséquence la modification de l'icôn
            numberstyle=\tiny,
            commentstyle=\color{gray}
         ]
-QtoolBar{ 
-    background: rgb(46,46,46); 
-    border: 0px; 
+QtoolBar{
+    background: rgb(46,46,46);
+    border: 0px;
 }
 \end{lstlisting}
 
@@ -959,17 +959,107 @@ QtoolBar{
 
 \section{Tracking}
 
+Cette partie du projet à été un réel défis car le traitement d'image était tout un sujet peu connu mais qui demande en plus de bonne notions de programmation en C++ et des mathématiques. Nous avons pu à présent affirmer que la qualité d'un logiciel de traitement d'image ou de vision par ordinateur dépend fortement de ces dernières notions.
+
+En concevant un tel logiciel il y a 3 principaux problèmes qui à prendre comptes, qui n'ont :
+
+\begin{itemize}
+\item \textbf{La rapidité:} En effet, le fait d'utiliser un algorithme ou l'autre pour effectuer une certaine tâches peut avoir d'énorme répercusion sur la rapiditié et la fluidité du logiciel. Sachant qu'il est question de traiter un certain nombre d'images par secondes, quelques millisecondes de moins ou de plus se remarques immédiatement à l'utilisation du logiciel. Ce problème à été traité en choisissant le C++ comme langage de programation, OpenCV comme librairies pour manipuler des images et en se renseigant toujours sur l'utilisation et les limites des fonctions offertes par cette librairie.
+\item \textbf{Les variations de lumières ambiante:} Ici il s'agit de créer un logiciel pouvant fonctionner de la manière attendue indépendament de l'environement dans le quel il est. Ce problème à été résolu en utlisant l'éspace de couleur HSV (Hue, Saturation et Value) pour réprésenter et pour manipuler les images reçues par la caméra.
+
+\item \textbf{Précision et fiabilité:} Ce dernier problème n'étant pas des moindres, est lié à la qualité d'images de la caméra et aux algorithmes utilisé pour les traiter. Cependant la qualité de la caméra est le seul facteur pouvant vraiment nous empêcher d'atteindre notre but. En effet, il existe plusieurs moyen d'écrire un code plus efficace ou plus fiable mais quand nous atteignons les limites de la qualité de l'image, il devient impossible de faire mieux.
+
+\end{itemize}
+
+Le projet à commencé par une phase d'étude des différentes manière de représenter des images, les différents espaces de couleurs et comment tirer certaines informations d'une image. C'est pourquoi nous commenceront par fixer les principes de bases utilisé dans le cadre de ce projet.
+
+Ensuite, nous détaillerons nos deux algorithmes de détection d'écran et de Tracking d'une Led.
+
+\subsection{Introduction à la vision par ordinateur}
+
+
+
+\subsubsection{Stockage est manipulation d'image}
+
+Une image numérique est une matrice de pixel de taille w * h dans laquelle chaque cases représente l'intensité de la couleur d'un pixel à une paire de coordonée (x,y). Pour une image en niveau de gris, chaque pixel est stocké en une valeur comprise dans l'interval [0,255]. Plus l'intensité est forte, plus la valeur est grande. Ce principe s'applique aussi au images couleur. Il n'y aura cenpendant plus une unique matrice mais plusieurs afin stocker plusieurs canaux. Ainsi, chaque pixel aura plusieurs valeurs associées à chacun des canaux.
+
+La librairie OpenCV nous fournis une interface pour lire une image, accèder à ses pixels et effectuer divers manipulation courante comme: redimensionnement, conversion, copie etc ...
+
+
+\subsubsection{Formats d'images}
+
+Profondeur
+
+Une image numérique est tout d'abord caractérisée par sa profondeur. La profondeur est lié à la taille mémoire d'un pixel. Vous avez certainement entendu parlé d'images 8, 24, 32 bits. Nous avons dit précedement que la valeur d'un pixel était compris dans l'interval [0,255]. Et bien, cela ne s'applique uniquement aux image de profondeurs 8 bits. La libraire OpenCV supporte différents type de profondeur en permettant d'exprimer les valeurs sur 8, 24, 32 et 64 bits signé ou non signé. Nous avons travaillé de manière exclusive sur des intensité comprise entre 0 et 255 en utilisant le type CV\_8U. le 8 pour 8 bits et le U etant pour "unsigned".
+
+Couleur
+
+En physique, la couleur étant une ondes est porteuse de plus informations due à sa fréquence et son amplitude. On choisi donc le format d'une image en fonction des informations que l'on veut en tirer.
+
+Comme dit plus tôt, une image en niveau de gris représente une intensité lumineuse pour chaque pixel. Nous avons donc accès une seul information appelée luminance qui est caractérisé par l'amplitude de l'onde lumineuse qui vient frapper un certain point.
+
+La fréquence est porteuse d'une secondes information, la couleur, appelé chrominance. Il existe différente manière de coder la couleur d'un pixel sur trois nombre et c'est ici qu'entre en jeux les différents espaces de couleur.
+
+Nous utilisons deux différents espace de couleur dans notre logiciel que nous allons brièvement décrire.
+
+
+RGB: C'est la manière la plus courante de représenter la couleur d'un pixel car il est possible de réprésenter toutes les couleurs en superposant trois composante: le rouge, le vert et le bleu. Une image RGB est représentée par une matrice à trois canaux. Le type OpenCV correspondant est \textit{CV\_8UC3} où C3 correspond à 3 canaux.
+
+\\\\Dans notre logiciel de tracking, nous utilisons cette espace de couleur pour récupérer les images de la caméra. C'est le type par défaut utilisé pour la lecture d'un flux d'images provenant d'une caméra. Nous ne pouvant pas tirer énormément d'informations sur une image avec un tel espace de couleur. La couleurs étant un simple dosage de rouge, vert et bleu, il est très difficile d'isoler une couleur précise en acceptant toutefois un intervale de différences car la couleur et la luminosité sont entièrement mixés entre les 3 valeurs.
+
+HSV: Cette espace de couleur est composé de 3 canaux: Hue, Saturation et Value. Cette une réprésentation cylindrique de l'ensemble des couleurs.
+
+La Teinte (Hue) est exprimée par une valeur en degré. Celle-ci représente la couleur d'un pixel. Habituellement, la teinte s'étend sur l'interval [0:360]. OpenCV à choisi par défaut d'utiliser un interval plus restreint [0:180], certainement pour des raisons de performances.
+
+La Saturation est l'intensité de la couleur ou autrement dit à quel proportion est-elle mixée avec du blanc.
+
+La Valeur correspond à la brillance de la couleur ou autrement dit à quel proportion elle est mixée avec du noir.
+
+La Saturation est la valeur peuvent varier selon la lumière ambiante, tandis que la teinte est entièrement indépendante. C'est la raison pour laquelle cette espace de couleur est souvent utilisé dans le domaine de la vision par ordinateur, lorsqu'il s'agit de détecter des objets ayant une certaine couleur.
+
+
 \subsection{Système de détection}
 
-\subsection{Mouvement du stylet}
+En utilisant l'espace de couleur HSV, nous somme capable de détecter et de suivre n'importe quel objet en fonction de sa couleur. Pour autant que les images reçues de la caméra soit suffisamment de bonne qualité, c'est à dire pas trop saturée, si notre oeil peut percevoir un objet sur une image, il est possible de créer un programme pouvant en faire autant.
 
-\subsection{Déclenchement du dessin}
+On faisant des recherches dans le domaine du tracking, nous avons pu constater un très grand nombre de différentes approches ou d'algorithmes dédié à cela. Heureusement, la libraire OpenCV à  tout d'abord été créée pour ne pas avoir à réécrire des algorithme souvent utilisé et parfois très complexes. Elle réunis le résultat de plusieurs années de recherche dans le domaine de la vision par ordinateur et nous à permis de tester et comparer plusieurs approches.
 
-\subsection{Filtrage de couleurs}
+\subsubsection{Détection d'écran}
 
-\subsection{Précision du tracking}
+\paragraph{Approche implémentée}
 
-\subsection{Contraintes de luminosité}
+Dans notre logiciel, l'écran projeté par un beamer est caractérisé par plusieurs informations (features) que nous devons décrire à l'ordinateur afin qu'il puisse le détecter. Si le but était de détecter n'importe quel type d'écran quelque soit sa taille et ce qu'il afficher, cela reviendrais un problème très complexe. Comme nous avons une certaine maîtrise sur le logiciel de dessin, il nous est  possible d'imposer des conditions au moment du calibrage afin d'apporter plus d'informations au logiciel lorsqu'il analysera l'image. Ces conditions sont: L'écran possède une couleur précise et il est objet qui prend le plus d'espace sur l'image. Ainsi, la première tâche de la classe \textit{ScreenDetector} consiste à détecter le plus grand rectangle vert visible sur une image.
+
+La première étape après avoir récuperé l'image RGB contenant potentiellement un écran vert, est de la convertir dans l'espace de couleur HSV afin de pouvoir isoler la couleur verte située dans l'interval HUE[41:90]. Selon la luminosité de la pièce, la brillance de l'écran illuminant les objets proches leur donne à eu aussi une couleur verte. Si l'on applique un filtre sur une tel image en prenant uniquement en compte la composante HUE, l'écran détecté ne se limitera pas à son coutour mais aussi jusqu'à tout objet illuminé par cette écran. Dans une pièce très sombre, l'image entière serait considérée comme un écran.
+
+C'est pourquoi nous avons soigneusement choisi l'interval des composantes de saturation et de valeurs en effectuant plusieurs tests. En choisissant une saturation S minimum fixée à 20\%, et une Valeur V minimum de 37\%, le logiciel est capable d'isoler le vert de l'écran en supprimant les pixels vert causé par la lumière de l'écran. Lorsque nous appliquons un filtre sur une image, nous obtenant en résultat une matrice M (une seul canal), contenant soit des pixels blancs où M(x,y) = 255 soit des pixels noirs où M(x,y) = 0.
+
+Cependant il est possible que plusieurs zones blanche (acceptée) apparaissent lors de l'application du filtre. Une première chose à faire est de supprimer les tout petits élements etant considéré comme des bruits. Pour cela nous utilisons les méthode \textit{cv::erode} et \textit{v::dilate} sur cette matrice. De plus, il est possible d'avoir d'autres zones blanches, trop grande pour être considéré comme bruit. Par exemple un pot de fleur vert ou une personne habillée en vert. Pour résoudre ce problème nous utilisons l'une des conditions fixée préalablement: \textit{détecter le plus grand rectangle vert visible}. Pour cela nous allons devoir comparer l'air des masses blanches et garder uniquement la plus grand.
+
+Pour trouver l'air d'une masse blanche nous devons la contourer puis calculer son aire. Nous utilisons la methode \textit{cv::findContours} qui retourne un vecteur de tout les contours trouvé dans l'image, puis enfin \textit{cv::contourArea(Contour)} qui retourne l'air comprise à l'intérieur d'un contour. Ces deux méthode nous permette de trier nos contours par surfaces et ainsi récupérer le plus grand contour.
+
+Une fois que nous avons obtenu le plus grand contour, il est nécessaire d'approximer ce contours afin de limiter le nombre de points qu'il contient. \textit{cv::approxPolyDP} nous permet de trouver d'approximer un contour de manière à l'exprimer en un nombre minimum de points. Nous vérifiant que cette forme possède 4 points afin d'être sûr que c'est le rectangle de l'écran qui à été détecté.
+
+Finalement, le point clé de cette étape de calibration est la création d'une matrice de transformation permettant de convertir un point dans le plan vue de la caméra en un point sur l'écran de l'utilisateur. Comme nous avons eu un rectangle \textit{source} déformé grâce à l'étape précédente, nous allons créer un autre rectangle \textit{destination} de la même taille que l'écran de l'utilisateur puis créer une matrice de transformation 3D obtenu par la fonction cv::getPerspectiveTransform(source, destination). Ainsi nous pouvant convertir un point \textit{p1} dans le plan de la source en un point \textit{p1}' en passant la matrice de transformation et ce point à la fonction \textit{cv::perspectiveTransform}.
+
+
+\begin{figure}[b]
+\centering
+    \begin{subfigure}[b]
+    \includegraphics[scale=0.4]{images/calibration_orig.png}
+    \caption{Image source de la caméra}
+    \end{subfigure}
+
+    \begin{subfigure}[b]
+    \includegraphics[scale=0.4]{images/calibration_rectangle2.png}
+    \caption{Filtre HSV}
+    \end{subfigure}
+
+    \begin{subfigure}[b]
+    \includegraphics[scale=0.4]{images/calibration_rectangle.png}
+    \caption{Rectangle approximés de l'écran}
+    \end{subfigure}
+\end{figure}
 
 \newpage
 
@@ -1051,7 +1141,7 @@ QtoolBar{
 
 \subsection{Fonctionnalités implémentées}
 
-Au terme de notre travail nous pouvons être content car nous avons réussi à nous en tenir à notre cahier des charges. Toutes les fonctionnalités de base que nous avions prévues sont présentes dans notre programme bien que certaines puissent encore être améliorées. Nous avons même pu ajouter le fait de permettre à l'utilisateur le rétablissement d'une action annulée. Ceci n'a pas été spécialement difficile à implémenter car tout (ou presque) avait déjà été mis en place pour l'annulation. 
+Au terme de notre travail nous pouvons être content car nous avons réussi à nous en tenir à notre cahier des charges. Toutes les fonctionnalités de base que nous avions prévues sont présentes dans notre programme bien que certaines puissent encore être améliorées. Nous avons même pu ajouter le fait de permettre à l'utilisateur le rétablissement d'une action annulée. Ceci n'a pas été spécialement difficile à implémenter car tout (ou presque) avait déjà été mis en place pour l'annulation.
 
 \subsection{Fonctionnalités manquantes}
 
@@ -1234,7 +1324,7 @@ L'application comportera différents threads: un thread de l'application sera co
 
 \section{Public-cible}
 
-L'application vise avant toute chose tout amateur de dessin souhaitant se passer d'une feuille. 
+L'application vise avant toute chose tout amateur de dessin souhaitant se passer d'une feuille.
 
 \section{Technologies utilisées}
 
@@ -1251,7 +1341,7 @@ Les points suivants constituent le matériel requis pour l'utilisation de l'appl
 
 \begin{itemize}
 \item[$\bullet$] Un prototype de stylet faisant office d'outil de dessin.
-\item[$\bullet$] Une caméra permettant de traquer les mouvements du stylet. 
+\item[$\bullet$] Une caméra permettant de traquer les mouvements du stylet.
 \item[$\bullet$] Un projecteur vidéo permettant de retranscrire le dessin de l'utilisateur.
 \item[$\bullet$] Un plan de travail permettant de dessiner.
 \item[$\bullet$] Un support prévu pour la disposition de la caméra et du projecteur au-dessus du plan de travail.
@@ -1268,7 +1358,7 @@ De par la nature du framework Qt, l'application est automatiquement multi-plate
 Le déploiement de l'application suit la procédure standard des environnements supportés:
 
 \begin{itemize}
-\item[$\bullet$] Pour un environnement Windows, le déploiement se réalise par le biais d'un installateur. 
+\item[$\bullet$] Pour un environnement Windows, le déploiement se réalise par le biais d'un installateur.
 \item[$\bullet$] Pour un environnement Mac OS X, le déploiement se réalise par le biais d'un fichier DMG.
 \item[$\bullet$] Pour une distribution Linux (Arch), le déploiement se réalise par le biais d'un paquetage.
 \end{itemize}
@@ -1417,11 +1507,11 @@ Le moment de mettre toutes les briques ensembles est arrivé. Cependant la grand
 
 \section{Semaine 13: 14-19 déc 2015}
 
-Le groupe se rend compte que le rendu approche à grand pas et que le retard devra être rattrapé. Nous décidons que nous passerons nos vacances à travailler s'il le faut. La mise en commun est terminée et nous avons le plaisir de voir que nous arrivons enfin à dessiner. Paul continue à affiner le tracking pour améliorer la précision pendant que le reste du groupe se lance dans la rédaction de toute la documentation qui sera à rendre avec le projet. 
+Le groupe se rend compte que le rendu approche à grand pas et que le retard devra être rattrapé. Nous décidons que nous passerons nos vacances à travailler s'il le faut. La mise en commun est terminée et nous avons le plaisir de voir que nous arrivons enfin à dessiner. Paul continue à affiner le tracking pour améliorer la précision pendant que le reste du groupe se lance dans la rédaction de toute la documentation qui sera à rendre avec le projet.
 
 \section{Semaine 14: 4 janvier 2016}
 
-Quelques dernières modifications sont apportées au rapport avant de le relier et de graver le CD contenant notre rendu. Le rendu étant passé, nous pouvons commencer à préparer la présentation finale qui aura lieu la semaine suivante. 
+Quelques dernières modifications sont apportées au rapport avant de le relier et de graver le CD contenant notre rendu. Le rendu étant passé, nous pouvons commencer à préparer la présentation finale qui aura lieu la semaine suivante.
 
 \section{Semaine 15: 11 janvier 2016}
 
