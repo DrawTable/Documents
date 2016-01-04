@@ -332,16 +332,7 @@ La figure suivante illustre l'architecture du système \textbf{LibreDraw System}
 
 Le système \textbf{LibreDraw System} est divisé en trois sous-systèmes distincts. Le premier sous-système est \textbf{Camera Subsystem}. Celui-ci a pour tâches de gérer l'initialisation, la configuration et sélection de la caméra utilisateur devant servir à capturer les mouvements du stylet. La partie initialisation et configuration est assurée par le constituant \textit{Manager}. Celui-ci fait appel au constituant \textit{Updater} pour proposer une liste de caméras disponibles susceptibles d'être utilisées en guires de dispositif d'enregistrement vidéo de l'application.
 
-Le second sous-système du système \textbf{LibreDraw System} est \textbf{Tracking Manager}. Celui-ci est constitué d'un constituant principal qui est le gestionnaire du tracking de stylet. Il a pour tâche principale comme son nom l'indique de gérer le tracking du stylet, c'est-à-dire d'assurer en permanence son suivi au sein du champ de vision de la caméra. Pour ce faire, il dispose à son tour d'un ensemble de constituants qui sont:
-
-\begin{itemize}
-\item[$\bullet$] \textit{Screen Detector}: ce constituant a pour fonction de détecter l'écran de l'utilisateur. Cela est notamment utilisé lors de la phase préliminaire de calibrage du matériel.
-\item[$\bullet$] \textit{LED Detector}: ce constituant a pour fonction de détecter et traquer en permanence la/les LED(s) du stylet de manière à le localiser dans le champ de vision de la caméra. Cela est utilisé aussi bien lors de la phase d'initialisation du système que lors de sa phase post-initialisation, c'est-à-dire lors du suivi du stylet.
-\item[$\bullet$] \textit{Controller}: ce constituant contrôle les mouvements et les actions du stylet selon les informations reçues par la caméra et selon leur analyse également.
-\item[$\bullet$] \textit{Calibrator}: ce constituant initialise et calibre l'infrastructure matériel de manière à ce qu'il puisse interagir avec l'application et inversement.
-\item[$\bullet$] \textit{Error Manager}: ce constituant fait office de gestionnaire d'erreur. Il est notamment sollicité lors d'une erreur rencontrée durant le processus de calibration.
-\item[$\bullet$] \textit{Network I/O Handler}: ce constituant fait office d'interface de communication réseau entre les systèmes \textbf{LibreDraw System} et \textbf{Mouse Simulator System}. Il est notamment sollicité une fois le traitement d'informations liés aux faits et gestes du stylet terminé afin de les reproduire au sein de la partie dessin du système gérée entre autres par le sous-système \textbf{Drawing Subsystem}.
-\end{itemize}
+Le second sous-système du système \textbf{LibreDraw System} est \textbf{Tracking Manager}. Celui-ci est constitué d'un constituant principal qui est le gestionnaire du tracking de stylet. Il a pour tâche principale, comme son nom l'indique, de gérer le tracking du stylet, c'est-à-dire d'assurer en permanence son suivi au sein du champ de vision de la caméra.
 
 Le dernier sous-système du système \textbf{LibreDraw System} est \textbf{Drawing Subsystem}. Celui-ci gère entre autres toute la partie interface graphique utilisateur de l'application de dessin. Il dispose en premier lieu d'un constituant nommé \textit{Core} qui fait office de coeur de l'interface. Il met également à disposition un constituant \textit{Virtual Keyboard} qui fournit comme son nom l'indique un clavier virtuel. Celui-ci est sollicité entre autres lors de chaque saisie utilisateur. 
 
@@ -428,31 +419,68 @@ Le sous-système \textbf{Drawing Subsystem} gère entre autres toute la partie i
 
 \subsection{Tracking Subsystem}
 
-// words about tracking manager
+Le sous-système \textbf{Tracking Subsystem} est un composant essentiel de l'application ayant pour but de gérer le pointeur de l'utilisateur. En effet, étant donné que ce type de pointeur n'est pas une entrée standard comme pourrait l'être une souris ou un clavier, l'application a besoin d'un module prenant en charge exclusivement le suivi du stylet.
+
+Ce module doit fournir une abstraction suffisante au \textbf{Drawing Subsystem} afin que les modules aient un minimum de dépendance et donc, que l'évolution d'un module n'influence pas l'autre.
 
 \subsubsection{Architecture}
+
+Les composants de ce sous-système peuvent être classé du niveau le plus bas au plus élevé:
+
+\begin{itemize}
+\item[$\bullet$] \textit{Calibrator}: ce constituant initialise et calibre l'infrastructure matériel de manière à ce qu'il puisse interagir avec l'application et inversement.
+\item[$\bullet$] \textit{LED Detector}: ce constituant a pour fonction de détecter et traquer en permanence la/les LED(s) du stylet de manière à le localiser dans le champ de vision de la caméra. Cela est utilisé aussi bien lors de la phase d'initialisation du système que lors de sa phase post-initialisation, c'est-à-dire lors du suivi du stylet.
+\item[$\bullet$] \textit{Screen Detector}: ce constituant a pour fonction de détecter l'écran de l'utilisateur. Cela est notamment utilisé lors de la phase préliminaire de calibrage du matériel. Il permet de décrire la position de la LED dans le référentiel de l'écran.
+\item[$\bullet$] \textit{Error Manager}: ce constituant fait office de gestionnaire d'erreur. Il est notamment sollicité lors d'une erreur rencontrée durant le processus de calibrage.
+\item[$\bullet$] \textit{Controller}: ce constituant contrôle les mouvements et les actions du stylet selon les informations reçues par la caméra et selon leur analyse également.
+\item[$\bullet$] \textit{Network I/O Handler}: ce constituant fait office d'interface de communication réseau entre les systèmes \textbf{LibreDraw System} et \textbf{Mouse Simulator System}. Il est notamment sollicité une fois le traitement d'informations liés aux faits et gestes du stylet terminé afin de les reproduire au sein de la partie dessin du système gérée entre autres par le sous-système \textbf{Drawing Subsystem}.
+\end{itemize}
+
+Comme nous pouvons le voir, une fois que le calibrage est effectué, la caméra pourra détecter la LED du stylet. Ensuite, cette position sera transformée pour que l'on connaisse sa position par rapport à l'image du vidéo-projecteur (donc du programme) et sera ensuite utilisée pour envoyer des événements de mouvement de souris via le réseau.
 
 \subsubsection{Controller}
 
 \subsubsection{Screen Detector}
 
+Le \textbf{Screen Detector} est un composant permettant de détecter l'écran vu depuis la caméra et d'en calculer les déformations par rapport à l'image qu'affiche le vidéo-projecteur. En effet, le pointeur de l'utilisateur se déplace dans le monde réel en trois dimensions, mais la caméra ne voit qu'une projection bidimensionnelle de ce monde et le projecteur envoie une image également bidimensionnelle. Dans le cas ou la caméra et le projecteur était exactement aligné, ils auraient la même perception du monde et aucun calcul ne serait nécessaire. Or, ce n'est pas le cas: la caméra peut se trouver plusieurs dizaines de centimètres à côté du projecteur. Ainsi, une matrice de transformation permettant de passer d'un référentiel à l'autre doit être calculé par le programme. En termes plus mathématiques, cette matrice nous permet d'effectuer une rotation tridimensionnelle, un déplacement et une mise à l'échelle de l'image afin de reporter les points du référentiel de la caméra à celui du programme.
+
 \subsubsection{LED Detector}
+
+Ce composant gère le suivi de la LED. Il peut être considéré comme bas niveau dans le sens qu'il s'occupe de traiter les données brutes venant directement de la caméra. Il y a donc plusieurs traitements à effectuer sur les images afin d'en faire ressortir le peu d'information utile, c'est-à-dire une position bidimensionnelle dans le référentiel de la caméra. Ces traitements ont été une partie très importante de ce travail car ils demandent beaucoup de tests dans des conditions différentes, ainsi que de l'imagination pour trouver la meilleure méthodologie à appliquer. Du temps a aussi été nécessaire pour trouver les paramètres les plus optimaux de nos filtres. Certains paramètres sont d'ailleurs fixes alors que d'autres sont calculés durant la phase de calibration.
 
 \subsubsection{Calibrator}
 
+Cette partie du programme s'occupe de calibrer le suivi de la LED en estimant et redéfinissant certains paramètres du \textbf{LED Detector}. En effet, selon l'environnement (éclairage, caméra, projecteur, LED, etc.), le suivi de la LED peut s'avérer plus ou moins difficile. Certaines caméras s'adaptent très bien à la luminosité et à la teinte de l'image projetée alors que d'autres ont plus de mal à d'adapter. Le \textbf{Calibrator} a pour mission de contrecarrer ses différences en utilisant divers méthodes de traitement de l'image.
+
 \subsubsection{Error Manager}
 
+Le gestionnaire d'erreur est un petit composant permettant simplement de détecté quand une erreur de calibrage est survenue et d'en avertir l'utilisateur. En outre, il offre la possibilité de relancer le processus de choix de caméra et de calibrage.
+
 \subsubsection{Network I/O Handler}
+
+Étant donné que nous voulions que la souris soit le plus proche possible du système d'exploitation, tout en restant multi-plateforme, nous avons exploré plusieurs possibilités offertes par les frameworks déjà utilisés, mais aucune solution n'était assez puissante et pratique par rapport à ce que nous souhaitions faire. Entre autres, l'un de nos souhait était que la souris nous permette aussi de cliquer sur les éléments propres au système d'exploitation et pas uniquement ceux de notre programme.
+
+Nous avons alors choisi d'utiliser un petit programme en Java afin de déplacer la souris et de cliquer selon une position donnée. Afin d'établir une connexion entre l'utilitaire Java et notre application, nous avons choisi d'utiliser des sockets. Cela nous aurait permis de pouvoir changer de stratégie très facilement dans le cas où cette solution aurait soulevé de nouveaux problèmes.
 
 \newpage
 
 \subsection{Camera Subsystem}
 
+Le sous-système \textbf{Camera Subsystem} permet de gérer la/les caméra(s) de l'utilisateur. Il s'occupe de détecter les différentes caméras connues du système d'exploitation et d'afficher à l'utilisateur leurs images afin de permettre à ce dernier de sélectionner la caméra qu'il souhaite utiliser.
+
+Il peut paraître étrange de parler de\textbf{s} caméra\textbf{s} (au pluriel). Pourtant, il n'en est rien puisqu'un grand nombre d'ordinateurs portables possèdent des caméras intégrées. Or, une caméra externe, se branchant sur un port série, peut s'avérer très pratique car l'ordinateur n'a pas besoin d'être déplacer. Il suffit de viser l'écran de projection avec la caméra externe. C'est pourquoi un système de sélection de caméra a été mis en place.
+
 \subsubsection{Architecture}
+
+Ce sous-système est assez simple. Il consiste en deux partie, le \textbf{Manager} et l'\textbf{Updater}.
 
 \subsubsection{Manager}
 
+Le \textbf{Manager} s'occupe de détecter, puis d'initialiser les caméras de l'utilisateur. Il va ensuite créer les différentes fenêtres qui afficheront plus tard les vues en direct des caméras. Cette affichage sera gérer par un fil d'exécution séparé, l'\textbf{Updater}.
+
 \subsubsection{Updater}
+
+Le rôle de l'\textbf{Updater} est de récupérer les images des caméras et mettre à jour les fenêtres de sélection de caméra en direct. Cela donne alors un aperçu en direct de toutes les caméras, permettant à l'utilisateur de replacer sa caméra si besoin (par exemple si l'écran n'est pas totalement visible par la caméra) et de la choisir.
 
 \newpage
 
@@ -683,7 +711,7 @@ En termes d'implémentation, cette interface graphique utilisateur correspond à
 
 Dans le cas de l'application de dessin, la barre de menus n'est pas conservée dans la mesure où un menu personnalisé a été développé pour des raisons ergonomiques et est mis à disposition de l'utilisateur au moyen d'une boîte de dialogue. La zone centrale et la barre d'outils y figurent en ce qui les concernent. Pour ce qui est de la barre d'état, elle n'a pas été ajoutée à l'interface étant donné que son utilité pour une telle application ne présente que peu d'intérêt.
 
-Il peut être constaté que l'interface utilisateur n'est pas caractérisée par une barre de titre que l'on rencontre dans les programmes fenêtrées. En effet, dès le lancement de l'application est affichée en mode plein écran. Il s'agit-là du mode par défaut de l'application qui ne peut faire l'objet d'une modification. Cela se justifie par le fait que le système de tracking analyse la totalité de l'écran et que l'affichage d'une partie d'une fenêtre native du système d'exploitation pourrait dégrader la qualité de détection du stylet d'une part, le mécanisme de calibration d'autre part.
+Il peut être constaté que l'interface utilisateur n'est pas caractérisée par une barre de titre que l'on rencontre dans les programmes fenêtrées. En effet, dès le lancement de l'application est affichée en mode plein écran. Il s'agit-là du mode par défaut de l'application qui ne peut faire l'objet d'une modification. Cela se justifie par le fait que le système de tracking analyse la totalité de l'écran et que l'affichage d'une partie d'une fenêtre native du système d'exploitation pourrait dégrader la qualité de détection du stylet d'une part, le mécanisme de calibrage d'autre part.
 
 En dernière instance, l'ébauche de l'interface graphique définie lors de l'établissement du cahier des charges a été adaptée selon les besoins ergonomiques de l'application de dessin.
 
