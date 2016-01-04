@@ -1,0 +1,25 @@
+@startuml
+skinparam activity {
+  BarColor SaddleBrown 
+  BackgroundColor White
+  BackgroundColor<< Begin >> White
+  BorderColor Black
+  ArrowColor Black
+}
+|Stylus|
+start
+:esquisse;
+|Camera|
+:capture;
+|Tracking Subsystem|
+:traitement de\n la capture;
+|Mouse Simulator System|
+:simulation \nde la capture;
+|Drawing Subsystem|
+:reproduction \nde l'esquisse;
+|Beamer|
+:projection \nde l'esquisse;
+|Drawing Area|
+:esquisse;
+stop
+@enduml
