@@ -57,7 +57,6 @@ bindingoffset=10mm, top=25mm,bottom=25mm}
 \maxtocdepth{subsection}
 
 \begin{document}
-
 \begin{titlepage}
 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
@@ -77,7 +76,7 @@ bindingoffset=10mm, top=25mm,bottom=25mm}
 %----------------------------------------------------------------------------------------
 
 \HRule \\[0.8cm]
-{ \huge \bfseries DrawTable}\\[0.4cm]
+{ \huge \bfseries LibreDraw}\\[0.4cm]
 \HRule \\[1.5cm]
  
 %----------------------------------------------------------------------------------------
@@ -88,17 +87,17 @@ bindingoffset=10mm, top=25mm,bottom=25mm}
 \begin{flushleft} \large
 \emph{Auteurs:}\\
 Sacha \textsc{Bron}\\
-David \textsc{Villa}\\
-Paul \textsc{Ntawuruhunga}\\
 Yassin \textsc{Kammoun}\\
-Marc \textsc{Pellet}
+Paul \textsc{Ntawuruhunga}\\
+Marc \textsc{Pellet}\\
+David \textsc{Villa}
 \end{flushleft}
 \end{minipage}
 ~
 \begin{minipage}{0.4\textwidth}
 \begin{flushright} \large
 \emph{Superviseur:} \\
-Dr. René \textsc{Rentsch}
+Dr. René \textsc{Rentsch} 
 \break 
 \break 
 \break 
@@ -121,6 +120,7 @@ Dr. René \textsc{Rentsch}
 \includegraphics[scale=0.6]{images/hesso.png}
 
 \vfill
+
 \end{titlepage}
 
 \cleardoublepage
@@ -137,7 +137,7 @@ Dr. René \textsc{Rentsch}
 
 \chapter{Introduction}
 
-Ce chapitre se veut être une introduction de ce rapport de travail. Il s'agit dans un premier temps de rappeler le sujet du projet par une description complète de celui-ci. Viennent ensuite l'énumération, le commentaire et l'explication des objectifs que cherche à atteindre ce projet. Les technologies utilisées pour la réalisation du système sont introduites par la suite. Les différents membres constituant l'équipe de projet sont présentés. Cette introduction décrit précisément les rôles de chacun des protagonistes. Finalement, un commentaire quant à la décision de choisir un tel sujet de projet est exposé. Cela consiste à partager les motivations et les raisons qui ont poussé le groupe à partir sur un tel projet.
+Ce chapitre est une introduction de ce rapport de travail. Il s'agit dans un premier temps de rappeler le sujet du projet par une description complète de celui-ci. Viennent ensuite l'énumération, le commentaire et l'explication des objectifs que cherche à atteindre ce projet. Les technologies utilisées pour la réalisation du système sont introduites par la suite. Les différents membres constituant l'équipe de projet sont présentés. Cette introduction décrit précisément les rôles de chacun des protagonistes. Finalement, un commentaire quant à la décision de choisir un tel sujet de projet est exposé. Cela consiste à partager les motivations et les raisons qui ont poussé le groupe à partir sur un tel projet.
 
 \section{Description du projet}
 
@@ -203,23 +203,23 @@ Le tableau suivant présente l'équipe de projet, la hiérarchie au sein du grou
 \centering
 \begin{tabular}{|l|l|c|l|}
 \hline
-\multicolumn{1}{|c|}{\textbf{Nom, prénom}} & \multicolumn{1}{c|}{\textbf{E-mail}} & \textbf{Hiérarchie}                 & \multicolumn{1}{c|}{\textbf{Rôles}} \\ \hline
-Bron, Sacha                                & sacha.bron@heig-vd.ch                & \multicolumn{1}{l|}{Chef de projet} & TODO                                    \\ \hline
-Villa, David                               & david.villa@heig-vd.ch               & \multicolumn{1}{l|}{Chef suppléant} & TODO                                    \\ \hline
-Kammoun, Yassin                            & yassin.kammoun@heig-vd.ch            & -                                   & TODO                                    \\ \hline
-Ntawuruhunga, Paul                         & paul.ntawuruhunga@heig-vd.ch         & -                                   & TODO                                    \\ \hline
-Pellet, Marc                               & marc.pellet@heig-vd.ch               & -                                   & TODO                                    \\ \hline
+\multicolumn{1}{|c|}{\textbf{Nom, prénom}} & \textbf{Hiérarchie}                 & \multicolumn{1}{c|}{\textbf{Rôles}} \\ \hline
+Bron, Sacha                & \multicolumn{1}{l|}{Chef de projet} & Prototypes, gestion caméras, expérience utilisateur                                    \\ \hline
+Villa, David               & \multicolumn{1}{l|}{Chef suppléant} & Interface graphique, outils de dessin                                    \\ \hline
+Kammoun, Yassin            & -                                   & Interface graphique, documentation                                    \\ \hline
+Ntawuruhunga, Paul         & -                                   & Tracking, calibrage, tests                                    \\ \hline
+Pellet, Marc               & -                                   & Interface graphique, outils de dessin                                    \\ \hline
 \end{tabular}
 \caption{Équipe de projet}
 \end{table}
 
 \section{Cadre de réalisation}
 
-Ce projet s'inscrit dans le cadre du cours de Projet de Groupe (PDG) au sein de la Haute École d'ingénierie et de gestion du canton de Vaud (Heig-VD) sis à Yverdon-les-Bains. Selon le plan d'études de l'école, il est dispensé aux étudiants IL du département des Technologies de l'Information et de la Communication (TIC) pour le compte de leur troisième année de formation Bachelor. Le but de ce cours est d’effectuer un projet en passant par toutes les étapes de développement. Cela inclut le choix d'un sujet, la définition d’un cahier des charges, une phase de recherche et d'analyse suivie du développement de l’application et d’une phase de tests et de validation. En dernière instance, un rapport sur le déroulement du travail et une présentation du projet sont requis dans le but d'évaluer le travail effectué.
+Ce projet s'inscrit dans le cadre du cours de Projet de Groupe (PDG) au sein de la Haute École d'ingénierie et de gestion du canton de Vaud (HEIG-VD) sis à Yverdon-les-Bains. Selon le plan d'études de l'école, il est dispensé aux étudiants IL du département des Technologies de l'Information et de la Communication (TIC) pour le compte de leur troisième année de formation Bachelor. Le but de ce cours est d’effectuer un projet en passant par toutes les étapes de développement. Cela inclut le choix d'un sujet, la définition d’un cahier des charges, une phase de recherche et d'analyse suivie du développement de l’application et d’une phase de tests et de validation. En dernière instance, un rapport sur le déroulement du travail et une présentation du projet sont requis dans le but d'évaluer le travail effectué.
 
 \section{Choix du sujet}
 
-Le choix d'un tel sujet se justifie par le fait que ce projet exige un important travail de recherche, de découverte et d'apprentissage de nouvelles technologies comme cela peut notamment être le cas pour la librairie OpenCV. Bien évidemment, ce genre de projet présente des risques compte tenu du fait que la technologie n'est connue de personne, qu'elle peut être difficile à appréhender, à mettre en oeuvre et à maîtriser, que la faisabilité du projet n'est pas facilement définissable et que le temps d'apprentissage est difficilement estimable. Toutefois, toutes ces problématiques ne rendent le projet que plus motivant, attrayant et intéressant.
+Le choix d'un tel sujet se justifie par le fait que ce projet exige un important travail de recherche, de découverte et d'apprentissage de nouvelles technologies comme cela peut notamment être le cas pour la librairie OpenCV. Bien évidemment, ce genre de projet présente des risques compte tenu du fait que la technologie n'est connue de personne, qu'elle peut être difficile à appréhender, à mettre en oeuvre et à maîtriser, que la faisabilité du projet n'est pas facilement définissable et que le temps d'apprentissage est difficilement estimable. Toutefois, toutes ces problématiques ne rendent le projet que plus motivant, attrayant et intéressant. 
 
 Ce projet s'inscrivant dans un cadre académique, il s'agit donc d'une opportunité idéale d'acquérir de nouvelles connaissances. Le sujet en lui-même est des plus intéressants. Il se démarque clairement de la monotonie des applications développées dans un tel contexte. Des projets similaires ont certainement déjà été réalisés que ce soit dans un cadre professionnel que dans un cadre académique mais à bien moindre mesure ce qui laisse énormément de place pour la créativité et l'innovation. Par ailleurs, la complexité d'un tel projet ne rend que plus grand le mérite une fois le travail terminé avec un système tout à fait fonctionnel.
 
@@ -233,246 +233,246 @@ En dernière instance, ce sujet de projet a été choisi en premier lieu par son
 
 \chapter{Conception}
 
-Ce chapitre se veut être une description complète aussi bien de la conception du système que de la conception du stylet. L'architecture débute le descriptif du système par la présentation et la description de ses différentes composantes. Un diagramme de classes concis représentant l'ensemble du système est introduit. Viennent ensuite les présentations des deux composantes logicielles du système: le mécanisme de tracking et l'outil de dessin. Chacune fait l'objet d'une description plus approfondie de son architecture tout comme leur diagramme de classes respectif. Une décomposition de leur structure interne est effectuée de manière à décrire de manière indépendante le rôle et le fonctionnement de chaque constituant du système donné. Le stylet pour sa part est introduit en premier lieu par une description de son principe d'utilisation. Une présentation des différents composants matériels qui le constitue est ensuite réalisée. Un exposé du prototype de stylet est effectué au moyen de schémas. Les étapes de fabrication de celui-ci sont énumérées et commentées en long et large par la suite. Enfin, le fonctionnement du stylet est introduit. En dernière instance, l'environnement de dessin idéal est schématisé à l'aide de modélisations accompagnées de descriptions.
+Ce chapitre se veut être une description complète aussi bien de la conception du système que de la conception du stylet. Il débute donc par la présentation complète du système. Cette présentation introduit dans un premier temps une vision globale du système. Cette étape préliminaire est suivie par une description détaillée et progressive de chaque composant du système. Il s'agit concrètement de présenter en fond et en large l'architecture de l'ensemble du système, de chaque sous-système et de leurs composants respectifs. Des diagrammes de classes et des diagrammes d'activités accompagnent cette description du système. Les différents modèles de stylet pour leur part sont introduits en premier lieu par une description de leur principe d'utilisation. Une présentation des différents composants matériels qui les constitue est ensuite réalisée. Un exposé de leur prototype est effectué au moyen de schémas. Les étapes de fabrication de ces modèles sont énumérées et commentées en long et large par la suite. Enfin, le fonctionnement de chacun des modèles est introduit. En dernière instance, l'environnement de dessin idéal est schématisé à l'aide de modélisations accompagnées de descriptions.
 
 \section{Système global}
 
-Cette section présente le système global du projet. Il s'agit d'exposer, de décrire et de commenter son architecture globale d'une part. D'autre part, il s'agit d'introduire le diagramme de classes correspondant. Celui-ci est toutefois concis dans la mesure où seules les entités sont mentionnées, ni méthode ni attribut n'y figurent dans le but bien évidemment d'alléger le contenu du schéma.
+Cette section présente l'ensemble du système d'un point de vue global. Le but est d'être aussi abstrait que possible de manière à ce que l'étude du système se fasse de manière progressive. Cette présentation débute par l'introduction de l'architecture du système. 
 
-Le système met en jeu différents composants. Certains de ces composants sont de l'ordre du logiciel; d'autres sont de l'ordre du matériel. Cela se justifie par le fait que ce projet met non seulement en jeu différents composants de nature diverse mais en plus, ces composants sont supposés interagir et ce, malgré leur nature.
+Le système global correspond en la réunion de l'infrastructure matérielle et des composants logiciels compte tenu de la nature du projet. Cela se justifie notamment par le fait que des composants matériels interagissent avec des composants logiciels et inversement.
 
-La relation entre composants peut prendre différentes formes. Certains composants interagissent entre eux par le biais d'une communication réseau. Certains encore utilisent des périphériques pour rediriger de l'information vers une sortie matérielle donnée. D'autres encore exploitent une entrée matérielle d'autres dispositifs pour récupérer des données.
+\subsection{Architecture}
+
+L'architecture est présentée en deux variantes: une vue d'ensemble et une vue détaillée. Cette dernière n'est là qu'à titre indicatif de façon à ce que le lecteur dispose de la version complète de l'architecture; elle ne fait pas l'objet d'un description, seule la version allégée le fait.
+
+\newpage
+
+\subsubsection{Vue d'ensemble}
+
+La figure suivante propose une vue d'ensemble de l'architecture de du système dans sa globalité:
+
+\begin{figure}[H]
+\centering
+\includegraphics[angle=90, scale=0.75]{overview-global-system-architecture.png}
+\caption{Vue d'ensemble de l'architecture du système global}
+\end{figure}
+
+Le système dans sa globalité est en fait constitué de deux systèmes à part entière qui sont respectivement \textbf{LibreDraw System} et \textbf{Mouse Simulator System}. Par ailleurs, le système global est caractérisé par des éléments externes d'ordre matériel interagissant avec les deux systèmes mentionnés plus tôt; il s'agit concrètement des éléments \textit{Beamer}, \textit{Camera}, \textit{Stylus} et \textit{Drawing Area}.
+
+Le système \textbf{LibreDraw System} correspond à l'application de dessin à proprement parlé laquelle gère aussi bien la partie outil de dessin que la partie tracking du stylet. Ces tâches sont gérées respectivement par les sous-systèmes \textbf{Drawing Subsystem} et \textbf{Tracking Subsystem}. Par ailleurs, ce même système est caractérisé par un sous-système supplémentaire à savoir \textbf{Camera Subsystem}. Celui-ci a pour objectif de gérer l'initialisation et la mise à jour de la communication avec un dispositif d'enregistrement vidéo, une caméra donc, connecté au système hôte. Autrement dit, il s'agit de l'élément matériel \textit{Camera}.
+
+Le sous-système \textbf{Drawing Subsystem} contient entre autres le \textit{Core} de l'application du point de vue expérience utilisateur, c'est-à-dire son interface graphique. Par ailleurs, compte tenu du fait que l'interaction de ce même utilisateur avec l'application s'effectue par le biais d'un stylet, un clavier virtuel est mis à disposition par le constituant \textit{Virtual Keyboard} pour toute saisie textuelle d'information. L'esquisse du dessin de l'utilisateur avec le stylet est reproduite par le constituant \textit{Drawing}. Cette reproduction est appliquée par des outils de dessin regroupés dans le constituant \textit{Drawing Tools}. La sérialisation d'un dessin, sa sauvegarde et son importation au sein de l'application, est rendue possible par la mise à disposition de fonctionnalités fournies par le constituant \textit{File System I/O}.
+
+Le sous-système \textbf{Tracking Subsystem} est caractérisé par un constituant unique; il s'agit du \textit{Tracking Manager}, le gestionnaire du suivi du stylet dit autrement. En plus de gérer le stylet, ce constituant assure l'initialisation et la configuration de l'ensemble de l'infrastructure du système: écran, caméra et stylet. 
+
+Le système \textbf{Mouse Simulator System} est un composant à part entière. Celui-ci permet comme son nom l'indique de simuler une souris, c'est-à-dire de reproduire les faits et gestes de l'utilisateur lors de la manipulation du stylet comme s'il utilisait une souris en lieu et place de ce même stylet. 
+
+Le système dans son ensemble fonctionne globalement de la manière suivante:
+
+\begin{enumerate}
+\item Le lancement de l'application débute par l'initialisation et la configuration de l'infrastructure système. Ceci est réalisé par le constituant \textit{Tracking Manager} du sous-système \textbf{Tracking Subsystem}.
+\item Une fois la phase de configuration et d'initialisation terminée, les éléments matériels \textit{Camera} et \textit{Stylus} sont opérationnels et exploitables.
+\item L'interaction de l'utilisateur par le stylet avec l'application est capturée par l'élément \textit{Caméra} qui communique l'information au constituant \textit{Tracking Subsystem}.
+\item L'analyse des faits et gestes de l'utilisateur par le constituant \textit{Tracking Manager} est communiquée au système \textbf{Mouse Simulator System}. Celui-ci simule l'action utilisateur et l'applique sur le sous-système \textbf{Drawing Subsystem} du système \textbf{LibreDraw}.
+\item Le constituant \textit{Drawing} du sous-système \textbf{Drawing Subsystem} veille à reproduire l'esquisse de l'utilisateur. Un élément adéquat du constituant \textit{Drawing Tools} est utilisé pour ce faire.
+\item L'élément matériel \textit{Beamer} veillera à projeter la reproduction du dessin de l'utilisateur réalisé par l'élément \textit{Stylus} sur le support de dessin physique représenté par l'élément \textit{Drawing Area}.
+\end{enumerate}
+
+\newpage
+
+\subsubsection{Vue détaillée}
+
+La figure suivante propose une vue détaillée de l'architecture de du système dans sa globalité:
+
+\begin{figure}[H]
+\centering
+\includegraphics[angle=90, scale=0.75]{detailled-global-system-architecture.png}
+\caption{Vue détaillée de l'architecture du système global}
+\end{figure}
+
+\newpage
+
+\subsection{Diagramme d'activités}
+
+La figure suivante illustre l'activité globale liée à une esquisse utilisateur réalisée au moyen du stylet:
+
+\begin{figure}[H]
+\centering
+\includegraphics[angle=90, scale=0.55]{global-drawing-activity.png}
+\caption{Activité globale d'une esquisse utilisateur}
+\end{figure}
+
+\subsection{Diagramme de classes}
+
+\subsubsection{Vue d'ensemble}
+
+\subsubsection{Vue détaillée}
+
+\newpage
+
+\section{LibreDraw System}
+
+Cette section présente le détail de la conception du système \textbf{LibreDraw System}. Cette présentation débute par l'introduction de l'architecture de ce système. Celle-ci est bien plus détaillée de manière à approfondir progressivement la description du système. Chaque constituant du système fait également l'objet d'une pareille décomposition et d'une pareille description. Ce système correspond à l'application de dessin à proprement parlé. Pour rappel, l'application se veut être un outil de dessin assisté par ordinateur permettant à l'utilisateur de réaliser ses dessins de la manière la plus naturelle possible. Il doit pouvoir dessiner directement sur sa table ou n'importe quelle autre surface plane à l'aide d'un stylet. Son dessin doit pour sa part être projeté sur son plan de travail, donnant à l'utilisateur l'impression de dessiner avec un crayon et une feuille. Une telle application nécessite bien évidemment la mise en place d'une infrastructure adéquate. Toutefois, cette infrastructure doit pouvoir être exploitée par l'application. 
+
+Le mécanisme de suivi du stylet étant relativement complexe, il ne peut en aucune manière être exécuté sans passer au préalable par une phase d'initialisation et de configuration. En effet, différents objectifs doivent être atteints initialement de manière à ce que le système de tracking soit non seulement en mesure d'interagir avec le matériel mais en plus, que son interaction s'effectue de la manière la plus optimale possible. Le système doit être capable de s'adapter à un certain nombre de contraintes. Celles-ci peuvent être d'ordre matériel. En effet, malgré la présence conseillée d'une caméra et d'un projecteur, il n'en demeure pas moins qu'elle n'est pas obligatoire. En conséquence, l'application doit être en mesure de s'adapter lors d'une telle situation. Par ailleurs, le fait de disposer d'une caméra connectée au système hôte n'est pas suffisant pour que le système de tracking soit en mesure d'interagir de manière performante avec l'ensemble de l'infrastructure. L'angle et la position de la caméra étant des informations tout à fait variables, elles doivent être prises en compte lors de l'initialisation du mécanisme de tracking.
+
+Le suivi du stylet n'est également pas une tâche facile. Le mécanisme de tracking doit être en mesure de détecter à tout moment le stylet tant qu'il reste dans le champ de vision de la caméra et ce, indépendamment de la gestuelle de l'utilisateur. Le principe de détection de stylet défini lors de l'établissement du cahier des charges reposant sur la détection de LED, celui-ci découle à un certain nombre de problèmes potentiels et de questions devant être imaginées, supposées et répondues à l'avance. Une de ces questions est le comportement du mécanisme de tracking lorsque la LED du stylet présente la même couleur que le contenu du dessin de l'utilisateur. Ainsi, le dessin et la LED risqueraient d'être confondues. Telles sont les problématiques auxquelles le système de tracking doit faire face. L'ergonomie de l'application et l'expérience utilisateurs sont tout autant des points à soulever. L'interaction de l'utilisateur avec l'application s'effectuant avec un stylet, celle-ci peut être sujette à des problèmes de précision. Par ailleurs, les situations de saisies d'information par l'utilisateur doivent être rendues aussi facile que possible. En effet, forcer l'utilisateur a quitté son support de travail pour être en mesure de sauvegarder son dessin par le biais de son clavier physique est une contrainte qui est loin d'être appréciable. De ce fait, une solution permettant à l'utilisateur d'accomplir une telle tâche en se passant de son clavier doit être proposée. Le fait que les faits et gestes de l'utilisateur soient captés par une caméra vidéo et interprétés nécessite de reproduire l'esquisse de dessin déclenchée par l'utilisateur dans l'application de dessin. Le dessin esquissé par l'utilisateur étant projeté via un projecteur sur son support de travail, le dessin doit donc être reproduit logiquement et visuellement au sein de l'application.
 
 \newpage
 
 \subsection{Architecture}
 
-La figure suivante présente l'architecture globale du système. Elle met en évidence entre autres les différentes composantes constituant le système:
+La figure suivante illustre l'architecture du système \textbf{LibreDraw System}:
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
-\includegraphics[scale=0.55]{images/global-system-architecture.png}
-\caption{Architecture globale du système}
+\includegraphics[angle=90, scale=0.75]{libredraw-system-architecture.png}
+\caption{Architecture du système LibreDraw System}
 \end{figure}
 
-\textit{TODO: décrire l'architecture globale du système.}
+Le système \textbf{LibreDraw System} est divisé en trois sous-systèmes distincts. Le premier sous-système est \textbf{Camera Subsystem}. Celui-ci a pour tâches de gérer l'initialisation, la configuration et sélection de la caméra utilisateur devant servir à capturer les mouvements du stylet. La partie initialisation et configuration est assurée par le constituant \textit{Manager}. Celui-ci fait appel au constituant \textit{Updater} pour proposer une liste de caméras disponibles susceptibles d'être utilisées en guires de dispositif d'enregistrement vidéo de l'application.
 
-\subsection{Diagramme d'activités}
+Le second sous-système du système \textbf{LibreDraw System} est \textbf{Tracking Manager}. Celui-ci est constitué d'un constituant principal qui est le gestionnaire du tracking de stylet. Il a pour tâche principale comme son nom l'indique de gérer le tracking du stylet, c'est-à-dire d'assurer en permanence son suivi au sein du champ de vision de la caméra. Pour ce faire, il dispose à son tour d'un ensemble de constituants qui sont:
 
-\textit{TODO: définir et décrire un diagramme d'activités mettant en jeu les différentes composants du système (Drawing System, Tracking System, Beamer, Drawing Area, Camera, Stylus).}
+\begin{itemize}
+\item[$\bullet$] \textit{Screen Detector}: ce constituant a pour fonction de détecter l'écran de l'utilisateur. Cela est notamment utilisé lors de la phase préliminaire de calibrage du matériel.
+\item[$\bullet$] \textit{LED Detector}: ce constituant a pour fonction de détecter et traquer en permanence la/les LED(s) du stylet de manière à le localiser dans le champ de vision de la caméra. Cela est utilisé aussi bien lors de la phase d'initialisation du système que lors de sa phase post-initialisation, c'est-à-dire lors du suivi du stylet.
+\item[$\bullet$] \textit{Controller}: ce constituant contrôle les mouvements et les actions du stylet selon les informations reçues par la caméra et selon leur analyse également.
+\item[$\bullet$] \textit{Calibrator}: ce constituant initialise et calibre l'infrastructure matériel de manière à ce qu'il puisse interagir avec l'application et inversement.
+\item[$\bullet$] \textit{Error Manager}: ce constituant fait office de gestionnaire d'erreur. Il est notamment sollicité lors d'une erreur rencontrée durant le processus de calibration.
+\item[$\bullet$] \textit{Network I/O Handler}: ce constituant fait office d'interface de communication réseau entre les systèmes \textbf{LibreDraw System} et \textbf{Mouse Simulator System}. Il est notamment sollicité une fois le traitement d'informations liés aux faits et gestes du stylet terminé afin de les reproduire au sein de la partie dessin du système gérée entre autres par le sous-système \textbf{Drawing Subsystem}.
+\end{itemize}
 
-\subsection{Diagramme de classes}
+Le dernier sous-système du système \textbf{LibreDraw System} est \textbf{Drawing Subsystem}. Celui-ci gère entre autres toute la partie interface graphique utilisateur de l'application de dessin. Il dispose en premier lieu d'un constituant nommé \textit{Core} qui fait office de coeur de l'interface. Il met également à disposition un constituant \textit{Virtual Keyboard} qui fournit comme son nom l'indique un clavier virtuel. Celui-ci est sollicité entre autres lors de chaque saisie utilisateur. 
 
-\textit{TODO: définir et décrire le diagramme de classes de l'ensemble du système (avec entités, sans méthodes, sans attributs, sans cardinalités).}
+Le dessin de l'utilisateur est représenté pour sa part par le constituant \textit{Drawing}. Ce dernier gère toute la partie reproduction de dessin aussi bien au niveau logique que graphique. Il délègue toutefois l'application de l'esquisse réalisée à l'aide d'un outil à des éléments du constituant \textit{Drawing Tools}. Finalement, le dernier constituant composant ce sous-système est \textit{File System I/O} qui met à disposition des mécanismes de sérialisation de dessin.
 
 \newpage
 
-\section{Système de tracking}
+\subsection{Diagramme d'activités}
 
-\textit{TODO: introduire le contenu de la section (qu'est-ce qui y sera présenté dans l'ordre).}
+\subsection{Diagramme de classes}
+
+\newpage
+
+\subsection{Drawing Subsystem}
+
+Cette section présente le détail de la conception du sous-système \textbf{Drawing Subsystem} du système \textbf{LibreDraw System}. Cette section présente le détail de la conception du sous-système \textbf{Drawing Subsystem}. Cette présentation débute par l'introduction de l'architecture de ce système. Celle-ci est bien plus détaillée de manière à approfondir progressivement la description du système. Chaque constituant du système fait également l'objet d'une pareille décomposition et d'une pareille description.
+
+L'interface graphique utilisateur doit concrètement proposer une fenêtre principale dans laquelle il est possible de dessiner. Bien évidemment, il est attendu de l'utilisateur qu'il dessine à l'aide du stylet sur son support de travail. Toutefois, il ne lui est pas impossible de travailler directement sur l'application au moyen de la souris de son ordinateur. Ce n'est évidemment pas jouir de la fonctionnalité principale de l'application de dessin. Néanmoins, aucune contrainte de cet ordre n'est imposé à l'utilisateur quant à l'esquisse de son dessin.
+
+L'esquisse d'un dessin doit pouvoir être effectuée dans une zone appropriée laquelle correspond en un espace ouvert où l'utilisateur peut esquisser ce qu'il désire et ce, à sa guise. Par ailleurs, il doit disposer d'une panoplie d'outils lui permettant d'être inventif et créatif vis-à-vis de son dessin tant sur sa forme que sur son contenu. Les points suivants récapitulent les outils devant être mis à disposition:
+
+\begin{itemize}
+\item[$\bullet$] Outils de dessin: les outils de dessin mettent à disposition un crayon et une gomme permettant de dessiner sans restriction n'importe quelle forme géométrique.
+\item[$\bullet$] Outils de formes: les outils de formes mettent à disposition un ensemble de formes géométriques prédéfinies pouvant être dessinées au sein d'un dessin et redimensionnées à la guise de l'utilisateur.
+\item[$\bullet$] Outils de couleurs: les outils de couleurs mettent à disposition une palette de couleurs laquelle permet de définir la couleur du trait aussi bien pour les outils de dessin que pour les outils de formes.
+\item[$\bullet$] Outils d'épaisseur: les outils d'épaisseur permettent de définir selon une liste prédéfinie l'épaisseur du trait aussi bien pour les outils de dessin que pour les outils de formes.
+\end{itemize}
+
+Le dessin esquissé par l'utilisateur doit pouvoir être sauvegardé de manière à pouvoir y retravailler dessus ultérieurement. De ce fait, des boîtes de dialogue adaptées à l'utilisation d'un stylet doivent être proposées de manière à pouvoir effectuer de telles opérations. De plus, ces boîtes de dialogue doivent permettre l'utilisateur d'y saisir aisément du texte. En conséquence, une solution de saisie doit être proposée et celle-ci doit être en adéquation avec l'utilisation d'un stylet lors de l'accomplissement d'une telle tâche.
+
+En dernière instance, l'interface graphique utilisateur doit être ergonomique, facile d'utilisation et agréable à l'utilisateur. Le point essentiel est l'aisance avec laquelle il doit être en mesure d'interagir avec l'interface graphique de l'application en recourant au stylet. En conséquence, l'élaboration de toutes les fenêtres, boîtes de dialogues et autres doivent impérativement être imaginées de telle sorte que l'utilisation du stylet remplace définitivement celle de la souris de l'ordinateur.
+
+\newpage
+
+\subsubsection{Architecture}
+
+La figure suivante illustre l'architecture du sous-système \textbf{Drawing Subsystem}:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.9]{drawing-subsystem-architecture.png}
+\caption{Architecture du sous-système Drawing Subsystem}
+\end{figure}
+
+Le sous-système \textbf{Drawing Subsystem} gère entre autres toute la partie interface graphique utilisateur de l'application de dessin. Le composant \textit{Core} correspond au coeur de ce sous-système et donc, à l'interface graphique de l'application. Celui-ci met effectivement à disposition tous les constituants graphiques nécessaires devant être combinés et regroupés ensemble pour former finalement l'interface utilisateur final. Il s'agit concrètement des constituants \textit{Menu} qui fournit le menu de l'application de dessin, \textit{Window} qui correspond à la fenêtre principale de l'application et enfin, \textit{Toolbar} qui se révèle être la barre d'outils de cette même fenêtre.
+
+
+
+\subsubsection{Core}
+
+\textbf{Architecture}
+
+\textbf{Window}
+
+\textbf{Menu}
+
+\textbf{Toolbar}
+
+\subsubsection{Virtual Keyboard}
+
+\textbf{Architecture}
+
+\textbf{Model}
+
+\textbf{Key}
+
+\textbf{Input}
+
+\subsubsection{Drawing}
+
+\textbf{Architecture}
+
+\textbf{Model}
+
+\textbf{Controller}
+
+\subsubsection{Drawing Tools}
+
+\textbf{Architecture}
+
+\subsubsection{File System I/O}
+
+\newpage
+
+\subsection{Tracking Subsystem}
+
+// words about tracking manager
+
+\subsubsection{Architecture}
+
+\subsubsection{Controller}
+
+\subsubsection{Screen Detector}
+
+\subsubsection{LED Detector}
+
+\subsubsection{Calibrator}
+
+\subsubsection{Error Manager}
+
+\subsubsection{Network I/O Handler}
+
+\newpage
+
+\subsection{Camera Subsystem}
+
+\subsubsection{Architecture}
+
+\subsubsection{Manager}
+
+\subsubsection{Updater}
+
+\newpage
+
+\section{Mouse Simulator System}
 
 \subsection{Architecture}
 
-\textit{TODO: décrire l'architecture du système de tracking.}
+\subsection{Network I/O Listener}
 
-\subsection{Diagramme d'activités}
-
-\textit{TODO: définir et décrire un diagramme d'activités mettant en jeu le système de tracking (Tracking System), les constituants de sa structure interne, le système de dessin (Drawing System), la caméra (Camera), le stylet (Stylus) et le support de dessin (Drawing Area).}
-
-\subsection{Diagramme de classes}
-
-\textit{TODO: définir et décrire le diagramme de classes complet du système de tracking (avec entités, avec attributs, avec méthodes, avec cardinalités).}
+\subsection{Mouse Controller}
 
 \newpage
 
-\section{Système de dessin}
+\section{Beamer}
 
-Cette section présente le système de dessin. Il s'agit d'exposer, de décrire et de commenter son architecture d'une part. D'autre part, il s'agit d'introduire le diagramme de classes correspondant. Contrairement à celui du système global, le diagramme de classes ici est complet: attributs, méthodes, cardinalités et toute autre information jugée pertinente y figurent. Enfin, la structure interne du système y est décomposée. Chacune de ses constituantes y est décrite de manière indépendante.
+\section{Camera}
 
-Le système de dessin correspond à un outil logiciel lequel fournit une interface graphique utilisateur destinée à y produire virtuellement du dessin. Celui-ci a pour but de représenter logiquement et graphiquement sur un moniteur le dessin qu'un utilisateur est en train de dessiner sur son support physique qui, pour rappel, est supposé être n'importe quelle surface plane.
+\section{Stylus}
 
-Cet outil de dessin a également pour objectif de fournir à l'utilisateur un ensemble de fonctionnalités lui permettant de manipuler son dessin. Ainsi, il se voit offrir un éventail d'outils:
-
-\begin{itemize}
-\item[$\bullet$] Outils de dessin:
-    \begin{itemize}
-    \item crayon, gomme.
-    \end{itemize}
-\item[$\bullet$] Outils de formes:
-    \begin{itemize}
-    \item cercle, rectangle.
-    \end{itemize}
-\item[$\bullet$] Outils de couleurs:
-    \begin{itemize}
-    \item palette de couleurs.
-    \end{itemize}
-\item[$\bullet$] Outils d'épaisseur:
-    \begin{itemize}
-    \item épaisseur de trait.
-    \end{itemize}
-\end{itemize}
-
-Outre les fonctionnalités de dessin, l'outil se doit de proposer les fonctionnalités usuelles d'un logiciel dans la mesure où il s'agit d'une application manipulant un document, c'est-à-dire une unité d'informations lisible et susceptible d'être stockée de manière persistante. Dans le cas présent, il s'agit d'un dessin. Ainsi, les fonctions d'importation et de sauvegarde, d'impression et d'historique d'actions se doivent d'être disponibles, donc conçues et implémentées.
-
-Selon ce qui a été défini dans le cahier des charges, les fonctionnalités suivantes sont donc mises à disposition dans l'application de dessin:
-
-\begin{itemize}
-\item[$\bullet$] Sérialisation:
-    \begin{itemize}
-    \item enregistrement, importation, impression.
-    \end{itemize}
-\item[$\bullet$] Historique d'actions:
-    \begin{itemize}
-    \item annulation, rétablissement.
-    \end{itemize}
-\end{itemize}
-
-Compte tenu du fait que le système de dessin est susceptible de communiquer avec d'autres composantes du système global, notamment des composantes matérielles, des fonctionnalités supplémentaires se révèlent être nécessaires. Il s'agit notamment de permettre à l'utilisateur de pouvoir configurer les composantes matérielles interagissant avec les composantes logicielles de manière à ce qu'elles puissent fonctionner et communiquer de manière optimale avec les meilleurs paramètres possibles et donc, avec le meilleur taux de performance.
-
-\newpage
-
-\subsection{Architecture}
-
-La figure suivante présente l'architecture du système de dessin:
-
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.7]{images/drawing-system-architecture.png}
-\caption{Architecture du système de dessin}
-\label{fig:dsa}
-\end{figure}
-
-Le système de dessin est composé d'un certain nombre de constituants, chacun réalisant des tâches bien déterminées. Par ailleurs, le système de dessin fait l'objet d'une dépendance avec le système de tracking. En effet, ceux-ci interagissent ensemble par le biais d'une communication réseau.
-
-La communication réseau avec le système de tracking est gérée du point de vue du système de dessin par un gestionnaire de communication réseau, symbolisé par le bloc \textit{Network I/O Handler} sur la figure \ref{fig:dsa}. Ce gestionnaire se comporte à la manière d'un \textit{listener}, d'un écouteur d'événements qui dans le cas présent consistent en la réception de messages. Ainsi, il se voit écouter tous les messages émis par le composant réseau du système de tracking. Les informations qui lui sont communiquées consistent typiquement en la description abstraite des faits et gestes de l'utilisateur avec le stylet sur le support physique, c'est-à-dire le bloc \textit{Drawing Area}. Cette description correspond typiquement en des actions survenues à des coordonnées données. Lors de la réception de tels messages, le gestionnaire de communication réseau transmet ces informations au gestionnaire de tracking du système de dessin, symbolisé par le bloc \textit{Tracking Manager} sur la figure \ref{fig:dsa}.
-
-Le bloc \textit{Tracking Manager} remplit plusieurs rôles. Concrètement, il accomplit les tâches suivantes:
-
-\begin{itemize}
-\item[$\bullet$] Simuler la souris: il s'agit de simuler et de reproduire avec la souris de l'ordinateur les faits et gestes de l'utilisateur avec le stylet. Cela est assuré par le bloc \textit{Mouse Controller}.
-\item[$\bullet$] Transformer des coordonnées: il s'agit de transformer les coordonnées du point de vue de la caméra vers le point de vue de l'écran. Cela est assuré par le bloc \textit{Coordinates Transformer}.
-\item[$\bullet$] Détecter la projection d'écran: il s'agit de détecter la zone physique sur laquelle la projection de la reproduction du dessin est réalisée. Cela est réalisé par le biais du bloc \textit{Screen Detector}.
-\item[$\bullet$] Calibrer la détection: il s'agit de calibrer la détection du stylet sur le support physique, c'est-à-dire de le localiser de manière précise en vue de l'exécution du mécanisme de tracking du stylet. Cette calibration est effectuée par le bloc \textit{Detection Calibrator}.
-\end{itemize}
-
-En définitive, le gestionnaire du tracking veille d'une part à ce que les composantes matérielles du système soient disponibles et fonctionnent de la manière la plus optimale possible. D'autre part, ce même gestionnaire tente tant bien que mal de reproduire ce que cherche à dessiner l'utilisateur en simulant ces faits et gestes et en les reportant sur l'équivalent logique du support physique de dessin.
-
-L'ensemble des constituants du système de dessin est géré par un contrôleur général, ou contrôleur système, symbolisé par le bloc \textit{System Controller} sur la figure \ref{fig:dsa}. Celui-ci fait office de médiateur entre les différents constituants et veille à transmettre des messages lorsque besoin se fait sentir. Concrètement, il délègue à un constituant donné une tâche émise par un autre constituant. Ce contrôleur général est donc le noyau central du système de dessin, le coeur du système dit autrement.
-
-Différents outils sont mis à la disposition de l'utilisateur en vue de dessiner et de personnaliser ses esquisses. Pour ce faire, différents contrôleurs sont définis de manière à traiter les interactions de l'utilisateur avec un outil donné. En conséquence, il y a autant de contrôleurs de dessin que d'outils prévus pour dessiner. Ces contrôleurs de dessin, ou contrôleurs d'outils de dessin, sont représentés par le bloc \textit{Drawing Controllers}. Ceux-ci sont mis à disposition du contrôleur général, \textit{System Controller} autrement dit.
-
-Lorsque le contrôleur de souris, c'est-à-dire le bloc \textit{Mouse Controller}, simule une action utilisateur, celle-ci est émise au contrôleur général qui délègue la reproduction du geste de l'utilisateur selon l'outil utilisé au contrôleur de dessin approprié. Cette délégation est réalisée de manière abstraite. Le contrôleur général ne sait en aucun cas quel contrôleur de dessin se voit confier la tâche d'appliquer le geste utilisateur sur l'équivalent logique du dessin physique.
-
-La reproduction des faits et gestes de l'utilisateur à l'aide du simulateur de souris, du contrôleur général et d'un contrôleur de dessin adéquat nécessite de disposer d'une vue sur laquelle ce traitement peut avoir lieu. Ceci est rendu possible par la définition d'une vue de dessin, symbolisée par le bloc \textit{Drawing View} sur la figure \ref{fig:dsa}. Le dessin que cherchera à dessiner l'utilisateur sera logiquement stocké dans ce constituant, affiché graphiquement et donc visible sur le moniteur de l'utilisateur. C'est précisément un des contrôleurs du bloc \textit{Drawing Controllers} qui effectuera cette tâche à la demande du contrôleur général, \textit{System Controller}, qui lui, aura réagi initialement à la demande du simulateur de souris, \textit{Mouse Controller}, qui aura reçu antérieurement une instruction de la part du système de tracking.
-
-Le bloc \textit{Beamer} est un composant matériel à part entière. C'est vers celui-ci qu'est projetée la reproduction du dessin de l'utilisateur. D'un point de vue global de l'ensemble de l'infrastructure, le système n'accomplit aucune tâche pour que cette projection soit possiblement effective. Ce composant fait bel et bien partie du système dans la mesure où il reçoit indirectement de l'information en provenance d'un composant logiciel, le système de dessin en l'occurrence. Toutefois, cette transmission d'information n'est pas réalisée par le système présenté mais par le système d'exploitation de la machine hôte. Ainsi, il incombe à l'utilisateur de veiller à ce qu'un tel périphérique soit connecté à la machine hôte et qu'il soit opérationnel. En dernière instance, pour que la projection soit visible, il est attendu de l'utilisateur qu'il duplique ou qu'il étende son écran sur la sortie du projecteur de manière à ce que ce dernier affiche le contenu du moniteur.
-
-Du point de vue du système de dessin, le bloc \textit{Drawing Area} n'est rien de plus qu'une zone sur laquelle est projetée la reproduction du dessin de l'utilisateur par le bloc \textit{Beamer}. Il s'agit tout simplement du support physique de l'utilisateur lequel remplace le support papier traditionnel.
-
-\subsection{Diagramme d'activités}
-
-\subsection{Diagramme de classes}
-
-\subsection{Gestionnaire de communication réseau}
-
-\subsection{Gestionnaire de tracking}
-
-\subsubsection{Contrôleur de souris}
-
-\subsubsection{Transformateur de coordonnées}
-
-\subsubsection{Détecteur d'écran}
-
-\subsubsection{Mécanisme de calibration}
-
-\subsection{Contrôleur système}
-
-\newpage
-
-\subsection{Contrôleurs de dessin}
-
-L'utilisation d'un outil de dessin nécessite le recours à un contrôleur adéquat devant permettre d'appliquer l'action que représente l'outil en question. Ainsi, dans le cas où l'utilisateur utiliserait la gomme, le contrôleur gérant la gomme devrait reproduire à l'exactitude les faits et gestes de l'utilisateur avec le stylet qui, dans le cas présent, représenterait une gomme.
-
-\subsubsection{Hiérarchie des contrôleurs}
-
-Les contrôleurs d'outils se présentent en plusieurs exemplaires. Chaque contrôleur a pour but de traiter les interactions de l'utilisateur avec son dessin pour un outil donné. Ainsi, si l'utilisateur manipule la gomme, le contrôleur relatif à la gomme entrera en scène et réagira aux actions de l'utilisateur, c'est-à-dire d'effacer là où l'utilisateur le demande. En l'occurrence, il s'agit du contrôleur nommé \textit{EraserController}. Si l'utilisateur manipule le crayon, le contrôleur relatif au crayon entrera en scène et ainsi de suite. Pour ce faire, une hiérarchie de contrôleurs d'outils a été établie. Elle est décrite par la figure suivante:
-
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.7]{images/tools-controllers-hierarchy.png}
-\caption{Hiérarchie des contrôleurs d'outils}
-\end{figure}
-
-Un contrôleur d'outil abstrait est défini au sommet de la hiérarchie. Celui-ci apporte une couche d'abstraction à l'architecture dans la mesure où le contrôleur général ne sait à aucun moment avec quel contrôleur d'outil il interagit. Ainsi, lorsqu'un contrôleur est soumis à une tâche, le contrôleur général lui déléguera le travail. Par polymorphisme, la bonne implémentation du contrôleur d'outil sera appelée.
-
-À noter qu'il y a autant de spécialisations de contrôleur d'outil qu'il y a d'outils mis à disposition de l'utilisateur. Pour rappel, les outils se présentent en quatre catégories à savoir les outils de dessin, les outils de formes, les outils de couleurs et les outils d'épaisseur. Toutefois, seules les deux premières font l'objet de contrôleurs d'outils, la raison étant due au fait que les outils appartenant à celles-ci sont les seuls permettant de produire du dessin à proprement parlé. Les autres font plutôt offices de cosmétiques pouvant être appliquées au dessin. Compte tenu de la hiérarchie établie et selon ce qui a été dit plus tôt, le mapping établi entre outils et contrôleurs d'outils se présente comme suit:
-
-\begin{table}[h]
-\centering
-\begin{tabular}{|l|l|}
-\hline
-\multicolumn{1}{|c|}{\textbf{Outil}} & \multicolumn{1}{c|}{\textbf{Contrôleur d'outil}} \\ \hline
-Crayon                               & PenController                                    \\ \hline
-Gomme                                & EraserController                                 \\ \hline
-Ligne                                & DashController                                   \\ \hline
-Cercle                               & EllipseControler                                 \\ \hline
-Rectangle                            & RectangleController                              \\ \hline
-\end{tabular}
-\caption{Mapping outil - contrôleur d'outil}
-\end{table}
-
-Bien que non représenté au sein de la figure précédente, les différents contrôleurs d'outil sont régis par les mêmes comportements. Ceux-ci sont effectivement appelés à réagir aux événements suivants:
-
-\begin{itemize}
-\item[$\bullet$] Mouvement de la souris.
-\item[$\bullet$] Pression du bouton de la souris.
-\item[$\bullet$] Relâchement du bouton de la souris.
-\item[$\bullet$] Double-click de la souris.
-\end{itemize}
-
-Lorsque le simulateur de souris invoque le contrôleur général suite à la réception d'un message en provenance du système de tracking, le contrôleur général veille à déléguer le travail d'application de dessin au contrôleur d'outil de dessin adéquat en déclenchant l'événement propice. Ainsi, si l'utilisateur sélectionne dans un premier temps l'outil crayon et que dans un second temps, il produit une esquisse avec ce même outil, l'événement de pression du bouton de la souris sera déclenché après interprétation. Le contrôleur général déclenchera ce même événement pour invoquer le contrôleur \textit{PenController} qui tâchera de reproduire l'esquisse de l'utilisateur.
-
-\subsubsection{Substitution des contrôleurs}
-
-Selon l'outil sélectionné par l'utilisateur, les contrôleurs substituent les uns autres selon le courant. Ce mécanisme est géré d'une part par l'interface graphique utilisateur. Pour rappel, celle-ci est représentée par la classe MainWindow pour laquelle des événements sont susceptibles d'être déclenchés par l'utilisateur comme le choix d'un outil par exemple. Ainsi, un tel déclenchement doit avoir pour conséquence la substitution des contrôleurs. La sélection d'un outil impliquera que le contrôleur général change le contrôleur d'outil courant sans pour autant savoir lequel il s'agit. Le diagramme de séquence qui suit récapitule le comportement attendu:
-
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.5]{images/tools-controllers-substitution.png}
-\caption{Substitution des contrôleurs d'outils}
-\end{figure}
-
-La figure précédente résume parfaitement ce qui a été décrit plus tôt; l'utilisateur sélectionne un outil. Cette action a pour conséquence le déclenchement d'un événement adéquat au sein de l'interface graphique utilisateur. Celle-ci fait ensuite appel au contrôleur général pour mettre à jour le contrôleur d'outil courant.
-
-\newpage
-
-\subsection{Dessin}
-
-Le concept de dessin correspond à n'importe quelle esquisse réalisée par l'utilisateur au moyen du stylet prévu et conçu à cet effet. Cela peut aller du simple point au milieu d'une surface à la modélisation en perspective du bâtiment du site de Cheseaux de la Haute École d'ingénierie et de gestion du canton de Vaud (Heig-VD).
-
-\subsubsection{Vue virtuelle}
-
-Bien qu'il soit prévu que le dessin esquissé soit projeté sur son support physique, le dessin logique du dessin doit être représenté sur le moniteur de l'utilisateur. En conséquence, une vue virtuelle du dessin doit être mise à disposition du système. Celui-ci fait entre autres appel aux contrôleurs de dessin pour y stocker logiquement et y retranscrire graphiquement les esquisses de l'utilisateur à la demande du contrôleur général.
-
-\subsubsection{Structure logique}
-
-La structure logique du dessin se base sur une structure de type \textit{bitmap}, c'est-à-dire une matrice où chaque élément de la matrice correspond à un pixel. La valeur stockée dans un tel élément consiste en la couleur de ce pixel. Cette couleur est représentée quant à elle par un code hexadécimal. En guise d'exemple, la figure suivante illustre une telle structure.
-
-\begin{figure}[h]
-\centering
-\includegraphics{images/drawing-structure.png}
-\caption{Structure logique d'un dessin}
-\end{figure}
-
-\subsubsection{Représentation graphique}
-
-La structure logique d'un dessin doit être traduite de manière à pouvoir obtenir une représentation graphique de celui-ci. Cette représentation graphique correspond au dessin affiché sur l'interface graphique utilisateur de l'application, sur le moniteur de l'utilisateur autrement dit.
-
-\subsubsection{Projection}
-
-La projection du dessin doit être réalisée par le biais d'un dispositif matériel adéquat. Dans le cadre de ce projet, il est préconisé de recourir à un projecteur lequel est censé être connecté à l'ordinateur. Le système d'exploitation de son côté veille à rediriger la représentation graphique du dessin vers la sortie matérielle faisant l'interface avec le périphérique de projection.
-
-\newpage
+\section{Drawing Area}
 
 \section{Stylet}
 
@@ -494,23 +494,20 @@ Le premier modèle du stylet est caractérisé par les composants suivants:
 \item[$\bullet$] Un boîtier.
 \end{itemize}
 
-\subsubsection{Fabrication}
-
-\textit{TODO: décrire les étapes de fabrication du stylet (celles-ci devraient permettre à tout un chacun de pouvoir le créer à partir de zéro).}
-
 \subsubsection{Prototype}
 
 La figure suivante propose une ébauche de prototype du modèle à une LED du stylet:
 
 \textit{TODO: inclure un schéma du prototype de stylet à une LED.}
 
-\subsubsection{Fonctionnement}
-
-\textit{TODO: décrire le fonctionnement interne du stylet.}
-
 \subsubsection{Principe d'utilisation}
 
-\textit{TODO: décrire le principe d'utilisation du stylet, c'est-à-dire ce qu'il faut faire exactement pour pouvoir dessiner (position du bras, disposition de la main et des doigts, appui sur l'interrupteur).}
+Ce modèle de stylet aurait dû pouvoir être utilisé comme un gros crayon, mais l'utilisateur aurait dû faire attention à l'inclinaison du stylet (voir ci-dessous). Son manque d'intuitivité aurait demandé à l'utilisateur de s'y habituer durant une période d'apprentissage indésirée.
+
+\subsubsection{Inconvénients}
+
+Après de rapides tests durant lesquels le modèle à une LED a été filmé, nous nous sommes rendus compte qu'il était parfois impossible de déterminé la position précise de la pointe du stylet en ayant pour unique information la position d'une seule LED. En effet, les mouvements du poignets lors du dessin étant complexes, l'inclinaison du stylet peut varier rapidement et l'alignement entre la LED et la pointe change.
+Nous avons alors imaginé l'évolution de ce modèle, le modèle à deux LEDs.
 
 \newpage
 
@@ -518,24 +515,25 @@ La figure suivante propose une ébauche de prototype du modèle à une LED du st
 
 Le modèle à deux LED du stylet a été défini durant la première partie du projet. Il remplace le modèle à une LED.
 
-\textit{TODO: expliquer et justifier la raison du changement de modèle.}
-
 \subsubsection{Composants}
 
 Le deuxième modèle du stylet est caractérisé par les composants suivants:
 
 \begin{itemize}
-\item[$\bullet$] Une LED rouge.
-\item[$\bullet$] Une LED verte.
-\item[$\bullet$] Un interrupteur.
-\item[$\bullet$] Une résistance.
-\item[$\bullet$] Une batterie.
-\item[$\bullet$] Un boîtier.
+\item[$\bullet$] Une LED rouge
+\item[$\bullet$] Une LED verte
+\item[$\bullet$] Un interrupteur momentané
+\item[$\bullet$] Une résistance
+\item[$\bullet$] Une batterie
+\item[$\bullet$] Un boîtier
 \end{itemize}
 
 \subsubsection{Fabrication}
 
-\textit{TODO: décrire les étapes de fabrication du stylet (celles-ci devraient permettre à tout un chacun de pouvoir le créer à partir de zéro).}
+Le but est de faire en sorte que les deux LEDs s'allument lorsque l'interrupteur momentané est appuyé. Pour cela, nous avons simplement connecté en série l'interrupteur, la LED rouge, la LED verte et la résistance à la batterie.
+L'ensemble a ensuite été installé dans un boîtier modélisé à l'aide du logiciel Blender, puis créé à l'aide d'une imprimante 3D à extrusion.
+
+\textit{TODO: schéma électrique? Image de synthèse?).}
 
 \subsubsection{Prototype}
 
@@ -549,41 +547,24 @@ La figure suivante propose une ébauche de prototype du modèle à deux LEDs du 
 
 \subsubsection{Principe d'utilisation}
 
+Ce modèle de stylet est censé pouvoir être utilisé comme un gros crayon. Il est alors relativement intuitif à utiliser et ne demande pas une longue période d'apprentissage.
+
 \textit{TODO: décrire le principe d'utilisation du stylet, c'est-à-dire ce qu'il faut faire exactement pour pouvoir dessiner (position du bras, disposition de la main et des doigts, appui sur l'interrupteur).}
+
+\subsubsection{Inconvénients}
+Après de nombreux essais avec ce modèle, nous avons remarqué qu'il était difficile d'obtenir une position calculée précise de la pointe du stylet en ne se basant que sur deux LEDs posées sur son côté. En effet, les problèmes d'inclinaisons n'étaient que partiellement résolu, et nous nous sommes rendus compte que la rotation du stylet avait un lourd impact sur la précision.
+Nous en avons conclu qu'il serait plus simple et plus efficace de suivre directement la pointe du stylet grâce à la caméra et nous nous sommes alors résolu à l'utilisation d'une LED jouant le rôle de mine ou à l'utilisation d'un pointeur laser. Les dispositifs étant tous deux perçus comme une tâche de lumière monochrome par la caméra.
 
 \newpage
 
 \subsection{Modèle laser}
 
-Le modèle laser du stylet a été défini durant la deuxième partie du projet. Il remplace le modèle à deux LEDs.
-
-\textit{TODO: expliquer et justifier la raison du changement de modèle.}
-
-\subsubsection{Composants}
-
-Le troisième modèle du stylet est caractérisé par les composants suivants:
-
-\begin{itemize}
-\item[$\bullet$] Une LED rouge.
-\item[$\bullet$] Un interrupteur.
-\item[$\bullet$] Une résistance.
-\item[$\bullet$] Une batterie.
-\item[$\bullet$] Un boîtier.
-\end{itemize}
-
-\subsubsection{Fabrication}
-
-\textit{TODO: décrire les étapes de fabrication du stylet (celles-ci devraient permettre à tout un chacun de pouvoir le créer à partir de zéro).}
-
-\subsubsection{Prototype}
-
-La figure suivante propose une ébauche de prototype du modèle laser du stylet:
-
-\textit{TODO: inclure un schéma du prototype de stylet laser.}
+Le modèle laser du stylet a été défini durant la seconde partie du projet. Il remplace le modèle à deux LEDs.
 
 \subsubsection{Fonctionnement}
 
-\textit{TODO: décrire le fonctionnement interne du stylet.}
+Au lieu d'essayer de suivre des objets permettant d'extrapoler la position à laquelle l'utilisateur souhaite dessiner, ce système suit directement la position pointée par l'utilisateur à l'aide d'une source lumineuse suffisamment focalisée.
+Ainsi, l'utilisateur à le choix d'utiliser une LED pointée sur l'écran à une petite distance (moins de 5 centimètres) ou encore un pointeur laser assez puissant pour être détecté par la caméra.
 
 \subsubsection{Principe d'utilisation}
 
@@ -601,7 +582,7 @@ Les points suivants constituent le matériel requis pour l'utilisation de l'appl
 
 \begin{itemize}
 \item[$\bullet$] Un prototype de stylet faisant office d'outil de dessin.
-\item[$\bullet$] Une caméra permettant de traquer les mouvements du stylet.
+\item[$\bullet$] Une caméra permettant de traquer les mouvements du stylet. 
 \item[$\bullet$] Un projecteur vidéo permettant de retranscrire le dessin de l'utilisateur.
 \item[$\bullet$] Un plan de travail permettant de dessiner.
 \item[$\bullet$] Un support prévu pour la disposition de la caméra et du projecteur au-dessus du plan de travail.
@@ -646,23 +627,132 @@ La procédure de mise en place n'est présentée ici qu'en guise de suggestion d
 
 \chapter{Description technique}
 
-\section{Vue d'ensemble des projets}
-
-\section{Structure des projets}
+\section{Structure du projet}
 
 \section{Patrons de conception}
 
 \section{Librairies}
 
+Plus que des librairies, ce sont deux puissants frameworks qui ont été utilisé sur ce projet. 
+
+\subsection{Qt}
+
+Qt est un framework multi-plateforme en C++ permettant le développement de grosse application graphique. Son plus grand avantage est de fournir une couche d'abstraction aux API graphiques de Windows, Mac OS X, GTK, etc. Ainsi, la création et la gestion des éléments graphiques de l'application se fait de manière uniforme au travers des méthodes fournies par Qt.
+
+Afin de proposer des mécanismes plus haut niveau que ceux inclus dans C++, Qt met à disposition un pré-compilateur (qmake) qui transformera certaine partie du code propre à Qt (les Q\_OBJECT, notamment) en C++. Il s'occupera aussi de la génération d'un Makefile compatible avec les différentes plateformes.
+
+Dans ce projet, nous avons beaucoup utilisé Qt pour la gestion de fenêtre, mais aussi pour l'environnement de dessin. En effet, Qt met aussi à disposition des éléments comme la zone de dessin, la sélection et la gestion de couleur, etc.
+
+\subsection{OpenCV}
+
+OpenCV est un framework destiné au traitement en temps réel des images. Dans ce projet, nous l'avons surtout utilisé pour suivre le stylet de l'utilisateur et pouvoir ainsi reporter sa position dans le monde réel au référentiel de l'écran. Les algorithmes rapides d'OpenCV permettant de filtrer des couleurs, de travailler sur des formes géométriques et de faire des projections tridimensionnelles nous ont été très utiles.
+
+\newpage
+
 \section{Interface graphique utilisateur}
+
+Cette section présente l'interface graphique utilisateur de l'application. Cette présentation débute par une introduction de sa structure. Elle est suivie d'une décomposition de ses différents constituants. Chaque constituant fait l'objet d'une description individuelle tant sur sa forme que sur son contenu.
+
+L'interface graphique utilisateur a été développée de manière à ce que l'interaction du stylet avec celle-ci soit la plus agréable, la plus naturelle et la plus ergonomique que possible. Compte tenu du fait que le stylet peut s'avérer quelques peu moins précis que la souris de d'un ordinateur et ce, quel que soit la qualité du système de tracking, les éléments cliquables de l'interface utilisateur doivent en conséquent être adaptés. Concrètement, la taille des éléments doit être ajustée, c'est-à-dire être plus grands qu'ils ne le seraient dans le cas d'une application desktop traditionnelle.
+
+Les applications susceptibles d'être développées pour des dispositifs tels que des smartphones et/ou des tablettes font l'objet d'une telle problématique. En effet, les éléments graphiques susceptibles de réagir à une action utilisateur sont plus grands qu'usuellement de manière à ce que l'interaction avec le doigt d'une personne soit aisée. Cette remarque s'applique également à cette application de dessin avec pour seule différence que les interactions s'effectuent par le biais d'un stylet.
+
+Les éléments de l'interface graphique utilisateur ont été développés selon la problématique exposée dans le paragraphe précédent. En conséquence, l'interface dispose d'éléments graphiques plus grands. Par ailleurs, ces éléments sont la plupart du temps caractérisés par des icônes plutôt que par du texte devant décrire l'action qu'ils sont supposés représenter, une image étant souvent bien plus explicite que des mots si elle est bien choisie.
 
 \subsection{Structure de l'interface utilisateur}
 
-\subsection{Barre des menus}
+La figure suivante présente l'interface graphique utilisateur finale de l'application:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{images/ui-final.png}
+\caption{Interface graphique utilisateur finale}
+\end{figure}
+
+La figure suivante présente la structure de l'interface graphique utilisateur finale de l'application:
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.4]{images/ui-final-structure.png}
+\caption{Structure de l'interface graphique utilisateur finale}
+\end{figure}
+
+La structure de l'interface graphique utilisateur est relativement rudimentaire; elle dispose d'une part d'une zone de dessin dans laquelle l'utilisateur est supposé y dessiner. D'autre part, elle dispose d'une barre d'outils laquelle fournit des outils de dessin, des outils de formes, des outils de couleurs et des outils d'épaisseur. Par ailleurs, cette barre d'outils met à disposition un outil supplémentaire permettant d'afficher le menu de l'application.
+
+En termes d'implémentation, cette interface graphique utilisateur correspond à la classe MainWindow. Celle-ci hérite de la classe graphique QMainWindow. Cette classe fournie par le framework Qt propose entre autres une structure de base pour des applications caractérisées par une barre de menus, par une barre d'outils, par une zone centrale et par une éventuelle barre d'état. 
+
+Dans le cas de l'application de dessin, la barre de menus n'est pas conservée dans la mesure où un menu personnalisé a été développé pour des raisons ergonomiques et est mis à disposition de l'utilisateur au moyen d'une boîte de dialogue. La zone centrale et la barre d'outils y figurent en ce qui les concernent. Pour ce qui est de la barre d'état, elle n'a pas été ajoutée à l'interface étant donné que son utilité pour une telle application ne présente que peu d'intérêt.
+
+Il peut être constaté que l'interface utilisateur n'est pas caractérisée par une barre de titre que l'on rencontre dans les programmes fenêtrées. En effet, dès le lancement de l'application est affichée en mode plein écran. Il s'agit-là du mode par défaut de l'application qui ne peut faire l'objet d'une modification. Cela se justifie par le fait que le système de tracking analyse la totalité de l'écran et que l'affichage d'une partie d'une fenêtre native du système d'exploitation pourrait dégrader la qualité de détection du stylet d'une part, le mécanisme de calibration d'autre part.
+
+En dernière instance, l'ébauche de l'interface graphique définie lors de l'établissement du cahier des charges a été adaptée selon les besoins ergonomiques de l'application de dessin.
+
+\subsection{Zone de dessin}
+
+La figure suivante illustre la zone de dessin de l'application de dessin:
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.4]{images/drawing-area.png}
+\caption{Zone de dessin}
+\end{figure}
+
+La zone de dessin consiste bien évidemment en un espace ouvert dans lequel il est possible à tout un chacun d'y esquisser son dessin. Aussi, si ce n'est cet espace, aucun autre élément graphique n'y figure à l'exception des éventuelles esquisses de l'utilisateur. Dans le cas de la figure précédente, il s'agit simplement d'une esquisse réalisée à l'aide de l'outil crayon.
+
+En termes d'implémentation, cette zone de dessin correspond à la classe Drawing. Il s'agit de la vue du dessin, c'est-à-dire de la représentation virtuelle du dessin esquissé sur le support physique de l'utilisateur. Cette classe fait l'objet d'une spécialisation de la classe graphique QGraphicsView mise à disposition par le framework Qt.
+
+\newpage
 
 \subsection{Barre d'outils}
 
-\subsection{Zone de dessin}
+La figure suivante illustre la barre d'outils de l'application de dessin:
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.4]{images/toolbar.png}
+\caption{Barre d'outils}
+\end{figure}
+
+La barre d'outils propose les outils suivants selon leur ordre d'apparition:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Outil}} & \multicolumn{1}{c|}{\textbf{Icône}} & \multicolumn{1}{c|}{\textbf{Action}} \\ \hline
+Menu                                 & \includegraphics{images/icon-menu.png}                                    & Déclenche l'ouverture du menu de l'application.                                                    \\ \hline
+Crayon                               & \includegraphics{images/icon-pen.png}                                     & Déclenche la sélection de l'outil crayon.                                                         \\ \hline
+Gomme                                & \includegraphics{images/icon-eraser.png}                                     & Déclenche la sélection de l'outil gomme.                                                          \\ \hline
+Épaisseur                            & \includegraphics[scale=0.13]{images/icon-thickness.png}                                     & Déclenche l'ouverture d'un menu de sélection d'épaisseur.                                        \\ \hline
+Annuler                              & \includegraphics{images/icon-undo.png}                                      & Annule la dernière action utilisateur sur le dessin.                                               \\ \hline
+Rétablir                             & \includegraphics{images/icon-redo.png}                                     & Rétablit la dernière action utilisateur sur le dessin.                                             \\ \hline
+Trait                                & \includegraphics{images/icon-dash.png}                                     & Déclenche la sélection de l'outil trait.                                                           \\ \hline
+Cercle                               & \includegraphics{images/icon-ellipse.png}                                      & Déclenche la sélection de l'outil cercle.                                                          \\ \hline
+Rectangle                            & \includegraphics{images/icon-rectangle.png}                                      & Déclenche la sélection de l'outil rectangle.                                                       \\ \hline
+Couleur                              & \includegraphics{images/icon-color.png}                                      & Déclenche l'ouverture de la palette d'outils.                                                      \\ \hline
+\end{tabular}
+\caption{Outils de la barre d'outils de l'interface graphique utilisateur}
+\end{table}
+
+La sélection d'un outil peut avoir pour conséquence la modification de l'icône du curseur selon l'outil donné. Ceci améliore l'expérience utilisateur dans la mesure où le curseur représente au mieux l'outil actuellement manipulé. Ainsi, la sélection de l'outil crayon aura pour conséquence l'affiche d'un curseur avec une icône représentant un crayon. En termes d'implémentation, la barre d'outils correspond directement à un objet de la classe QToolBar fournie par le framework Qt. Il n'a pas été jugé nécessaire d'en faire une spécialisation compte tenu du fait qu'elle proposait déjà toutes les fonctionnalités nécessaires à l'application. Par ailleurs, cette barre d'outils fait l'objet d'une personnalisation visuelle plutôt que de laisser le style de barre natif du système hôte. Ceci est réalisé par le CSS suivant:
+
+\begin{lstlisting}[
+           caption=CSS de la barre d'outils de l'interface graphique utilisateur,
+           showspaces=false,
+           basicstyle=\ttfamily,
+           numbers=left,
+           numberstyle=\tiny,
+           commentstyle=\color{gray}
+        ]
+QToolBar{ 
+    background: rgb(46,46,46); 
+    border: 0px; 
+}
+\end{lstlisting}
+
+\newpage
+
+\subsection{Menu}
 
 \subsection{Ressources}
 
@@ -718,7 +808,15 @@ La procédure de mise en place n'est présentée ici qu'en guise de suggestion d
 
 \section{Historique des actions}
 
+\section{Clavier virtuel}
+
 \section{Sérialisation}
+
+\subsection{Importation}
+
+\subsection{Sauvegarde}
+
+\subsection{Interface d'utilisation}
 
 \section{Impression}
 
@@ -731,6 +829,8 @@ La procédure de mise en place n'est présentée ici qu'en guise de suggestion d
 \section{Stratégie de tests}
 
 \section{Outils}
+
+\section{Matériel}
 
 \section{Procédures de tests}
 
@@ -752,9 +852,13 @@ La procédure de mise en place n'est présentée ici qu'en guise de suggestion d
 
 \subsection{Fonctionnalités implémentées}
 
-\subsection{Fonctionnalités manquantes}
+\subsection{Fonctionnalités non implémentées}
 
 \subsection{Propositions d'amélioration}
+
+\textit{TODO: Infrarouge, avec caméra infrarouge (Wiimote)}
+
+\textit{TODO: Amélioration du logiciel de dessin}
 
 \section{Problèmes rencontrés}
 
@@ -770,9 +874,13 @@ La procédure de mise en place n'est présentée ici qu'en guise de suggestion d
 
 \subsection{Évolution}
 
+\textit{TODO: pas facile d'imaginer un planning sur quelque chose que l'on a jamais fait, sur quelque chose d'expérimental, finalement, le tracking aura duré durant tout le projet, on peut tout le temps l'améliorer}
+
 \section{Déroulement du projet}
 
 \subsection{Points positifs}
+
+\textit{TODO: On a appris plein de truc: OpenCV, tracking, caméra, la difficulté de gérer un projet difficile à tester}
 
 \subsection{Points négatifs}
 
@@ -904,7 +1012,7 @@ L'application comportera différents threads: un thread de l'application sera co
 
 \section{Public-cible}
 
-L'application vise avant toute chose tout amateur de dessin souhaitant se passer d'une feuille.
+L'application vise avant toute chose tout amateur de dessin souhaitant se passer d'une feuille. 
 
 \section{Technologies utilisées}
 
@@ -921,7 +1029,7 @@ Les points suivants constituent le matériel requis pour l'utilisation de l'appl
 
 \begin{itemize}
 \item[$\bullet$] Un prototype de stylet faisant office d'outil de dessin.
-\item[$\bullet$] Une caméra permettant de traquer les mouvements du stylet.
+\item[$\bullet$] Une caméra permettant de traquer les mouvements du stylet. 
 \item[$\bullet$] Un projecteur vidéo permettant de retranscrire le dessin de l'utilisateur.
 \item[$\bullet$] Un plan de travail permettant de dessiner.
 \item[$\bullet$] Un support prévu pour la disposition de la caméra et du projecteur au-dessus du plan de travail.
@@ -929,7 +1037,7 @@ Les points suivants constituent le matériel requis pour l'utilisation de l'appl
 
 \section{Plateformes supportées}
 
-De par la nature du framework Qt, l'application est automatiquement multiplateforme; elle est donc supportée par les environnements usuels. Il s'agit entre autres des éditions Windows, des systèmes Mac OS X et des différentes distributions Linux. Un simple travail de recompilation du code source sur l'environnement désiré permet de disposer d'une version compatible de l'application.
+De par la nature du framework Qt, l'application est automatiquement multi-plateforme; elle est donc supportée par les environnements usuels. Il s'agit entre autres des éditions Windows, des systèmes Mac OS X et des différentes distributions Linux. Un simple travail de recompilation du code source sur l'environnement désiré permet de disposer d'une version compatible de l'application.
 
 \section{Déploiement}
 
@@ -938,7 +1046,7 @@ De par la nature du framework Qt, l'application est automatiquement multiplatef
 Le déploiement de l'application suit la procédure standard des environnements supportés:
 
 \begin{itemize}
-\item[$\bullet$] Pour un environnement Windows, le déploiement se réalise par le biais d'un installateur.
+\item[$\bullet$] Pour un environnement Windows, le déploiement se réalise par le biais d'un installateur. 
 \item[$\bullet$] Pour un environnement Mac OS X, le déploiement se réalise par le biais d'un fichier DMG.
 \item[$\bullet$] Pour une distribution Linux (Arch), le déploiement se réalise par le biais d'un paquetage.
 \end{itemize}
