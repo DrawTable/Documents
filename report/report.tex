@@ -338,8 +338,6 @@ Le dernier sous-système du système \textbf{LibreDraw System} est \textbf{Drawi
 
 Le dessin de l'utilisateur est représenté pour sa part par le constituant \textit{Drawing}. Ce dernier gère toute la partie reproduction de dessin aussi bien au niveau logique que graphique. Il délègue toutefois l'application de l'esquisse réalisée à l'aide d'un outil à des éléments du constituant \textit{Drawing Tools}. Finalement, le dernier constituant composant ce sous-système est \textit{File System I/O} qui met à disposition des mécanismes de sérialisation de dessin.
 
-\newpage
-
 \subsection{Diagramme d'activités}
 
 \subsection{Diagramme de classes}
@@ -397,7 +395,7 @@ La figure suivante illustre l'architecture du composant \textit{Core} du sous-sy
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.9]{core-component-architecture.png}
+\includegraphics[scale=0.75]{core-component-architecture.png}
 \caption{Architecture du composant Core}
 \end{figure}
 
@@ -409,7 +407,7 @@ La figure suivante illustre la structure de l'élément \textit{Window}:
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.9]{window-element-structure.png}
+\includegraphics[scale=0.7]{window-element-structure.png}
 \caption{Structure de l'élément Window}
 \end{figure}
 
@@ -421,11 +419,13 @@ La figure suivante illustre la structure de l'élément \textit{Menu}:
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.9]{menu-element-structure.png}
+\includegraphics[scale=0.4]{menu-element-structure.png}
 \caption{Structure de l'élément Menu}
 \end{figure}
 
 L'élément \textit{Menu} est accessible via l'élément \textit{Window} par le déclenchement d'un outil adéquat de l'élément \textit{Toolbar}. Cet élément \textit{Menu} est composé pour sa part par des boutons lesquels permettent d'exécuter des fonctionnalités données liées à la manipulation usuelle d'un document comme sa création, sa sauvegarde et autres.
+
+\newpage
 
 \textbf{Toolbar}
 
@@ -433,7 +433,7 @@ La figure suivante illustre la structure de l'élément \textit{Toolbar}:
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.9]{toolbar-element-structure.png}
+\includegraphics[scale=0.6]{toolbar-element-structure.png}
 \caption{Structure de l'élément Toolbar}
 \end{figure}
 
@@ -451,7 +451,7 @@ La figure suivante illustre l'architecture du composant \textit{Virtual Keyboard
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.9]{keyboard-component-structure.png}
+\includegraphics[scale=0.7]{keyboard-component-architecture.png}
 \caption{Architecture du composant Virtual Keyboard}
 \end{figure}
 
@@ -465,15 +465,17 @@ Les figures suivantes illustrent l'agencement des touches du clavier:
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.9]{keyboard-layout-letter.png}
+\includegraphics[scale=0.5]{keyboard-layout-letter.png}
 \caption{Agencement des touches du clavier virtuel selon le mode lettre}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.9]{keyboard-layout-symbol.png}
+\includegraphics[scale=0.5]{keyboard-layout-symbol.png}
 \caption{Agencement des touches du clavier virtuel selon le mode symbole}
 \end{figure}
+
+\newpage
 
 \textbf{Key}
 
@@ -508,13 +510,15 @@ Cette sous-section décrit le composant \textit{Drawing}. Il s'agit de présente
 
 Le composant \textit{Drawing} correspond au dessin de l'utilisateur.
 
+\newpage
+
 \textbf{Architecture}
 
 La figure suivante illustre l'architecture du composant \textit{Drawing} du sous-système \textbf{Drawing Subsystem}:
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.9]{drawing-component-structure.png}
+\includegraphics[scale=0.9]{drawing-component-architecture.png}
 \caption{Architecture du composant Drawing}
 \end{figure}
 
@@ -553,6 +557,12 @@ Ce module doit fournir une abstraction suffisante au \textbf{Drawing Subsystem} 
 \subsubsection{Architecture}
 
 Les composants de ce sous-système peuvent être classé du niveau le plus bas au plus élevé:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.9]{tracking-subsystem-architecture.png}
+\caption{Architecture du sous-système Tracking Subsystem}
+\end{figure}
 
 \begin{itemize}
 \item[$\bullet$] \textit{Calibrator}: ce constituant initialise et calibre l'infrastructure matériel de manière à ce qu'il puisse interagir avec l'application et inversement.
@@ -601,6 +611,12 @@ Il peut paraître étrange de parler de\textbf{s} caméra\textbf{s} (au pluriel)
 
 Ce sous-système est assez simple. Il consiste en deux partie, le \textbf{Manager} et l'\textbf{Updater}.
 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{camera-subsystem-architecture.png}
+\caption{Architecture du sous-système Tracking Subsystem}
+\end{figure}
+
 \subsubsection{Manager}
 
 Le \textbf{Manager} s'occupe de détecter, puis d'initialiser les caméras de l'utilisateur. Il va ensuite créer les différentes fenêtres qui afficheront plus tard les vues en direct des caméras. Cette affichage sera gérer par un fil d'exécution séparé, l'\textbf{Updater}.
@@ -614,6 +630,14 @@ Le rôle de l'\textbf{Updater} est de récupérer les images des caméras et met
 \section{Mouse Simulator System}
 
 \subsection{Architecture}
+
+La figure suivante illustre l'architecture du système \textbf{Mouse Simulator System}:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{mouse-simulator-system-architecture.png}
+\caption{Architecture du système Mouse Simulator System}
+\end{figure}
 
 \subsection{Network I/O Listener}
 
