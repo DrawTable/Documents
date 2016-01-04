@@ -243,7 +243,7 @@ Le système global correspond en la réunion de l'infrastructure matérielle et 
 
 \subsection{Architecture}
 
-L'architecture est présentée en deux variantes: une vue d'ensemble et une vue détaillée. Cette dernière n'est là qu'à titre indicatif de façon à ce que le lecteur dispose de la version complète de l'architecture; elle ne fait pas l'objet d'un description, seule la version allégée le fait.
+L'architecture est présentée en deux variantes: une vue d'ensemble et une vue détaillée. Cette dernière n'est là qu'à titre indicatif de façon à ce que le lecteur dispose de la version complète de l'architecture; elle ne fait pas l'objet d'une description, seule la version allégée le fait.
 
 \newpage
 
@@ -316,7 +316,7 @@ Cette section présente le détail de la conception du système \textbf{LibreDra
 
 Le mécanisme de suivi du stylet étant relativement complexe, il ne peut en aucune manière être exécuté sans passer au préalable par une phase d'initialisation et de configuration. En effet, différents objectifs doivent être atteints initialement de manière à ce que le système de tracking soit non seulement en mesure d'interagir avec le matériel mais en plus, que son interaction s'effectue de la manière la plus optimale possible. Le système doit être capable de s'adapter à un certain nombre de contraintes. Celles-ci peuvent être d'ordre matériel. En effet, malgré la présence conseillée d'une caméra et d'un projecteur, il n'en demeure pas moins qu'elle n'est pas obligatoire. En conséquence, l'application doit être en mesure de s'adapter lors d'une telle situation. Par ailleurs, le fait de disposer d'une caméra connectée au système hôte n'est pas suffisant pour que le système de tracking soit en mesure d'interagir de manière performante avec l'ensemble de l'infrastructure. L'angle et la position de la caméra étant des informations tout à fait variables, elles doivent être prises en compte lors de l'initialisation du mécanisme de tracking.
 
-Le suivi du stylet n'est également pas une tâche facile. Le mécanisme de tracking doit être en mesure de détecter à tout moment le stylet tant qu'il reste dans le champ de vision de la caméra et ce, indépendamment de la gestuelle de l'utilisateur. Le principe de détection de stylet défini lors de l'établissement du cahier des charges reposant sur la détection de LED, celui-ci découle à un certain nombre de problèmes potentiels et de questions devant être imaginées, supposées et répondues à l'avance. Une de ces questions est le comportement du mécanisme de tracking lorsque la LED du stylet présente la même couleur que le contenu du dessin de l'utilisateur. Ainsi, le dessin et la LED risqueraient d'être confondues. Telles sont les problématiques auxquelles le système de tracking doit faire face. L'ergonomie de l'application et l'expérience utilisateurs sont tout autant des points à soulever. L'interaction de l'utilisateur avec l'application s'effectuant avec un stylet, celle-ci peut être sujette à des problèmes de précision. Par ailleurs, les situations de saisies d'information par l'utilisateur doivent être rendues aussi facile que possible. En effet, forcer l'utilisateur a quitté son support de travail pour être en mesure de sauvegarder son dessin par le biais de son clavier physique est une contrainte qui est loin d'être appréciable. De ce fait, une solution permettant à l'utilisateur d'accomplir une telle tâche en se passant de son clavier doit être proposée. Le fait que les faits et gestes de l'utilisateur soient captés par une caméra vidéo et interprétés nécessite de reproduire l'esquisse de dessin déclenchée par l'utilisateur dans l'application de dessin. Le dessin esquissé par l'utilisateur étant projeté via un projecteur sur son support de travail, le dessin doit donc être reproduit logiquement et visuellement au sein de l'application.
+Le suivi du stylet n'est également pas une tâche facile. Le mécanisme de tracking doit être en mesure de détecter à tout moment le stylet tant qu'il reste dans le champ de vision de la caméra et ce, indépendamment de la gestuelle de l'utilisateur. Le principe de détection de stylet défini lors de l'établissement du cahier des charges reposant sur la détection de LED, celui-ci découle à un certain nombre de problèmes potentiels et de questions devant être imaginées, supposées et répondues à l'avance. Une de ces questions est le comportement du mécanisme de tracking lorsque la LED du stylet présente la même couleur que le contenu du dessin de l'utilisateur. Ainsi, le dessin et la LED risqueraient d'être confondus. Telles sont les problématiques auxquelles le système de tracking doit faire face. L'ergonomie de l'application et l'expérience utilisateurs sont tout autant des points à soulever. L'interaction de l'utilisateur avec l'application s'effectuant avec un stylet, celle-ci peut être sujette à des problèmes de précision. Par ailleurs, les situations de saisies d'information par l'utilisateur doivent être rendues aussi faciles que possible. En effet, forcer l'utilisateur a quitté son support de travail pour être en mesure de sauvegarder son dessin par le biais de son clavier physique est une contrainte qui est loin d'être appréciable. De ce fait, une solution permettant à l'utilisateur d'accomplir une telle tâche en se passant de son clavier doit être proposée. Le fait que les faits et gestes de l'utilisateur soient captés par une caméra vidéo et interprétés nécessite de reproduire l'esquisse de dessin déclenchée par l'utilisateur dans l'application de dessin. Le dessin esquissé par l'utilisateur étant projeté via un projecteur sur son support de travail, le dessin doit donc être reproduit logiquement et visuellement au sein de l'application.
 
 \newpage
 
@@ -339,8 +339,8 @@ Le second sous-système du système \textbf{LibreDraw System} est \textbf{Tracki
 \item[$\bullet$] \textit{LED Detector}: ce constituant a pour fonction de détecter et traquer en permanence la/les LED(s) du stylet de manière à le localiser dans le champ de vision de la caméra. Cela est utilisé aussi bien lors de la phase d'initialisation du système que lors de sa phase post-initialisation, c'est-à-dire lors du suivi du stylet.
 \item[$\bullet$] \textit{Controller}: ce constituant contrôle les mouvements et les actions du stylet selon les informations reçues par la caméra et selon leur analyse également.
 \item[$\bullet$] \textit{Calibrator}: ce constituant initialise et calibre l'infrastructure matériel de manière à ce qu'il puisse interagir avec l'application et inversement.
-\item[$\bullet$] \textit{Error Manager}: ce constituant fait office de gestionnaire d'erreur. Il est notamment sollicité lors d'une erreur rencontrée durant le processus de calibration.
-\item[$\bullet$] \textit{Network I/O Handler}: ce constituant fait office d'interface de communication réseau entre les systèmes \textbf{LibreDraw System} et \textbf{Mouse Simulator System}. Il est notamment sollicité une fois le traitement d'informations liés aux faits et gestes du stylet terminé afin de les reproduire au sein de la partie dessin du système gérée entre autres par le sous-système \textbf{Drawing Subsystem}.
+\item[$\bullet$] \textit{Error Manager}: ce constituant fait office de gestionnaire d'erreur. Il est notamment sollicité lors d'une erreur rencontrée durant le processus de calibrage.
+\item[$\bullet$] \textit{Network I/O Handler}: ce constituant fait office d'interface de communication réseau entre les systèmes \textbf{LibreDraw System} et \textbf{Mouse Simulator System}. Il est notamment sollicité une fois le traitement d'informations liées aux faits et gestes du stylet terminé afin de les reproduire au sein de la partie dessin du système gérée entre autres par le sous-système \textbf{Drawing Subsystem}.
 \end{itemize}
 
 Le dernier sous-système du système \textbf{LibreDraw System} est \textbf{Drawing Subsystem}. Celui-ci gère entre autres toute la partie interface graphique utilisateur de l'application de dessin. Il dispose en premier lieu d'un constituant nommé \textit{Core} qui fait office de coeur de l'interface. Il met également à disposition un constituant \textit{Virtual Keyboard} qui fournit comme son nom l'indique un clavier virtuel. Celui-ci est sollicité entre autres lors de chaque saisie utilisateur. 
@@ -359,7 +359,7 @@ Le dessin de l'utilisateur est représenté pour sa part par le constituant \tex
 
 Cette section présente le détail de la conception du sous-système \textbf{Drawing Subsystem} du système \textbf{LibreDraw System}. Cette section présente le détail de la conception du sous-système \textbf{Drawing Subsystem}. Cette présentation débute par l'introduction de l'architecture de ce système. Celle-ci est bien plus détaillée de manière à approfondir progressivement la description du système. Chaque constituant du système fait également l'objet d'une pareille décomposition et d'une pareille description.
 
-L'interface graphique utilisateur doit concrètement proposer une fenêtre principale dans laquelle il est possible de dessiner. Bien évidemment, il est attendu de l'utilisateur qu'il dessine à l'aide du stylet sur son support de travail. Toutefois, il ne lui est pas impossible de travailler directement sur l'application au moyen de la souris de son ordinateur. Ce n'est évidemment pas jouir de la fonctionnalité principale de l'application de dessin. Néanmoins, aucune contrainte de cet ordre n'est imposé à l'utilisateur quant à l'esquisse de son dessin.
+L'interface graphique utilisateur doit concrètement proposer une fenêtre principale dans laquelle il est possible de dessiner. Bien évidemment, il est attendu de l'utilisateur qu'il dessine à l'aide du stylet sur son support de travail. Toutefois, il ne lui est pas impossible de travailler directement sur l'application au moyen de la souris de son ordinateur. Ce n'est évidemment pas jouir de la fonctionnalité principale de l'application de dessin. Néanmoins, aucune contrainte de cet ordre n'est imposée à l'utilisateur quant à l'esquisse de son dessin.
 
 L'esquisse d'un dessin doit pouvoir être effectuée dans une zone appropriée laquelle correspond en un espace ouvert où l'utilisateur peut esquisser ce qu'il désire et ce, à sa guise. Par ailleurs, il doit disposer d'une panoplie d'outils lui permettant d'être inventif et créatif vis-à-vis de son dessin tant sur sa forme que sur son contenu. Les points suivants récapitulent les outils devant être mis à disposition:
 
@@ -388,41 +388,168 @@ La figure suivante illustre l'architecture du sous-système \textbf{Drawing Subs
 
 Le sous-système \textbf{Drawing Subsystem} gère entre autres toute la partie interface graphique utilisateur de l'application de dessin. Le composant \textit{Core} correspond au coeur de ce sous-système et donc, à l'interface graphique de l'application. Celui-ci met effectivement à disposition tous les constituants graphiques nécessaires devant être combinés et regroupés ensemble pour former finalement l'interface utilisateur final. Il s'agit concrètement des constituants \textit{Menu} qui fournit le menu de l'application de dessin, \textit{Window} qui correspond à la fenêtre principale de l'application et enfin, \textit{Toolbar} qui se révèle être la barre d'outils de cette même fenêtre.
 
+La sérialisation d'un dessin est rendue possible par le constituant \textit{File System I/O} qui fournit deux boîtes de dialogue permettant respectivement d'importer et de sauvegarder un dessin. La problématique liée à la saisie utilisateur par le biais du stylet est répondue grâce au constituant \textit{Visual Keyboard}. Ce dernier fournit un clavier virtuel s'apparentant aux claviers usuels que l'on rencontre sur les applications des smartphones et des tablettes. Ainsi, les boîtes de dialogue mentionnées plus tôt intègrent ce clavier dans leur interface. 
 
+Les constituants \textit{Drawing} et \textit{Drawing Tools} collaborent ensemble en vue de produire le dessin esquissé par l'utilisateur. Pour ce faire, un élément \textit{Controller} veille à appliquer l'esquisse sur le \textit{Model} du dessin en prenant en compte l'outil courant proposé par le constituant \textit{Drawing Tools}. À noter que, durant la totalité de son interaction avec l'interface graphique, l'utilisateur peut à tout moment recourir à la souris de son ordinateur pour réaliser les mêmes traitements qu'il était supposé réalisé initialement par le biais du stylet. Ainsi, la possibilité de s'abstenir d'utiliser le stylet demeure toujours possible pour l'utilisateur.
+
+En définitive, le sous-système \textbf{Drawing Subsystem} fait collaborer l'ensemble de ses composants en vue de reproduire le dessin esquissé par l'utilisateur et de sérialiser ce dessin en recourant au clavier virtuel fournit par \textit{Visual Keyboard}. Ce dernier se révèle être en parfaite adéquation avec une saisie utilisateur au moyen d'un stylet.
 
 \subsubsection{Core}
 
+Cette sous-section décrit le composant \textit{Core}. Il s'agit de présenter son architecture, de la décomposer pour ensuite introduire individuellement ses constituants.
+
+Le composant \textit{Core} correspond en l'interface graphique de la fenêtre principale de l'application.
+
 \textbf{Architecture}
+
+La figure suivante illustre l'architecture du composant \textit{Core} du sous-système \textbf{Drawing Subsystem}:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.9]{core-component-architecture.png}
+\caption{Architecture du composant Core}
+\end{figure}
+
+Le composant \textit{Core} a pour base l'élément \textit{Window} qui consiste en la fenêtre principale de l'application. Dans cette fenêtre figure l'élément \textit{Toolbar} faisant office de barre d'outils de la fenêtre. Cette barre d'outils permet de sélectionner un outil de dessin, de forme ou d'exécuter l'outil d'épaisseur, les outils d'historique des actions ou encore l'outil palette de couleurs. Par ailleurs, cette même barre permet d'accéder au menu de l'application représenté par l'élément \textit{Menu}.
 
 \textbf{Window}
 
+La figure suivante illustre la structure de l'élément \textit{Window}:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.9]{window-element-structure.png}
+\caption{Structure de l'élément Window}
+\end{figure}
+
+L'élément \textit{Window} est composé d'une part par le composant \textit{Drawing} censé contrôlé et stocké le desin de l'utilisateur. D'autre part, il est caractérisé par l'élément \textit{Toolbar} laquelle met à disposition un ensemble d'outils susceptibles de contribuer à l'esquisse du dessin, à modifier certaines propriétés de l'élément \textit{Controller} du composant \textit{Drawing} comme l'épaisseur du trait. Par ailleurs, ce même élément \textit{Toolbar} permet d'accéder à l'élément \textit{Menu}.
+
 \textbf{Menu}
+
+La figure suivante illustre la structure de l'élément \textit{Menu}:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.9]{menu-element-structure.png}
+\caption{Structure de l'élément Menu}
+\end{figure}
+
+L'élément \textit{Menu} est accessible via l'élément \textit{Window} par le déclenchement d'un outil adéquat de l'élément \textit{Toolbar}. Cet élément \textit{Menu} est composé pour sa part par des boutons lesquels permettent d'exécuter des fonctionnalités données liées à la manipulation usuelle d'un document comme sa création, sa sauvegarde et autres.
 
 \textbf{Toolbar}
 
+La figure suivante illustre la structure de l'élément \textit{Toolbar}:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.9]{toolbar-element-structure.png}
+\caption{Structure de l'élément Toolbar}
+\end{figure}
+
+L'élément \textit{Toolbar} est constitué d'un ensemble de boutons. Un premier bouton s'écarte toutefois du lot; il s'agit du bouton avec pour label "Menu". Celui-ci permet évidemment d'ouvrir l'élément \textit{Menu} de la fenêtre. Le reste des autres boutons est à part. Certains d'entre eux permettent d'esquisser des formes géométriques ou de dessiner à main levée. D'autres permettent de personnaliser les traits tant au niveau de la couleur que de l'épaisseur. Enfin, certains permettent d'agir sur l'historique des actions, annuler ou rétablir une action autrement dit.
+
 \subsubsection{Virtual Keyboard}
+
+Cette sous-section décrit le composant \textit{Virtual Keyboard}. Il s'agit de présenter son architecture, de la décomposer pour ensuite introduire individuellement ses constituants.
+
+Le composant \textit{Virtual Keyboard} correspond en un clavier virtuel lequel permet à l'utilisateur de saisir des informations au sein par le biais du stylet.
 
 \textbf{Architecture}
 
+La figure suivante illustre l'architecture du composant \textit{Virtual Keyboard} du sous-système \textbf{Drawing Subsystem}:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.9]{keyboard-component-structure.png}
+\caption{Architecture du composant Virtual Keyboard}
+\end{figure}
+
+Le composant \textit{Virtual Keyboard} est caractérisé avant tout par un élément \textit{Model}, correspondant au modèle du clavier, c'est-à-dire à la disposition de ses touches. Chacune des touches du clavier correspondent pour leur part à des éléments \textit{Key}. L'élément \textit{Input} consiste en ce qui le concerne en un champ texte éditable lequel est lié à un clavier virtuel. Autrement dit, la saisie de texte dans ce champ n'est possible que par le composant \textit{Virtual Keyboard} qui lui aurait été associé.
+
 \textbf{Model}
+
+L'élément \textit{Model} correspond pour le composant \textit{Virtual Keyboard} la disposition de ses touches représentés par des éléments \textit{Key}.
+
+Les figures suivantes illustrent l'agencement des touches du clavier:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.9]{keyboard-layout-letter.png}
+\caption{Agencement des touches du clavier virtuel selon le mode lettre}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.9]{keyboard-layout-symbol.png}
+\caption{Agencement des touches du clavier virtuel selon le mode symbole}
+\end{figure}
 
 \textbf{Key}
 
+L'élément \textit{Key} représente une touche du clavier virtuel représenté par le composant \textit{Virtual Keyboard}. Ce dernier faisant l'objet de deux agencements, certains de ses éléments \textit{Key} sont amenés à changer de valeur. Ainsi, on dénombre deux modes différents pour un élément \textit{Key}:
+
+\begin{itemize}
+\item[$\bullet$] Le mode mono-évalué: en mode symbole ou en mode lettre, la même valeur est retournée.
+\item[$\bullet$] Le mode multi-évalué: en mode symbole ou en mode lettre, une valeur différente est retournée.
+\end{itemize}
+
+Les figures suivantes illustrent les deux formes possibles que peut prendre un élément \textit{Key}:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.9]{keyboard-key-mono.png}
+\caption{Elément Key mono-evalué}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.9]{keyboard-key-multi.png}
+\caption{Elément Key multi-evalué}
+\end{figure}
+
 \textbf{Input}
+
+L'élément \textit{Input} correspond en un champ texte éditable uniquement par le biais d'un composant \textit{Virtual Keyboard}. Ainsi, lors du focus sur ce champ texte, le clavier virtuel est aussitôt affiché.
 
 \subsubsection{Drawing}
 
+Cette sous-section décrit le composant \textit{Drawing}. Il s'agit de présenter son architecture, de la décomposer pour ensuite introduire individuellement ses constituants.
+
+Le composant \textit{Drawing} correspond au dessin de l'utilisateur.
+
 \textbf{Architecture}
+
+La figure suivante illustre l'architecture du composant \textit{Drawing} du sous-système \textbf{Drawing Subsystem}:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.9]{drawing-component-structure.png}
+\caption{Architecture du composant Drawing}
+\end{figure}
+
+Le composant \textit{Drawing} est composé d'un élément \textit{Model} qui représente le dessin aussi bien logiquement que visuellement. Ce composant est également caractérisé par l'élément \textit{Controller}. Celui-ci assure la reproduction des esquisses de l'utilisateur sur demande du système \textbf{Mouse Simulator System}.
 
 \textbf{Model}
 
+L'élément \textit{Model} représente le dessin de manière logique et graphique. Il se repose sur une structure de type \textit{bitmap}, c’est-à-dire une matrice où chaque élément correspond à un pixel. La valeur stockée dans un tel élément correspond à une couleur. Cette couleur est représentée quant à elle par un code hexadécimal. En guise d’exemple, la figure suivante illustre une telle structure.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.9]{drawing-structure.png}
+\caption{Structure logique d’un dessin}
+\end{figure}
+
 \textbf{Controller}
+
+L'élément \textit{Controller} veille à la bonne reproduction des esquisses de l'utilisateur lorsqu'il est sollicité par le système \textbf{Mouse Simulator System}. Il délègue la reproduction de l'esquisse à un élément du composant \textit{Drawing Tools}.
 
 \subsubsection{Drawing Tools}
 
-\textbf{Architecture}
+Le composant \textit{Drawing} correspond en un ensemble d'éléments associant aux outils accessibles via le composant \textit{Core} un contrôleur respectif. Ce contrôleur reproduit le geste de l'utilisateur selon l'outil sélectionné au moment donné. Il est à noter toutefois que cette association ne concerne que les outils susceptibles d'ajouter du contenu au dessin, esquisser à main levée ou esquisser des formes géométriques autrement dit.
 
 \subsubsection{File System I/O}
+
+Le composant \textit{File System I/O} met à disposition de l'application, et de l'utilisateur dans une moindre mesure, des mécanismes de sérialisation de dessin. Ceux-ci sont rendus accessibles à l'utilisateur par des interfaces graphiques se présentant sous la forme de boîtes de dialogue. Compte tenu du fait que ces boîtes de dialogue attendent de l'utilisateur de la saisie textuelle, les interfaces en question intègrent le composant \textit{Virtual Keyboard} lequel fournit un clavier virtuel permettant l'édition de champ texte et ce, en recourant au stylet.
 
 \newpage
 
@@ -468,11 +595,19 @@ Le sous-système \textbf{Drawing Subsystem} gère entre autres toute la partie i
 
 \section{Beamer}
 
+L'élément \textit{Beamer} est un composant matériel. Il permet la projection du dessin représenté par le composant \textit{Drawing} du système \textbf{LibreDraw System}. Il est à noter que cet élément n'est pas essentiel au fonctionnement du système dans son ensemble.
+
 \section{Camera}
+
+L'élément \textit{Camera} est un composant matériel. Il permet de capturer les faits et gestes de l'utilisateur réalisés par le biais du stylet à condition de se trouver dans le champ de vision de ce dispositif matériel. Les informations capturées par cet élément sont transmises au composant \textit{Tacking Manager} du système \textbf{LibreDraw System}. Cette transmission est réalisée de manière à pouvoir par la suite reproduire l'action utilisateur aussi du sous-système \textbf{Drawing Subsystem}.
 
 \section{Stylus}
 
+L'élément \textit{Stylus} correspond au stylet interagissant avec le système \textbf{LibreDraw System}. L'utilisateur l'exploite pour esquisser virtuellement un dessin sur l'élément \textit{Drawing Area}.
+
 \section{Drawing Area}
+
+L'élément \textit{Drawing Area} correspond au support de travail de l'utilisateur. Il s'agit de la surface, à priori plane, sur laquelle l'utilisateur esquisse son dessin d'une part et constate la projection de la reproduction de son esquisse.
 
 \section{Stylet}
 
@@ -683,7 +818,7 @@ En termes d'implémentation, cette interface graphique utilisateur correspond à
 
 Dans le cas de l'application de dessin, la barre de menus n'est pas conservée dans la mesure où un menu personnalisé a été développé pour des raisons ergonomiques et est mis à disposition de l'utilisateur au moyen d'une boîte de dialogue. La zone centrale et la barre d'outils y figurent en ce qui les concernent. Pour ce qui est de la barre d'état, elle n'a pas été ajoutée à l'interface étant donné que son utilité pour une telle application ne présente que peu d'intérêt.
 
-Il peut être constaté que l'interface utilisateur n'est pas caractérisée par une barre de titre que l'on rencontre dans les programmes fenêtrées. En effet, dès le lancement de l'application est affichée en mode plein écran. Il s'agit-là du mode par défaut de l'application qui ne peut faire l'objet d'une modification. Cela se justifie par le fait que le système de tracking analyse la totalité de l'écran et que l'affichage d'une partie d'une fenêtre native du système d'exploitation pourrait dégrader la qualité de détection du stylet d'une part, le mécanisme de calibration d'autre part.
+Il peut être constaté que l'interface utilisateur n'est pas caractérisée par une barre de titre que l'on rencontre dans les programmes fenêtrées. En effet, dès le lancement de l'application est affichée en mode plein écran. Il s'agit-là du mode par défaut de l'application qui ne peut faire l'objet d'une modification. Cela se justifie par le fait que le système de tracking analyse la totalité de l'écran et que l'affichage d'une partie d'une fenêtre native du système d'exploitation pourrait dégrader la qualité de détection du stylet d'une part, le mécanisme de calibrage d'autre part.
 
 En dernière instance, l'ébauche de l'interface graphique définie lors de l'établissement du cahier des charges a été adaptée selon les besoins ergonomiques de l'application de dessin.
 
